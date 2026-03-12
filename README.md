@@ -12,6 +12,10 @@ A aplicação utiliza **Inteligência Artificial** para responder perguntas, ofe
 Link:https://app.milanote.com/1W0K201wz9gc9S?p=B95GvVBopPz
 
 ---
+## Figma
+Link:https://www.figma.com/design/ogNdOiMf4l2FMHiz191wwJ/Projeto-Sa%C3%BAde-e-Bem-Estar?node-id=0-1&t=5R6IsvKqsNhPe1Xn-1
+
+---
 
 ## 🎯 Objetivos
 - Fornecer informações básicas sobre saúde
