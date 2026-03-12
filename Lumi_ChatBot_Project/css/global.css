@@ -1,0 +1,29 @@
+/* css/global.css */
+:root {
+    --primary-dark: #1E3A8A;
+    --primary: #2563EB;
+    --primary-light: #93C5FD;
+    --white: #FFFFFF;
+    --athens-gray: #E5E7EB;
+    
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+    --card-bg: #FFFFFF;
+    --shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--athens-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--text-dark);
+}
