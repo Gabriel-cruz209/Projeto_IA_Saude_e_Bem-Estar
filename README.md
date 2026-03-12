@@ -8,6 +8,10 @@ A aplicação utiliza **Inteligência Artificial** para responder perguntas, ofe
 > ⚠️ Este projeto tem caráter **educacional e informativo**. Ele **não substitui orientação médica profissional**.
 
 ---
+## Documentação pelo Milanote
+Link:https://app.milanote.com/1W0K201wz9gc9S?p=B95GvVBopPz
+
+---
 
 ## 🎯 Objetivos
 - Fornecer informações básicas sobre saúde
