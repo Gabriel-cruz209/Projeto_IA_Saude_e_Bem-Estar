@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Observar cartões de funcionalidades e desenvolvedores
-    const animatedElements = document.querySelectorAll('.feature-card, .dev-card, .chat-mockup, .section-title');
+    // Observar cartões de funcionalidades, desenvolvedores, vídeo e texto
+    const animatedElements = document.querySelectorAll('.feature-card, .dev-card, .chat-mockup, .section-title, .video-wrapper, .intro-text-block');
     animatedElements.forEach(el => {
         observer.observe(el);
         // Prepara elementos para a animação se não estiverem no CSS base

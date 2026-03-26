@@ -156,9 +156,98 @@ body {
     transition: var(--transition-smooth);
 }
 
-.main-cta:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 40px var(--accent-glow);
+/* Video Section & Introduction */
+.video-section {
+    padding: 80px 5%;
+    background: var(--bg-surface);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.video-section h2 {
+    font-size: 2.25rem;
+    margin-bottom: 3.5rem;
+    font-weight: 800;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.25);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition-smooth);
+}
+
+.video-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.intro-text-block {
+    max-width: 800px;
+    margin: 48px auto 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition-smooth);
+    transition-delay: 0.2s;
+}
+
+.intro-text-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro-text-block p {
+    color: var(--text-primary);
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+.intro-p-large {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.intro-p-standard {
+    font-size: 1rem;
+    color: var(--text-secondary) !important;
+}
+
+.intro-cta {
+    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--accent-secondary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: var(--transition-smooth);
+}
+
+.intro-cta:hover {
+    color: var(--accent-primary);
+    transform: translateX(5px);
 }
 
 /* Features Section */

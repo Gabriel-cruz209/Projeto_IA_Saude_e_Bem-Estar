@@ -1,0 +1,208 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-26T15:46:48.075342Z",
+  "conversations": [
+    {
+      "createdAt": "2026-03-26T18:45:53.778Z",
+      "id": "1774550753778",
+      "maxRisk": "URGENTE",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ],
+          "timestamp": "2026-03-26T18:45:53.781Z"
+        },
+        {
+          "role": "user",
+          "content": "Tenho febre há 2 dias",
+          "timestamp": "2026-03-26T18:46:00.392Z"
+        },
+        {
+          "role": "bot",
+          "content": "Sinto muito que você esteja se sentindo mal! Febrícula ou febre pode ser um sintoma de muitas condições diferentes, então é importante tentar entender melhor o que está acontecendo.\n\n**Aqui estão algumas perguntas para ajudar a entender melhor sua situação:**\n\n1. Qual é a temperatura da sua febre? (se você souber)\n2. Você está apresentando outros sintomas, como dor de cabeça, dor de corpo, tosse, congestão nasal ou diarreia?\n3. Você teve algum contato com alguém que esteja doente recentemente?\n4. Você está tomando algum medicamento ou tem alguma condição médica pré-ex",
+          "timestamp": "2026-03-26T18:46:02.610Z",
+          "riskLevel": "ALTO",
+          "resources": [
+            {
+              "type": "site",
+              "title": "Como controlar a febre",
+              "source": "Drauzio Varella",
+              "url": "https://drauziovarella.uol.com.br"
+            }
+          ],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ]
+        },
+        {
+          "role": "user",
+          "content": "meu nome é pedro me chame assim apartir de agora",
+          "timestamp": "2026-03-26T18:46:20.831Z"
+        },
+        {
+          "role": "bot",
+          "content": "Olá, Pedro! É um prazer conhecer você! Estou aqui para ajudar e apoiar você em tudo relacionado à saúde e bem-estar. Como posso ajudar você hoje? Você tem alguma dúvida ou preocupação específica que gostaria de discutir? Estou aqui para ouvir e ajudar no que for necessário!",
+          "timestamp": "2026-03-26T18:46:21.648Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ]
+        },
+        {
+          "role": "user",
+          "content": "O que devo comer?",
+          "timestamp": "2026-03-26T18:46:27.921Z"
+        },
+        {
+          "role": "bot",
+          "content": "**Alimentação Saudável: Uma Escolha Consciente**\n\nOlá! Estou aqui para ajudá-lo a encontrar as melhores opções alimentares para o seu bem-estar. A escolha do que comer pode ser um desafio, especialmente com tantas opções disponíveis. No entanto, é importante lembrar que uma alimentação saudável é fundamental para manter o corpo e a mente em equilíbrio.\n\n**Princípios Básicos de Alimentação Saudável**\n\nAqui estão alguns princípios básicos para ajudá-lo a tomar decisões informadas sobre o que comer:\n\n1. **Frutas e Legumes**: Esses alimentos ricos em nutrient",
+          "timestamp": "2026-03-26T18:46:28.631Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ]
+        },
+        {
+          "role": "user",
+          "content": "Quais os sintomas?",
+          "timestamp": "2026-03-26T18:46:29.687Z"
+        },
+        {
+          "role": "bot",
+          "content": "Olá! Eu sou Lumi, seu assistente de saúde e bem-estar. É um prazer estar aqui para ajudá-lo.\n\nOs sintomas podem variar muito dependendo da condição ou doença específica. No entanto, aqui estão alguns sintomas comuns que as pessoas podem experimentar:\n\n**Sintomas Físicos:**\n\n1. **Dor**: Dor de cabeça, dor no peito, dor nas articulações, dor muscular, etc.\n2. **Fadiga**: Sentir-se cansado ou sem energia.\n3. **Febre**: Aumento da temperatura corporal.\n4. **Náusea e vômito**: Sentir-se mal ou vomitar",
+          "timestamp": "2026-03-26T18:46:30.563Z",
+          "riskLevel": "URGENTE",
+          "resources": [
+            {
+              "type": "video",
+              "title": "Primeiros socorros: Infarto",
+              "source": "Hospital Albert Einstein",
+              "url": "https://youtube.com"
+            },
+            {
+              "type": "site",
+              "title": "Quando ir à emergência",
+              "source": "Ministério da Saúde",
+              "url": "https://saude.gov.br"
+            }
+          ],
+          "suggestions": [
+            "Onde tem uma UPA?",
+            "Ligar para o SAMU",
+            "Sintomas de infarto"
+          ]
+        },
+        {
+          "role": "user",
+          "content": "Onde tem uma UPA?",
+          "timestamp": "2026-03-26T18:46:33.388Z"
+        },
+        {
+          "role": "bot",
+          "content": "Olá! Estou aqui para ajudar.\n\nPara encontrar uma Unidade de Pronto Atendimento (UPA) próxima a você, posso sugerir algumas opções:\n\n1. **Site do Ministério da Saúde**: Você pode acessar o site do Ministério da Saúde e usar a ferramenta de busca por unidades de saúde. Basta digitar o nome da sua cidade ou estado e selecionar \"Unidade de Pronto Atendimento\" como tipo de unidade.\n2. **Google Maps**: Você pode usar o Google Maps para encontrar UPAs próximas à sua localização atual. Basta digitar \"UPA\" ou \"Unidade de Pronto Atendimento\" no campo de busca",
+          "timestamp": "2026-03-26T18:46:34.159Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ]
+        },
+        {
+          "role": "user",
+          "content": "Como prevenir isso?",
+          "timestamp": "2026-03-26T18:46:38.450Z"
+        },
+        {
+          "role": "bot",
+          "content": "Para fornecer orientações precisas sobre prevenção, é importante saber a que condição ou problema você está se referindo. No entanto, posso oferecer algumas dicas gerais de prevenção que podem ser aplicadas a uma variedade de condições de saúde e bem-estar:\n\n1. **Alimentação Saudável**: Manter uma dieta equilibrada rica em frutas, vegetais, grãos integrais e proteínas magras pode ajudar a prevenir muitas doenças crônicas, como doenças cardíacas, diabetes tipo 2 e alguns tipos de câncer.\n\n2. **Atividade Física Regular**: Exercícios regulares",
+          "timestamp": "2026-03-26T18:46:39.131Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ]
+        },
+        {
+          "role": "user",
+          "content": "Quais os sintomas?",
+          "timestamp": "2026-03-26T18:46:40.215Z"
+        },
+        {
+          "role": "bot",
+          "content": "Olá! Estou aqui para ajudar. Você está se referindo a um sintoma específico ou a uma condição de saúde em geral? Existem muitos sintomas possíveis, então vou fornecer uma lista geral. Por favor, sinta-se à vontade para fornecer mais informações sobre o que você está procurando.\n\nAqui estão alguns exemplos de sintomas comuns:\n\n1. **Sintomas físicos**:\n * Dor de cabeça\n * Dor no peito\n * Dor nas costas\n * Fadiga\n * Nausea\n * Vômito\n * Diarreia\n * Febre\n2. **Sintomas emocionais**:\n * Ansiedade",
+          "timestamp": "2026-03-26T18:46:40.881Z",
+          "riskLevel": "URGENTE",
+          "resources": [
+            {
+              "type": "video",
+              "title": "Primeiros socorros: Infarto",
+              "source": "Hospital Albert Einstein",
+              "url": "https://youtube.com"
+            },
+            {
+              "type": "site",
+              "title": "Quando ir à emergência",
+              "source": "Ministério da Saúde",
+              "url": "https://saude.gov.br"
+            }
+          ],
+          "suggestions": [
+            "Onde tem uma UPA?",
+            "Ligar para o SAMU",
+            "Sintomas de infarto"
+          ]
+        },
+        {
+          "role": "user",
+          "content": "Sintomas de infarto",
+          "timestamp": "2026-03-26T18:46:46.515Z"
+        },
+        {
+          "role": "bot",
+          "content": "**Sintomas de Infarto: Conheça os Sinais de Alerta**\n\nO infarto, também conhecido como ataque cardíaco, é uma condição médica grave que ocorre quando o fluxo de sangue para o coração é bloqueado, causando danos às células cardíacas. É fundamental reconhecer os sintomas de infarto para buscar ajuda médica imediata e evitar complicações graves.\n\n**Sintomas Comuns de Infarto:**\n\n1. **Dor no Peito**: A dor no peito é o sintoma mais comum de infarto. Pode ser descrita como uma sensação de pressão, aperto ou queima",
+          "timestamp": "2026-03-26T18:46:47.246Z",
+          "riskLevel": "URGENTE",
+          "resources": [
+            {
+              "type": "video",
+              "title": "Primeiros socorros: Infarto",
+              "source": "Hospital Albert Einstein",
+              "url": "https://youtube.com"
+            },
+            {
+              "type": "site",
+              "title": "Quando ir à emergência",
+              "source": "Ministério da Saúde",
+              "url": "https://saude.gov.br"
+            }
+          ],
+          "suggestions": [
+            "Onde tem uma UPA?",
+            "Ligar para o SAMU",
+            "Sintomas de infarto"
+          ]
+        }
+      ],
+      "title": "Tenho febre há 2 dias"
+    }
+  ]
+}

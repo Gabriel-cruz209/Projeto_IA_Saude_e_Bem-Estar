@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-26T15:45:54.592117Z",
+  "conversations": [
+    {
+      "id": "1774550753778",
+      "title": "Nova conversa",
+      "createdAt": "2026-03-26T18:45:53.778Z",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "role": "bot",
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "timestamp": "2026-03-26T18:45:53.781Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ]
+        }
+      ]
+    }
+  ]
+}
