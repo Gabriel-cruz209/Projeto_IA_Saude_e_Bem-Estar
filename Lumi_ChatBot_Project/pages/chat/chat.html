@@ -2,29 +2,52 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Chat - Atendimento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Assistente de Saúde Inteligente</title>
+    <!-- Incluindo as variáveis globais -->
     <link rel="stylesheet" href="../../css/global.css">
     <link rel="stylesheet" href="chat.css">
 </head>
 <body>
-    <div class="chat-container">
-        <header class="chat-header">
-            <div class="bot-avatar">🤖</div>
-            <div class="bot-info">
-                <h2>Assistente Virtual Pro</h2>
-                <p>Online agora</p>
-            </div>
+    <div class="page-wrapper">
+        <header class="header-section">
+             <h1><span class="sparkle">✨</span> Assistente de Saúde Inteligente <span class="sparkle">✨</span></h1>
+             <p class="subtitle">Como posso ajudá-lo hoje?</p>
         </header>
 
-        <main class="chat-box" id="chat-box">
-            <div class="message bot-message">
-                Olá! Sou o assistente virtual. Como posso ajudar você hoje?
+        <main class="chat-card">
+            <div class="avatar-wrapper">
+                <div class="avatar-glow">
+                    <!-- Um placeholder que combina com um avatar de médico 3D. Em produção, substitua pelo arquivo local -->
+                    <img src="/Arquivos/Avatar_bot_realista.png" alt="Avatar do Assistente Médico" class="avatar-img">
+                </div>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Digite sua dúvida sobre saúde..." autocomplete="off">
+                <button id="send-btn" aria-label="Enviar">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.01 21L23 12L2.01 3L2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="suggestions-container">
+                <p class="suggestions-title">Sugestões de perguntas:</p>
+                <button class="suggestion-btn">Quais são os sintomas de gripe?</button>
+                <button class="suggestion-btn">Como melhorar minha imunidade?</button>
+                <button class="suggestion-btn">Quando devo procurar um médico?</button>
+            </div>
+
+            <div class="status-footer">
+                <div class="status-item"><span class="dot green"></span> Seguro e Privado</div>
+                <div class="status-item"><span class="dot blue"></span> IA Médica</div>
+                <div class="status-item"><span class="dot blue"></span> 24/7 Disponível</div>
             </div>
         </main>
 
-        <footer class="chat-input-area">
-            <input type="text" id="user-input" placeholder="Digite sua mensagem..." autocomplete="off">
-            <button id="send-btn">Enviar</button>
+        <footer class="disclaimer">
+            Este assistente fornece informações gerais. Sempre consulte um profissional de saúde para diagnósticos e tratamentos.
         </footer>
     </div>
     <script src="chat.js"></script>
