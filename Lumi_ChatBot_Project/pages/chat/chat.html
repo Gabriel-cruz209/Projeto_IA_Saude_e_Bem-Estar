@@ -3,53 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat - Assistente de Saúde Inteligente</title>
-    <!-- Incluindo as variáveis globais -->
+    <title>Lumi - Sua Assistente de Saúde Inteligente</title>
+    <!-- Incluindo as variáveis globais se houver, mas o chat.css agora é autossuficiente -->
     <link rel="stylesheet" href="../../css/global.css">
     <link rel="stylesheet" href="chat.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="page-wrapper">
-        <header class="header-section">
-             <h1><span class="sparkle">✨</span> Assistente de Saúde Inteligente <span class="sparkle">✨</span></h1>
-             <p class="subtitle">Como posso ajudá-lo hoje?</p>
-        </header>
-
-        <main class="chat-card">
-            <div class="avatar-wrapper">
-                <div class="avatar-glow">
-                    <!-- Um placeholder que combina com um avatar de médico 3D. Em produção, substitua pelo arquivo local -->
-                    <img src="/Arquivos/Avatar_bot_realista.png" alt="Avatar do Assistente Médico" class="avatar-img">
-                </div>
-            </div>
-
-            <div class="input-wrapper">
-                <input type="text" id="user-input" placeholder="Digite sua dúvida sobre saúde..." autocomplete="off">
-                <button id="send-btn" aria-label="Enviar">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.01 21L23 12L2.01 3L2 10l15 2-15 2z"/>
-                    </svg>
+    <div class="app-container">
+        <!-- Sidebar lateral -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" id="new-chat-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    Nova Conversa
                 </button>
             </div>
+            <ul class="chat-history-list" id="chat-history-list">
+                <!-- Histórico será populado via JS -->
+            </ul>
+        </aside>
 
-            <div class="suggestions-container">
-                <p class="suggestions-title">Sugestões de perguntas:</p>
-                <button class="suggestion-btn">Quais são os sintomas de gripe?</button>
-                <button class="suggestion-btn">Como melhorar minha imunidade?</button>
-                <button class="suggestion-btn">Quando devo procurar um médico?</button>
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <header class="chat-header">
+                <div class="bot-identity">
+                    <!-- Botão Voltar -->
+                    <a href="../Home/home.html" class="back-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <span class="back-text">Voltar</span>
+                    </a>
+
+                    <!-- Botão Hambúrguer Mobile -->
+                    <button class="menu-toggle" id="menu-toggle" style="background:none; border:none; color:white; cursor:pointer; display:none; margin-right: 15px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                    
+                    <div class="header-avatar-container">
+                        <div class="avatar-border-glow" id="avatar-glow"></div>
+                        <img src="../../../Arquivos/Avatar_bot_realista.png" alt="Lumi Avatar" class="header-avatar" id="main-avatar">
+                    </div>
+                    <div class="bot-info">
+                        <h2>Lumi</h2>
+                        <div class="status-indicator">
+                            <span class="online-dot"></span>
+                            <span id="bot-status-text">Online</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Container de Mensagens -->
+            <div class="messages-container" id="messages-container">
+                <!-- Populado dinamicamente -->
             </div>
 
-            <div class="status-footer">
-                <div class="status-item"><span class="dot green"></span> Seguro e Privado</div>
-                <div class="status-item"><span class="dot blue"></span> IA Médica</div>
-                <div class="status-item"><span class="dot blue"></span> 24/7 Disponível</div>
-            </div>
+            <!-- Rodapé de Input -->
+            <footer class="input-area">
+                <div class="input-container">
+                    <textarea id="chat-textarea" placeholder="Envie uma mensagem para Lumi..." rows="1"></textarea>
+                    <button class="send-btn" id="send-btn" title="Enviar Mensagem">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </div>
+                <p class="disclaimer-mini" style="text-align: center; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.75rem;">
+                    Lumi pode cometer erros. Considere verificar informações médicas importantes.
+                </p>
+            </footer>
         </main>
-
-        <footer class="disclaimer">
-            Este assistente fornece informações gerais. Sempre consulte um profissional de saúde para diagnósticos e tratamentos.
-        </footer>
     </div>
+
+    <script src="../../services/ConversationStorageService.js"></script>
     <script src="chat.js"></script>
 </body>
 </html>
