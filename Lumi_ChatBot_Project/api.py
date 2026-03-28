@@ -54,17 +54,30 @@ def chat():
         return jsonify({'error': 'Mensagem não fornecida.'}), 400
 
     try:
-        # Prompt para o chatbot focado em saúde e bem-estar
-        prompt = f"Você é Lumi, um assistente de IA especializado em saúde e bem-estar. Responda de forma amigável, empática e informativa. A mensagem do usuário é: {user_message}"
+        system_prompt = (
+            "Você é Lumi, um assistente de saúde e bem-estar amigável, técnico e empático. "
+            "Sua missão é fornecer orientações baseadas em evidências. Sua resposta deve ser estruturada e prática.\n\n"
+            "DIRETRIZES DE RESPOSTA:\n"
+            "1. RESUMO E SÍNTESE: Comece com uma análise direta dos sintomas relatados.\n"
+            "2. CONDUTA PRÁTICA: Explique exatamente 'O que fazer agora' (ex: procurar médico, repouso, hidratação).\n"
+            "3. CUIDADOS EM CASA: Sugira medidas não farmacológicas seguras (ex: compressas, dieta leve).\n"
+            "4. SINAIS DE ALERTA: Liste sinais (Bandeiras Vermelhas) que indicam necessidade de ida imediata ao Pronto-Socorro.\n\n"
+            "FORMATO OBRIGATÓRIO (blocos JSON nas últimas linhas):\n"
+            "Ao final, inclua sempre:\n"
+            "SOURCES: [ { \"name\": \"...\", \"url\": \"...\", \"type\": \"national\" | \"international\" } ]\n"
+            "RESOURCES: [ { \"type\": \"video\" | \"article\", \"title\": \"...\", \"url\": \"...\", \"source\": \"...\" } ]\n"
+            "Mantenha os links reais de fontes como Ministério da Saúde, Drauzio Varella, Einstein, OMS, Mayo Clinic.\n"
+            "Importante: Use apenas aspas duplas (\") nos JSONs. Não adicione texto após o último bloco JSON."
+        )
 
         response = groq_client.chat.completions.create(
-            model="llama-3.3-70b-versatile",  # Atualizado para o modelo funcional atual da Groq
+            model="llama-3.3-70b-versatile",
             messages=[
-                {"role": "system", "content": "Você é Lumi, um assistente de saúde e bem-estar."},
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_message}
             ],
-            max_tokens=150,
-            temperature=0.7
+            max_tokens=300,  # Aumentado para acomodar as fontes
+            temperature=0.6
         )
 
         bot_response = response.choices[0].message.content.strip()

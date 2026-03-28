@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📔 Diário de Saúde - Lumi</title>
+    <link rel="stylesheet" href="../../styles/global.css">
+    <link rel="stylesheet" href="diary.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <img src="../../../Arquivos/Avatar_bot_realista.png" alt="Lumi" class="logo-avatar">
+                    <h1 class="appName">Lumi <span class="appVersion">v2.0</span></h1>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="../home/home.html" class="nav-item">🏠 Início</a>
+                <a href="../chat/chat.html" class="nav-item">💬 Chat</a>
+                <a href="diary.html" class="nav-item active">📔 Diário</a>
+                <a href="../perfil/perfil.html" class="nav-item">👤 Perfil</a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="logout-btn">Sair</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="page-header">
+                <div class="header-info">
+                   <h2>📔 Meu Diário de Saúde</h2>
+                   <p>Visualize padrões e acompanhe sua evolução diária.</p>
+                </div>
+                <button class="register-btn" id="open-entry-btn">+ Novo Registro</button>
+            </header>
+
+            <div class="diary-dashboard">
+                <!-- Insights Card -->
+                <div class="insights-container" id="insights-container">
+                    <h3>🔍 Insights da Lumi</h3>
+                    <div id="insights-list" class="insights-list"></div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Heatmap Card -->
+                    <div class="card heatmap-card">
+                        <h3>🗓️ Calendário de Saúde</h3>
+                        <div id="health-heatmap" class="heatmap-container"></div>
+                        <div class="heatmap-legend">
+                            <span>Baixo Risco</span>
+                            <div class="legend-scale">
+                                <div class="scale-box low"></div>
+                                <div class="scale-box moderate"></div>
+                                <div class="scale-box high"></div>
+                                <div class="scale-box urgent"></div>
+                            </div>
+                            <span>Alto Risco</span>
+                        </div>
+                    </div>
+
+                    <!-- Trend Chart Card (Placeholder visual em Vanilla JS) -->
+                    <div class="card charts-card">
+                        <h3>📈 Intensidade vs Tempo (Últimos 15 dias)</h3>
+                        <div id="trend-chart-container" class="chart-wrapper">
+                             <div class="chart-placeholder">Frequência e Intensidade</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Entries List -->
+                <div class="entries-list-section">
+                    <h3>📓 Registros Recentes</h3>
+                    <div id="entries-feed" class="entries-feed"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Container for dynamic entries -->
+    <div id="diary-modal-root"></div>
+
+    <!-- Scripts -->
+    <script src="../../services/DiaryService.js"></script>
+    <script src="../../components/DiaryEntryForm.js"></script>
+    <script src="diary.js"></script>
+</body>
+</html>

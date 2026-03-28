@@ -78,7 +78,27 @@ body {
     box-shadow: 0 4px 15px var(--accent-glow);
 }
 
-/* Hero Section */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nav-link:hover {
+    color: var(--accent-secondary);
+    transform: translateY(-1px);
+}
 .hero {
     min-height: 100vh;
     display: flex;
@@ -326,11 +346,11 @@ body {
     border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.05);
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .mockup-header {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
@@ -351,7 +371,7 @@ body {
 }
 
 .mock-bot {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     align-self: flex-start;
     display: flex;
     gap: 1rem;
@@ -377,22 +397,45 @@ body {
 
 /* Keyframes */
 @keyframes fadeInUp {
-    to { opacity: 1; transform: translateY(0); }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes floating {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 @keyframes rotateGlow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Responsividade Base */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .features-grid { grid-template-columns: 1fr; }
-    .navbar { padding: 1rem 5%; }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 1rem 5%;
+    }
 }

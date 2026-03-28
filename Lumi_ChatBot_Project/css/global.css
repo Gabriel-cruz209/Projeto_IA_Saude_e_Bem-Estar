@@ -5,11 +5,11 @@
     --primary-light: #93C5FD;
     --white: #FFFFFF;
     --athens-gray: #E5E7EB;
-    
+
     --text-dark: #1F2937;
     --text-light: #6B7280;
     --card-bg: #FFFFFF;
-    --shadow: 0 4px 15px rgba(0,0,0,0.08);
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 * {

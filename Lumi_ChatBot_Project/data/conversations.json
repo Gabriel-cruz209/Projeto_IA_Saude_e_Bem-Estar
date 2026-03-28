@@ -1,0 +1,195 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-28T14:06:24.064131Z",
+  "conversations": [
+    {
+      "id": "1774717513054",
+      "title": "Estou com gripe / resfria...",
+      "createdAt": "2026-03-28T17:05:13.054Z",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "role": "bot",
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "timestamp": "2026-03-28T17:05:13.056Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        },
+        {
+          "role": "user",
+          "content": "Estou com gripe / resfriado",
+          "timestamp": "2026-03-28T17:05:21.775Z"
+        },
+        {
+          "role": "bot",
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "timestamp": "2026-03-28T17:05:21.775Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        },
+        {
+          "role": "bot",
+          "content": "**RESUMO E SÍNTESE**: Com base nos sintomas relatados, como gripe/resfriado com dor de garganta, coriza, espirros e febre, e considerando o perfil de risco moderado, é importante adotar medidas para aliviar os sintomas e evitar complicações.\n\n**CONDUCTA PRÁTICA**: O que fazer agora:\n- Procure um médico para uma avaliação detalhada, especialmente se os sintomas se agravarem ou se você pertencer a grupos de risco (como idosos, crianças pequenas, pessoas com doenças crônicas ou imunossuprimidas).\n- Mantenha-se hidratado, consumindo muitos líquidos, como água, chá quente ou sopa, para ajudar a aliviar a dor de garganta e a febre.\n- Repouse o bastante, pois o descanso é crucial para a recuperação.\n\n**CUIDADOS EM CASA**: Medidas não farmacológicas seguras incluem:\n- Uso de compressas quentes ou frias na garganta para aliviar a dor.\n- Uso de um umidificador no quarto para ajudar a aliviar a coriza e a dor de garganta.\n- Consumo de alimentos leves e fáceis de digerir, como sopas, aveia ou",
+          "timestamp": "2026-03-28T17:05:57.311Z",
+          "riskLevel": "MODERADO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        },
+        {
+          "role": "bot",
+          "content": "**RESUMO E SÍNTESE:**\nCom base nos sintomas relatados, como gripe/resfriado com dor de garganta, coriza, espirros e febre, e considerando o perfil de risco moderado, é importante adotar medidas para aliviar os sintomas e evitar complicações.\n\n**CONDUTA PRÁTICA:**\nO que fazer agora:\n- Procure um médico para uma avaliação detalhada, especialmente se os sintomas persistirem ou piorarem.\n- Mantenha-se hidratado, consumindo bastante líquido, como água, chás e sopas.\n- Repouso é essencial para ajudar o corpo a se recuperar.\n\n**CUIDADOS EM CASA:**\nMedidas não farmacológicas seguras incluem:\n- Usar um umidificador no quarto para ajudar a aliviar a congestão nasal.\n- Fazer gargarejos com água morna salgada para aliviar a dor de garganta.\n- Manter-se aquecido, mas evitar superaquecimento, especialmente se houver febre.\n- Evitar o uso excessivo de medicamentos sem prescrição médica.\n\n**SINAIS DE ALERTA:**\nBandeiras Vermelhas que indicam necessidade de ida imediata ao Pronto-Socorro incluem:\n- D",
+          "timestamp": "2026-03-28T17:06:17.215Z",
+          "riskLevel": "MODERADO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        },
+        {
+          "role": "bot",
+          "content": "**RESUMO E SÍNTESE**: Você está apresentando sintomas de gripe ou resfriado com intensidade moderada a alta, acompanhados de dor de garganta, coriza, espirros e febre. Seu perfil de risco é considerado moderado.\n\n**CONDUTA PRÁTICA**: O que fazer agora:\n- Procure um médico para uma avaliação mais detalhada, especialmente se os sintomas piorarem ou se você tiver condições de saúde pré-existentes.\n- Mantenha-se hidratado, consumindo líquidos quentes como chá ou sopa para ajudar a aliviar a dor de garganta e a febre.\n- Repouso é essencial para ajudar o corpo a combater a infecção.\n\n**CUIDADOS EM CASA**: Medidas não farmacológicas seguras:\n- Use um humidificador para ajudar a aliviar a congestão nasal.\n- Faça gargarejos com água salgada morna para ajudar a aliviar a dor de garganta.\n- Mantenha uma dieta leve, rica em nutrientes, como sopas, frutas e vegetais.\n- Evite o tabaco e a exposição à fumaça de segunda mão.\n\n**SINAIS DE ALERTA**: Se você apresentar algum dos seguintes sintomas, procure atendimento médico",
+          "timestamp": "2026-03-28T17:06:23.248Z",
+          "riskLevel": "MODERADO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        }
+      ]
+    },
+    {
+      "createdAt": "2026-03-28T17:05:08.319Z",
+      "id": "1774717508319",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-28T17:05:08.323Z"
+        }
+      ],
+      "title": "Nova conversa"
+    },
+    {
+      "createdAt": "2026-03-27T12:55:44.151Z",
+      "id": "1774616144151",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-27T12:55:44.157Z"
+        },
+        {
+          "content": "Estou com dor de cabeça",
+          "role": "user",
+          "timestamp": "2026-03-27T12:55:48.887Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-27T12:55:48.888Z"
+        },
+        {
+          "content": "**RESUMO E SÍNTESE**: Com base nos sintomas relatados, incluindo dor de cabeça intensa, sensibilidade à luz, tontura, náusea, febre e rigidez no pescoço, é crucial considerar a possibilidade de uma condição grave, como meningite ou encefalite, que requer atenção médica imediata.\n\n**CONDUTA PRÁTICA**: Dada a classificação de **Risco URGENTE**, é essencial procurar atendimento médico imediato. Não tente automedicar-se ou esperar para ver se os sintomas melhoram por conta própria. Dirija-se ao pronto-socorro mais próximo ou ligue para os serviços de emergência para avaliação e tratamento adequados.\n\n**CUIDADOS EM CASA**: Enquanto aguarda o atendimento médico, mantenha-se hidratado, evite estímulos luminosos fortes e tente manter a calma. No entanto, é fundamental entender que esses cuidados em casa são apenas paliativos e não substituem a necessidade de avaliação médica imediata.\n\n**SINAIS DE ALERTA**: Alguns sinais de alerta que indicam a necessidade de ida imediata ao pronto-socorro incluem:\n- Agravamento da dor de cabeça ou alterações no",
+          "resources": [],
+          "riskLevel": "URGENTE",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-27T12:55:59.713Z"
+        }
+      ],
+      "title": "Estou com dor de cabeça"
+    },
+    {
+      "createdAt": "2026-03-27T01:29:29.611Z",
+      "id": "1774574969611",
+      "maxRisk": "ALTO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ],
+          "timestamp": "2026-03-27T01:29:29.615Z"
+        },
+        {
+          "content": "Estou com gripe / resfriado",
+          "role": "user",
+          "timestamp": "2026-03-27T01:30:29.036Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ],
+          "timestamp": "2026-03-27T01:30:29.037Z"
+        },
+        {
+          "content": "Com base na triagem, avalio seu caso como **Risco MODERADO**.\n\nTriagem realizada para: **Estou com gripe / resfriado**\n\n- Intensidade: **8/10**\n- Sintomas associados: Dor no corpo, Coriza, Dor de garganta, Espirros, Febre, Tosse seca\n- Evolução: Piora progressiva\n\nParece ser um quadro estável, mas continue monitorando e procure ajuda se os sintomas piorarem.",
+          "resources": [
+            {
+              "source": "Drauzio Varella",
+              "title": "Como controlar a febre",
+              "type": "site",
+              "url": "https://drauziovarella.uol.com.br"
+            }
+          ],
+          "riskLevel": "ALTO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ],
+          "timestamp": "2026-03-27T01:31:04.971Z"
+        }
+      ],
+      "title": "Estou com gripe / resfria..."
+    }
+  ]
+}

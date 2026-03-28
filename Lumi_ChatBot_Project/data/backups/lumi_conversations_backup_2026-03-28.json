@@ -1,0 +1,127 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-28T14:05:09.126378Z",
+  "conversations": [
+    {
+      "id": "1774717508319",
+      "title": "Nova conversa",
+      "createdAt": "2026-03-28T17:05:08.319Z",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "role": "bot",
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "timestamp": "2026-03-28T17:05:08.323Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        }
+      ]
+    },
+    {
+      "createdAt": "2026-03-27T12:55:44.151Z",
+      "id": "1774616144151",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-27T12:55:44.157Z"
+        },
+        {
+          "content": "Estou com dor de cabeça",
+          "role": "user",
+          "timestamp": "2026-03-27T12:55:48.887Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-27T12:55:48.888Z"
+        },
+        {
+          "content": "**RESUMO E SÍNTESE**: Com base nos sintomas relatados, incluindo dor de cabeça intensa, sensibilidade à luz, tontura, náusea, febre e rigidez no pescoço, é crucial considerar a possibilidade de uma condição grave, como meningite ou encefalite, que requer atenção médica imediata.\n\n**CONDUTA PRÁTICA**: Dada a classificação de **Risco URGENTE**, é essencial procurar atendimento médico imediato. Não tente automedicar-se ou esperar para ver se os sintomas melhoram por conta própria. Dirija-se ao pronto-socorro mais próximo ou ligue para os serviços de emergência para avaliação e tratamento adequados.\n\n**CUIDADOS EM CASA**: Enquanto aguarda o atendimento médico, mantenha-se hidratado, evite estímulos luminosos fortes e tente manter a calma. No entanto, é fundamental entender que esses cuidados em casa são apenas paliativos e não substituem a necessidade de avaliação médica imediata.\n\n**SINAIS DE ALERTA**: Alguns sinais de alerta que indicam a necessidade de ida imediata ao pronto-socorro incluem:\n- Agravamento da dor de cabeça ou alterações no",
+          "resources": [],
+          "riskLevel": "URGENTE",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-27T12:55:59.713Z"
+        }
+      ],
+      "title": "Estou com dor de cabeça"
+    },
+    {
+      "createdAt": "2026-03-27T01:29:29.611Z",
+      "id": "1774574969611",
+      "maxRisk": "ALTO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ],
+          "timestamp": "2026-03-27T01:29:29.615Z"
+        },
+        {
+          "content": "Estou com gripe / resfriado",
+          "role": "user",
+          "timestamp": "2026-03-27T01:30:29.036Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ],
+          "timestamp": "2026-03-27T01:30:29.037Z"
+        },
+        {
+          "content": "Com base na triagem, avalio seu caso como **Risco MODERADO**.\n\nTriagem realizada para: **Estou com gripe / resfriado**\n\n- Intensidade: **8/10**\n- Sintomas associados: Dor no corpo, Coriza, Dor de garganta, Espirros, Febre, Tosse seca\n- Evolução: Piora progressiva\n\nParece ser um quadro estável, mas continue monitorando e procure ajuda se os sintomas piorarem.",
+          "resources": [
+            {
+              "source": "Drauzio Varella",
+              "title": "Como controlar a febre",
+              "type": "site",
+              "url": "https://drauziovarella.uol.com.br"
+            }
+          ],
+          "riskLevel": "ALTO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?",
+            "O que devo comer?"
+          ],
+          "timestamp": "2026-03-27T01:31:04.971Z"
+        }
+      ],
+      "title": "Estou com gripe / resfria..."
+    }
+  ]
+}

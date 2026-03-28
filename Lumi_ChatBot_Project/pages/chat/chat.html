@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,19 +13,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="app-container">
         <!-- Sidebar lateral -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <button class="new-chat-btn" id="new-chat-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
                     Nova Conversa
                 </button>
             </div>
             <ul class="chat-history-list" id="chat-history-list">
                 <!-- Histórico será populado via JS -->
             </ul>
+            
+            <div class="sidebar-nav-global">
+                <a href="../home/home.html" class="nav-global-item">🏠 Início</a>
+                <a href="../diary/diary.html" class="nav-global-item">📔 Diário</a>
+            </div>
+
+            <!-- Aviso de Privacidade e Limpeza -->
+            <div class="privacy-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <div>
+                    Seus dados de saúde ficam salvos apenas aqui.
+                    <button class="clear-memory-btn" onclick="window.useUserProfile().clearProfile()">Apagar meu perfil</button>
+                </div>
+            </div>
         </aside>
 
         <!-- Conteúdo Principal -->
@@ -33,18 +53,29 @@
                 <div class="bot-identity">
                     <!-- Botão Voltar -->
                     <a href="../Home/home.html" class="back-button">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
                         <span class="back-text">Voltar</span>
                     </a>
 
                     <!-- Botão Hambúrguer Mobile -->
-                    <button class="menu-toggle" id="menu-toggle" style="background:none; border:none; color:white; cursor:pointer; display:none; margin-right: 15px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    <button class="menu-toggle" id="menu-toggle"
+                        style="background:none; border:none; color:white; cursor:pointer; display:none; margin-right: 15px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
                     </button>
-                    
+
                     <div class="header-avatar-container">
                         <div class="avatar-border-glow" id="avatar-glow"></div>
-                        <img src="../../../Arquivos/Avatar_bot_realista.png" alt="Lumi Avatar" class="header-avatar" id="main-avatar">
+                        <img src="../../../Arquivos/Avatar_bot_realista.png" alt="Lumi Avatar" class="header-avatar"
+                            id="main-avatar">
                     </div>
                     <div class="bot-info">
                         <h2>Lumi</h2>
@@ -66,17 +97,36 @@
                 <div class="input-container">
                     <textarea id="chat-textarea" placeholder="Envie uma mensagem para Lumi..." rows="1"></textarea>
                     <button class="send-btn" id="send-btn" title="Enviar Mensagem">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
                     </button>
                 </div>
-                <p class="disclaimer-mini" style="text-align: center; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.75rem;">
+                <p class="disclaimer-mini"
+                    style="text-align: center; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.75rem;">
                     Lumi pode cometer erros. Considere verificar informações médicas importantes.
                 </p>
             </footer>
         </main>
     </div>
 
+    <div id="notification-container"></div>
+
+    <script src="../../services/SpeechService.js"></script>
+    <script src="../../hooks/useAudio.js"></script>
+    <script src="../../components/AudioButton.js"></script>
+    <script src="../../services/UserProfileService.js"></script>
+    <script src="../../hooks/useUserProfile.js"></script>
+    <script src="../../components/ProfileMemoryNotice.js"></script>
+    <script src="../../services/TriageService.js"></script>
+    <script src="../../components/SymptomScaleSlider.js"></script>
+    <script src="../../components/SymptomChecklist.js"></script>
+    <script src="../../components/TriageFlow.js"></script>
+    <script src="../../components/SourceBadge.js"></script>
     <script src="../../services/ConversationStorageService.js"></script>
     <script src="chat.js"></script>
 </body>
+
 </html>
