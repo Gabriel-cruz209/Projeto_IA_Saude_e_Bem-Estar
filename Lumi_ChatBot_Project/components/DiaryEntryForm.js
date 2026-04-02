@@ -91,7 +91,7 @@ function DiaryEntryForm({ onSave, onCancel }) {
   modal.querySelector('.diary-cancel-btn').onclick = onCancel;
   modal.querySelector('.diary-save-btn').onclick = () => {
     if (!selectedMood) {
-        alert("Por favor, selecione como você se sente hoje.");
+        window.ModalService.alert({ title: 'Atenção', message: "Por favor, selecione como você se sente hoje." });
         return;
     }
 

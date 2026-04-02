@@ -103,11 +103,16 @@ function loadConversation(id) {
 
 function deleteConversation(id, e) {
     e.stopPropagation();
-    if (!confirm("Excluir esta conversa?")) return;
-    conversations = conversations.filter(c => c.id !== id);
-    currentConversationId = (currentConversationId === id) ? (conversations[0]?.id || null) : currentConversationId;
-    saveToStorage();
-    if (currentConversationId) loadConversation(currentConversationId); else createNewConversation();
+    window.ModalService.confirm({
+        title: 'Excluir Conversa',
+        message: 'Excluir esta conversa?'
+    }).then(confirmed => {
+        if (!confirmed) return;
+        conversations = conversations.filter(c => c.id !== id);
+        currentConversationId = (currentConversationId === id) ? (conversations[0]?.id || null) : currentConversationId;
+        saveToStorage();
+        if (currentConversationId) loadConversation(currentConversationId); else createNewConversation();
+    });
 }
 
 function saveToStorage() { window.storageService.saveAll(conversations); }

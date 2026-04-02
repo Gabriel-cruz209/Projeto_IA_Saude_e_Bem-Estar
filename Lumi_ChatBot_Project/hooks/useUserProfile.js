@@ -21,20 +21,22 @@ function useUserProfile() {
     }
   };
 
-  const detectAndSaveInfo = (text) => {
+  const detectAndSaveInfo = async (text) => {
     const detected = window.UserProfileService.detectNewInfo(text);
     
-    // Processar informações detectadas e perguntar antes de salvar
-    Object.entries(detected).forEach(([key, value]) => {
-        // Simulação de confirmação (em app real seria via chat)
-        if (confirm(`A Lumi detectou ${key === 'name' ? 'seu nome' : key}: ${value}. Posso salvar esta informação para lembrar no futuro?`)) {
+    for (const [key, value] of Object.entries(detected)) {
+        const confirmed = await window.ModalService.confirm({
+            title: 'Nova Informação Detectada',
+            message: `A Lumi detectou ${key === 'name' ? 'seu nome' : key}: ${value}. Posso salvar esta informação para lembrar no futuro?`
+        });
+        if (confirmed) {
             if (key === 'name') updateProfileField('name', value);
             if (key === 'age') updateProfileField('age', value);
             if (key === 'allergy') updateProfileField('allergies', value);
             if (key === 'condition') updateProfileField('conditions', value);
             if (key === 'medication') updateProfileField('medications', value);
         }
-    });
+    }
     
     return detected;
   };
