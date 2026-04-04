@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-04-04T14:33:15.195199Z",
+  "conversations": [
+    {
+      "createdAt": "2026-03-28T17:50:06.833Z",
+      "id": "1774720206833",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-28T17:50:06.837Z"
+        },
+        {
+          "content": "Estou com dor de cabeça",
+          "role": "user",
+          "timestamp": "2026-03-28T17:50:09.731Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-28T17:50:09.732Z"
+        },
+        {
+          "content": "Identifiquei um **Risco URGENTE**.\n\n📍 RESUMO DA TRIAGEM:\n- Queixa: **Estou com dor de cabeça**\n- Intensidade: **5/10**\n- Sintomas associados: Rigidez no pescoço, Febre\n\nProcure atendimento médico.",
+          "resources": [],
+          "riskLevel": "URGENTE",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-28T17:50:18.197Z"
+        },
+        {
+          "role": "user",
+          "content": "Como prevenir isso?",
+          "timestamp": "2026-04-04T17:33:14.377Z"
+        }
+      ],
+      "title": "Estou com dor de cabeça"
+    }
+  ]
+}

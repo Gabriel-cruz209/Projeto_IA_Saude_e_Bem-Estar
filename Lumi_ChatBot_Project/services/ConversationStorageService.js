@@ -5,7 +5,10 @@
 
 class ConversationStorageService {
     constructor() {
-        this.API_URL = 'http://127.0.0.1:5000/api/conversations';
+        const API_BASE = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost' 
+            ? 'http://127.0.0.1:5000' 
+            : 'https://api.producao.com';
+        this.API_URL = `${API_BASE}/api/conversations`;
         this.STORAGE_KEY = 'lumi_conversations_v1';
         this.STORAGE_STRATEGY = 'nextjs'; // Estratégia de API/Backend
         this.schemaVersion = "1.0";

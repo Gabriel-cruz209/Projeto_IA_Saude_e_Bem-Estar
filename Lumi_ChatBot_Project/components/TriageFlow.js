@@ -17,7 +17,7 @@ function TriageFlow({ mainSymptom, onComplete, onCancel }) {
     
     // Check if we should skip personal context (T6) if profile is complete
     if (step.id === 'personal_context') {
-      const profile = window.useUserProfile().getProfile();
+      const profile = window.UserProfileService.getProfile();
       if (profile.conditions.length > 0) {
         responses.personal_context = profile.conditions.join(', ');
         handleNext();

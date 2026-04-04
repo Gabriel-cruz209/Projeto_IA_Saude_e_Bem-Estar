@@ -1,17 +1,17 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-28T14:50:19.026158Z",
+  "lastUpdated": "2026-04-04T15:30:15.737180Z",
   "conversations": [
     {
-      "id": "1774720206833",
-      "title": "Estou com dor de cabeça",
-      "createdAt": "2026-03-28T17:50:06.833Z",
+      "id": "1775327369491",
+      "title": "Estou com febre",
+      "createdAt": "2026-04-04T18:29:29.491Z",
       "maxRisk": "BAIXO",
       "messages": [
         {
           "role": "bot",
           "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
-          "timestamp": "2026-03-28T17:50:06.837Z",
+          "timestamp": "2026-04-04T18:29:29.494Z",
           "riskLevel": "BAIXO",
           "resources": [],
           "suggestions": [
@@ -21,13 +21,13 @@
         },
         {
           "role": "user",
-          "content": "Estou com dor de cabeça",
-          "timestamp": "2026-03-28T17:50:09.731Z"
+          "content": "Estou com febre",
+          "timestamp": "2026-04-04T18:29:32.300Z"
         },
         {
           "role": "bot",
           "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
-          "timestamp": "2026-03-28T17:50:09.732Z",
+          "timestamp": "2026-04-04T18:29:32.300Z",
           "riskLevel": "BAIXO",
           "resources": [],
           "suggestions": [
@@ -37,9 +37,25 @@
         },
         {
           "role": "bot",
-          "content": "Identifiquei um **Risco URGENTE**.\n\n📍 RESUMO DA TRIAGEM:\n- Queixa: **Estou com dor de cabeça**\n- Intensidade: **5/10**\n- Sintomas associados: Rigidez no pescoço, Febre\n\nProcure atendimento médico.",
-          "timestamp": "2026-03-28T17:50:18.197Z",
-          "riskLevel": "URGENTE",
+          "content": "Obrigado por fornecer informações sobre seus sintomas. Vamos analisar a situação:\n\n### 1. Resumo e Síntese\nVocê está apresentando febre intensa (9), acompanhada de fraqueza, calafrios e suor excessivo, o que indica uma possível infecção ou outra condição subjacente. O risco moderado sugere que você deve monitorar sua situação de perto.\n\n### 2. Conduta Prática\n**O que fazer agora:**\n- Hidratação: Beba bastante água, chás ou isotônicos para manter-se hidratado.\n- Repouso: Descanse o máximo possível para ajudar seu corpo a se recuperar.\n- Antitérmicos: Se não houver contraindicações, você pode tomar paracetamol ou ibuprofeno para ajudar a reduzir a febre e aliviar o desconforto.\n\n### 3. Cuidados em Casa\n- Compressas: Aplique compressas mornas na testa ou nos pulsos para ajudar a regular a temperatura.\n- Banho morno: Um banho morno pode ajudar a aliviar a sensação de calor e os calafrios.\n- Alimentação leve: Consuma alimentos leves e de fácil digestão, como sopas e frutas, conforme sua tolerância.\n\n### 4. Sinais de Alerta\n**Bandeiras Vermelhas que indicam necessidade de ida imediata ao Pronto-Socorro:**\n- Febre persistente acima de 39°C (102°F) por mais de 3 dias.\n- Dificuldade para respirar ou dor no peito.\n- Confusão ou alteração do estado mental.\n- Sangramentos inexplicáveis ou erupções cutâneas severas.\n- Desidratação grave (pouca ou nenhuma urina, boca seca).\n\n```json\n{\n  \"SOURCES\": [\n    {\n      \"name\": \"Ministério da Saúde\",\n      \"url\": \"https://www.gov.br/saude/pt-br\",\n      \"type\": \"national\"\n    },\n    {\n      \"name\": \"Drauzio Varella\",\n      \"url\": \"https://www.drauzio.com.br\",\n      \"type\": \"national\"\n    },\n    {\n      \"name\": \"Mayo Clinic\",\n      \"url\": \"https://www.mayoclinic.org\",\n      \"type\": \"international\"\n    }\n  ],\n  \"RESOURCES\": [\n    {\n      \"type\": \"article\",\n      \"title\": \"Como lidar com a febre\",\n      \"url\": \"https://www.drauzio.com.br/artigo/como-lidar-com-a-febre/\",\n      \"source\": \"Drauzio Varella\"\n    },\n    {\n      \"type\": \"video\",\n      \"title\": \"Entendendo a Febre\",\n      \"url\": \"https://www.youtube.com/watch?v=example\",\n      \"source\": \"Mayo Clinic\"\n    }\n  ]\n}\n```",
+          "timestamp": "2026-04-04T18:29:54.786Z",
+          "riskLevel": "MODERADO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        },
+        {
+          "role": "user",
+          "content": "Quais os sintomas?",
+          "timestamp": "2026-04-04T18:30:05.019Z"
+        },
+        {
+          "role": "bot",
+          "content": "Vamos explorar os sintomas associados à febre:\n\n### 1. Sintomas Comuns de Febre\nA febre é uma resposta do corpo a infecções, inflamações ou outras condições. Os sintomas podem incluir:\n\n- **Aumento da temperatura corporal**: Geralmente acima de 37,5°C (99,5°F).\n- **Calafrios**: Sensação de frio, mesmo quando a temperatura está elevada.\n- **Suor excessivo**: Sudorese intensa como parte da resposta do corpo.\n- **Fraqueza e fadiga**: Sensação de cansaço e falta de energia.\n- **Dor de cabeça**: Pode acompanhar a febre.\n- **Dor muscular**: Desconforto ou dor nos músculos.\n- **Perda de apetite**: Dificuldade em se alimentar.\n- **Desidratação**: O aumento da temperatura pode levar à perda de fluidos.\n\n### 2. Sintomas Adicionais (dependendo da causa da febre)\n- **Tosse**: Se houver uma infecção respiratória.\n- **Dor abdominal**: Se a febre estiver associada a uma infecção gastrointestinal.\n- **Erupções cutâneas**: Podem indicar uma infecção viral ou reações alérgicas.\n\n### 3. Observações\nÉ importante observar se a febre vem acompanhada de outros sintomas que podem indicar uma condição mais grave, como os listados anteriormente.\n\nCaso esteja apresentando febre, é fundamental monitorar outros sintomas e considerar as orientações que forneci anteriormente.\n\n```json\n{\n  \"SOURCES\": [\n    {\n      \"name\": \"Ministério da Saúde\",\n      \"url\": \"https://www.gov.br/saude/pt-br\",\n      \"type\": \"national\"\n    },\n    {\n      \"name\": \"Drauzio Varella\",\n      \"url\": \"https://www.drauzio.com.br\",\n      \"type\": \"national\"\n    },\n    {\n      \"name\": \"Mayo Clinic\",\n      \"url\": \"https://www.mayoclinic.org\",\n      \"type\": \"international\"\n    }\n  ],\n  \"RESOURCES\": [\n    {\n      \"type\": \"article\",\n      \"title\": \"Sintomas da Febre\",\n      \"url\": \"https://www.drauzio.com.br/artigo/sintomas-da-febre/\",\n      \"source\": \"Drauzio Varella\"\n    },\n    {\n      \"type\": \"video\",\n      \"title\": \"Como a febre funciona no corpo\",\n      \"url\": \"https://www.youtube.com/watch?v=example\",\n      \"source\": \"Mayo Clinic\"\n    }\n  ]\n}\n```",
+          "timestamp": "2026-04-04T18:30:14.929Z",
+          "riskLevel": "BAIXO",
           "resources": [],
           "suggestions": [
             "Como prevenir isso?",
@@ -47,6 +63,293 @@
           ]
         }
       ]
+    },
+    {
+      "createdAt": "2026-04-04T17:59:31.046Z",
+      "id": "1775325571046",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:59:31.051Z"
+        },
+        {
+          "content": "Estou com febre",
+          "role": "user",
+          "timestamp": "2026-04-04T17:59:33.162Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:59:33.164Z"
+        },
+        {
+          "content": "Identifiquei um **Risco MODERADO**.\n\n📍 RESUMO DA TRIAGEM:\n- Queixa: **Estou com febre**\n- Intensidade: **9/10**\n- Sintomas associados: Dores musculares, Calafrios, Suor excessivo\n\nProcure atendimento médico.",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:59:48.452Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-04T17:59:52.159Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão: Erro ao processar a mensagem: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:59:54.020Z"
+        },
+        {
+          "content": "oi",
+          "role": "user",
+          "timestamp": "2026-04-04T18:00:07.627Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão: Erro ao processar a mensagem: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T18:00:09.697Z"
+        }
+      ],
+      "title": "Estou com febre"
+    },
+    {
+      "createdAt": "2026-04-04T17:52:07.048Z",
+      "id": "1775325127048",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:52:07.055Z"
+        },
+        {
+          "content": "Estou com febre",
+          "role": "user",
+          "timestamp": "2026-04-04T17:52:10.137Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:52:10.137Z"
+        },
+        {
+          "content": "Identifiquei um **Risco BAIXO**.\n\n📍 RESUMO DA TRIAGEM:\n- Queixa: **Estou com febre**\n- Intensidade: **6/10**\n- Sintomas associados: Calafrios, Fraqueza\n\nProcure atendimento médico.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:52:24.293Z"
+        },
+        {
+          "content": "Como prevenir isso?",
+          "role": "user",
+          "timestamp": "2026-04-04T17:52:26.384Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:52:28.151Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-04T17:52:29.617Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:52:31.388Z"
+        },
+        {
+          "content": "Como prevenir isso?",
+          "role": "user",
+          "timestamp": "2026-04-04T17:57:06.897Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:57:10.577Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-04T17:57:12.039Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:57:14.039Z"
+        }
+      ],
+      "title": "Estou com febre"
+    },
+    {
+      "createdAt": "2026-03-28T17:50:06.833Z",
+      "id": "1774720206833",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-28T17:50:06.837Z"
+        },
+        {
+          "content": "Estou com dor de cabeça",
+          "role": "user",
+          "timestamp": "2026-03-28T17:50:09.731Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-28T17:50:09.732Z"
+        },
+        {
+          "content": "Identifiquei um **Risco URGENTE**.\n\n📍 RESUMO DA TRIAGEM:\n- Queixa: **Estou com dor de cabeça**\n- Intensidade: **5/10**\n- Sintomas associados: Rigidez no pescoço, Febre\n\nProcure atendimento médico.",
+          "resources": [],
+          "riskLevel": "URGENTE",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-03-28T17:50:18.197Z"
+        },
+        {
+          "content": "Como prevenir isso?",
+          "role": "user",
+          "timestamp": "2026-04-04T17:33:14.377Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-04T17:33:22.664Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:33:27.102Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-04T17:33:31.064Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:33:33.012Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-04T17:57:17.431Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-04T17:57:19.620Z"
+        }
+      ],
+      "title": "Estou com dor de cabeça"
     }
   ]
 }

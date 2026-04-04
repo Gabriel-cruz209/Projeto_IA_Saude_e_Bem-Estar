@@ -1,12 +1,17 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from groq import Groq
+from openai import OpenAI
 from dotenv import load_dotenv
 import os
 import json
 import datetime
 import logging
 import shutil
+
+# Carregar variáveis de ambiente do arquivo .env
+# Tenta carregar do diretório atual ou do diretório pai
+if not load_dotenv():
+    load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 # Configurações de Persistência
 DATA_DIR = './data'
@@ -25,25 +30,16 @@ logging.basicConfig(filename=LOG_FILE, level=logging.ERROR,
 app = Flask(__name__)
 CORS(app)
 
-# Configurar chave da API Groq (use variáveis de ambiente para segurança)
-GROQ_API_KEY = os.getenv('GROQ_API_KEY', '')
-groq_client = Groq(api_key=GROQ_API_KEY)
+# Configurar chave da API OpenAI (use variáveis de ambiente para segurança)
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+if not OPENAI_API_KEY:
+    logging.error("Variável OPENAI_API_KEY não foi encontrada. Verifique seu arquivo .env.")
+    raise ValueError("ERRO CRÍTICO: OPENAI_API_KEY ausente.")
 
-# Simulação de usuários para login (em produção, use um banco de dados)
-users = {
-    'user@example.com': 'password123'
-}
+# Limpar aspas da chave se existirem
+OPENAI_API_KEY = OPENAI_API_KEY.strip("'\"")
 
-@app.route('/login', methods=['POST'])
-def login():
-    data = request.get_json()
-    email = data.get('email')
-    password = data.get('password')
-
-    if email in users and users[email] == password:
-        return jsonify({'success': True, 'message': 'Login realizado com sucesso!'})
-    else:
-        return jsonify({'success': False, 'message': 'Credenciais inválidas.'}), 401
+openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -70,13 +66,34 @@ def chat():
             "Importante: Use apenas aspas duplas (\") nos JSONs. Não adicione texto após o último bloco JSON."
         )
 
-        response = groq_client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_message}
-            ],
-            max_tokens=300,  # Aumentado para acomodar as fontes
+        # Recuperar histórico de mensagens (contexto)
+        messages_history = data.get('history', [])
+        
+        # Iniciar lista de mensagens com o prompt do sistema
+        messages = [{"role": "system", "content": system_prompt}]
+        
+        # Se houver histórico, formatar e adicionar (bot -> assistant)
+        if messages_history:
+            # Mapear roles para o formato OpenAI e limitar histórico
+            formatted_history = []
+            for msg in messages_history[-10:]:
+                role = "assistant" if msg.get('role') == 'bot' else msg.get('role')
+                formatted_history.append({"role": role, "content": msg.get('content')})
+            
+            # Verificar se a última mensagem do histórico já é a mensagem atual para evitar duplicidade
+            if formatted_history and formatted_history[-1]['content'] == user_message:
+                messages.extend(formatted_history)
+            else:
+                messages.extend(formatted_history)
+                messages.append({"role": "user", "content": user_message})
+        else:
+            # Caso não venha histórico, adiciona apenas a mensagem atual
+            messages.append({"role": "user", "content": user_message})
+
+        response = openai_client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=messages,
+            max_tokens=800,  # Limite aumentado para prevenir corte do payload JSON
             temperature=0.6
         )
 
@@ -84,7 +101,10 @@ def chat():
         return jsonify({'response': bot_response})
 
     except Exception as e:
-        return jsonify({'error': f'Erro ao processar a mensagem: {str(e)}'}), 500
+        error_msg = str(e)
+        logging.error(f"Erro ao processar a mensagem: {error_msg}")
+        print(f"ERRO NO BACKEND: {error_msg}")
+        return jsonify({'error': f'Erro ao processar a mensagem: {error_msg}'}), 500
 
 # Helper: Carregar conversas do arquivo
 def load_conversations_from_disk():
@@ -135,7 +155,6 @@ def save_conversations():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    load_dotenv()
     app.run(debug=True)
 
 

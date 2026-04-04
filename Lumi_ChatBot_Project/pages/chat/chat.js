@@ -3,7 +3,10 @@
  * Persistence, Multi-session, TTS, and Risky Analysis
  */
 
-const API_URL = 'http://127.0.0.1:5000/chat';
+const API_BASE = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost' 
+    ? 'http://127.0.0.1:5000' 
+    : 'https://api.producao.com';
+const API_URL = `${API_BASE}/chat`;
 const AVATAR_URL = "../../../Arquivos/Avatar_bot_realista.png";
 
 let conversations = [];
@@ -16,7 +19,12 @@ if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition((pos) => {
         userLocation = { lat: pos.coords.latitude, lng: pos.coords.longitude };
         console.log("Geolocalização habilitada:", userLocation);
-    }, (err) => console.log("Geolocalização não permitida"));
+    }, (err) => {
+        console.log("Geolocalização não permitida ou falhou.");
+        if (window.ProfileMemoryNotice) {
+            window.ProfileMemoryNotice("Localização não permitida. A busca por hospitais será genérica.", "info");
+        }
+    });
 }
 
 // Elementos da UI
@@ -167,8 +175,14 @@ function renderMessage(msg) {
         let jsonStr = text.substring(idx + marker.length).trim();
         const cleanText = text.substring(0, idx).trim();
         
-        // Remove markdown tags if the LLM wrapped it
-        jsonStr = jsonStr.replace(/^```json/i, '').replace(/^```/, '').replace(/```$/, '').trim();
+        // Remove markdown tags if the LLM wrapped it AND clean string output ensuring correct [] encapsulation
+        jsonStr = jsonStr.replace(/```json/gi, '').replace(/```/g, '').trim();
+        if (jsonStr.startsWith('[')) {
+            const endIdx = jsonStr.lastIndexOf(']');
+            if (endIdx !== -1) {
+                jsonStr = jsonStr.substring(0, endIdx + 1);
+            }
+        }
         return { jsonStr, cleanText };
     };
 
@@ -312,15 +326,27 @@ async function handleSend() {
     showTypingIndicator();
 
     try {
+        const history = currentChat.messages.map(m => ({
+            role: m.role,
+            content: m.content
+        }));
+
         const response = await fetch(API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message: text })
+            body: JSON.stringify({ 
+                message: text,
+                history: history 
+            })
         });
         const data = await response.json();
         hideTypingIndicator();
-        if (response.ok && data.response) appendBotMessage(data.response);
-        else appendBotMessage("Ops, houve um erro na conexão.");
+        if (response.ok && data.response) {
+            appendBotMessage(data.response);
+        } else {
+            const errorMsg = data.error || "Erro desconhecido na conexão.";
+            appendBotMessage(`Ops, houve um erro na conexão: ${errorMsg}`);
+        }
     } catch (error) {
         hideTypingIndicator();
         appendBotMessage("Não foi possível conectar ao servidor.");
@@ -396,6 +422,7 @@ async function finalizeTriage(results) {
     
     // Diagnóstico Geral: Obter risco real do serviço
     const risk = window.TriageService.calculateFinalRisk(results);
+    const currentChat = conversations.find(c => c.id === currentConversationId);
     
     let summary = `📍 RESUMO DA TRIAGEM:\n`;
     summary += `- Queixa: **${results.initial}**\n`;
@@ -404,6 +431,11 @@ async function finalizeTriage(results) {
     
     showTypingIndicator();
     
+    const history = currentChat ? currentChat.messages.map(m => ({
+        role: m.role,
+        content: m.content
+    })) : [];
+
     // Prompt estratégico para IA gerar conduta prática com os novos campos
     const prompt = `Realizei uma triagem. Sintomas: ${results.initial}, Intensidade: ${results.intensity}, Associados: ${results.associated || 'nenhum'}.
 Perfil de Risco do Sistema: **Risco ${risk}**.
@@ -418,7 +450,10 @@ No final, inclua os blocos RESOURCES e SOURCES obrigatórios.`;
         const response = await fetch(API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message: prompt })
+            body: JSON.stringify({ 
+                message: prompt,
+                history: history
+            })
         });
         const data = await response.json();
         hideTypingIndicator();
