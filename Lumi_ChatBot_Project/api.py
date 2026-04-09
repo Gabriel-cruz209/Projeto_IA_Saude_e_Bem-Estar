@@ -69,8 +69,8 @@ def chat():
         # Recuperar histórico de mensagens (contexto)
         messages_history = data.get('history', [])
         
-        # Iniciar lista de mensagens com o prompt do sistema
-        messages = [{"role": "system", "content": system_prompt}]
+        # Iniciar lista de mensagens com o prompt usando a role 'developer' em vez de 'system'
+        messages = [{"role": "developer", "content": system_prompt}]
         
         # Se houver histórico, formatar e adicionar (bot -> assistant)
         if messages_history:
@@ -90,11 +90,11 @@ def chat():
             # Caso não venha histórico, adiciona apenas a mensagem atual
             messages.append({"role": "user", "content": user_message})
 
+        # CHAMANDO A API DO OPENAI COM O HISTÓRICO COMPLETO
         response = openai_client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-5-mini", 
             messages=messages,
-            max_tokens=800,  # Limite aumentado para prevenir corte do payload JSON
-            temperature=0.6
+            max_completion_tokens=800  # Parâmetro correto para os modelos novos
         )
 
         bot_response = response.choices[0].message.content.strip()
@@ -156,5 +156,3 @@ def save_conversations():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
