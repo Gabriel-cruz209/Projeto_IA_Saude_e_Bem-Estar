@@ -31,7 +31,7 @@
             <ul class="chat-history-list" id="chat-history-list">
                 <!-- Histórico será populado via JS -->
             </ul>
-            
+
             <div class="sidebar-nav-global">
                 <a href="../home/home.html" class="nav-global-item">🏠 Início</a>
                 <a href="../diary/diary.html" class="nav-global-item">📔 Diário</a>
@@ -39,10 +39,13 @@
 
             <!-- Aviso de Privacidade e Limpeza -->
             <div class="privacy-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
                 <div>
                     Seus dados de saúde ficam salvos apenas aqui.
-                    <button class="clear-memory-btn" onclick="window.useUserProfile().clearProfile()">Apagar meu perfil</button>
+                    <button class="clear-memory-btn" onclick="window.useUserProfile().clearProfile()">Apagar meu
+                        perfil</button>
                 </div>
             </div>
         </aside>
@@ -96,6 +99,17 @@
             <footer class="input-area">
                 <div class="input-container">
                     <textarea id="chat-textarea" placeholder="Envie uma mensagem para Lumi..." rows="1"></textarea>
+
+                    <button id="mic-btn" class="mic-btn" title="Falar por voz">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                            <line x1="12" y1="19" x2="12" y2="23"></line>
+                            <line x1="8" y1="23" x2="16" y2="23"></line>
+                        </svg>
+                    </button>
+
                     <button class="send-btn" id="send-btn" title="Enviar Mensagem">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

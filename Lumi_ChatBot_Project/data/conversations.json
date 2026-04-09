@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-09T14:56:13.355229Z",
+  "lastUpdated": "2026-04-09T16:21:18.097596Z",
   "conversations": [
     {
-      "createdAt": "2026-04-09T17:49:26.941Z",
-      "id": "1775756966941",
+      "createdAt": "2026-04-09T18:42:51.400Z",
+      "id": "1775760171400",
       "maxRisk": "BAIXO",
       "messages": [
         {
@@ -16,12 +16,12 @@
             "Como prevenir isso?",
             "Quais os sintomas?"
           ],
-          "timestamp": "2026-04-09T17:49:26.945Z"
+          "timestamp": "2026-04-09T18:42:51.405Z"
         },
         {
-          "content": "Estou com gripe / resfriado",
+          "content": "Estou com dor de estômago",
           "role": "user",
-          "timestamp": "2026-04-09T17:49:31.723Z"
+          "timestamp": "2026-04-09T18:42:55.940Z"
         },
         {
           "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
@@ -32,87 +32,10 @@
             "Como prevenir isso?",
             "Quais os sintomas?"
           ],
-          "timestamp": "2026-04-09T17:49:31.724Z"
+          "timestamp": "2026-04-09T18:42:55.941Z"
         },
         {
-          "content": "Como prevenir isso?",
-          "role": "user",
-          "timestamp": "2026-04-09T17:49:39.142Z"
-        },
-        {
-          "content": "Vamos lá..",
-          "role": "user",
-          "timestamp": "2026-04-09T17:50:07.598Z"
-        },
-        {
-          "role": "user",
-          "content": "oi tio",
-          "timestamp": "2026-04-09T17:53:05.122Z"
-        },
-        {
-          "role": "bot",
-          "content": "Parece que houve um mal-entendido. Vamos focar nos sintomas que você está apresentando. \n\n### RESUMO E SÍNTESE\nO termo gripe ou resfriado geralmente se refere a infecções virais que afetam o sistema respiratório. Os sintomas podem incluir coriza, dor de garganta, tosse, febre, dores no corpo e cansaço. \n\n### CONDUTA PRÁTICA\n**O que fazer agora**:  Repouse o máximo que puder e mantenha-se hidratado. Caso os sintomas estejam causando desconforto significativo, você pode considerar o uso de medicamentos antivirais ou analgésicos, se for recomendado por um profissional de saúde. Se os sintomas persistirem ou piorarem, busque um médico.\n\n### CUIDADOS EM CASA\n- Beba bastante líquidos como água, chás e sopas.\n- Use um umidificador de ar no ambiente, se possível.\n- Faça gargarejos com água morna e sal para aliviar a dor de garganta.\n- Coma alimentos leves, como frutas, vegetais e caldos nutritivos.\n- Descanse o suficiente para ajudar seu corpo na recuperação.\n\n### SINAIS DE ALERTA\n**Bandeiras Vermelhas** que indicam a necessidade de ida imediata ao Pronto-Socorro:\n- Dificuldade em respirar ou respiração acelerada.\n- Dor no peito ou pressão sentida.\n- Confusão mental ou incapacidade de despertar.\n- Febre alta persistente (acima de 39°C) que não melhora com medicamentos.\n- Sintomas que pioram rapidamente.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/campanha-de-vacinacao-contra-a-gripe-comecou-nesta-segunda-feira\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/gripe-e-resfriado/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/diseases-conditions/cold/symptoms-causes/syc-20377426\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Gripe e Resfriado: Entenda as Diferenças\", \"url\": \"https://www.drauziovarella.uol.com.br/artigos/gripe-e-resfriado-entenda-as-diferencas/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
-          "timestamp": "2026-04-09T17:53:18.252Z",
-          "riskLevel": "BAIXO",
-          "resources": [],
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ]
-        },
-        {
-          "role": "user",
-          "content": "estou com gripe",
-          "timestamp": "2026-04-09T17:54:20.485Z"
-        },
-        {
-          "role": "bot",
-          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
-          "timestamp": "2026-04-09T17:54:20.488Z",
-          "riskLevel": "BAIXO",
-          "resources": [],
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ]
-        },
-        {
-          "role": "bot",
-          "content": "Obrigado por compartilhar os detalhes dos seus sintomas. Vamos às orientações:\n\n### RESUMO E SÍNTESE\nCom base nos sintomas que você descreveu — gripe, febre, espirros, dor de garganta e dor no corpo — e considerando um risco moderado, é importante tomar medidas para aliviar os sintomas e monitorar seu estado.\n\n### CONDUTA PRÁTICA\n**O que fazer agora**:\n1. **Repouso**: Descansar é fundamental para que seu corpo possa combater a infecção.\n2. **Hidratação**: Beba bastante água, chás quentes e caldos nutritivos para evitar desidratação.\n3. **Medicamentos**: Se não houver contraindicações, considere o uso de antitérmicos, como paracetamol ou ibuprofeno, para aliviar a febre e a dor. Sempre consulte um médico ou farmacêutico antes de usar qualquer medicamento.\n\n### CUIDADOS EM CASA\n- **Compressas mornas**: Aplique compressas mornas na testa para ajudar a reduzir a febre.\n- **Gargarejos**: Faça gargarejos com água morna e sal para aliviar a dor de garganta.\n- **Ambiente ventilado**: Mantenha o ambiente arejado, mas evite correntes de vento.\n- **Alimentação leve**: Prefira alimentos leves, como sopas, frutas e vegetais.\n\n### SINAIS DE ALERTA\n**Bandeiras Vermelhas** que indicam a necessidade de ida imediata ao Pronto-Socorro:\n- Dificuldade em respirar ou respiração acelerada.\n- Dor no peito ou pressão sentida.\n- Confusão mental ou incapacidade de despertar.\n- Febre persistente acima de 39°C que não melhora com medicamentos.\n- Sintomas que pioram rapidamente ou não melhoram após 3 a 5 dias.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/campanha-de-vacinacao-contra-a-gripe-comecou-nesta-segunda-feira\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/gripe-e-resfriado/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/diseases-conditions/cold/symptoms-causes/syc-20377426\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Gripe e Resfriado: Entenda as Diferenças\", \"url\": \"https://www.drauziovarella.uol.com.br/artigos/gripe-e-resfriado-entenda-as-diferencas/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
-          "timestamp": "2026-04-09T17:55:24.389Z",
-          "riskLevel": "MODERADO",
-          "resources": [],
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ]
-        },
-        {
-          "role": "user",
-          "content": "oque faço se me cortar com uma faca",
-          "timestamp": "2026-04-09T17:56:02.219Z"
-        },
-        {
-          "role": "bot",
-          "content": "### RESUMO E SÍNTESE\nUm corte feito com uma faca pode variar em gravidade. A primeira coisa a considerar é a profundidade e extensão do corte, bem como se está sangrando muito ou se há sinais de infecção.\n\n### CONDUTA PRÁTICA\n**O que fazer agora**:\n1. **Lave as mãos**: Antes de tocar no corte, lave bem as mãos com água e sabão.\n2. **Parar o sangramento**: Aplique pressão suave sobre o corte com um pano limpo ou gaze até que o sangramento diminua.\n3. **Limpeza**: Após o sangramento ter parado, lave o corte gentilmente com água e sabão neutro. Evite usar álcool ou produtos irritantes diretamente no ferimento.\n4. **Cobrir o ferimento**: Aplique um antisséptico (se disponível) e cubra o corte com um curativo ou gaze estéril.\n\n### CUIDADOS EM CASA\n- Mantenha o corte limpo e seco. Troque o curativo diariamente ou se ele ficar molhado ou sujo.\n- Evite tocar no corte com as mãos sujas para prevenir infecções.\n- Utilize analgésicos como paracetamol ou ibuprofeno se houver dor.\n\n### SINAIS DE ALERTA\n**Bandeiras Vermelhas** que indicam a necessidade de ida imediata ao Pronto-Socorro:\n- Corte profundo que parece exigir pontos.\n- Sangramento intenso que não para após 10 minutos de pressão.\n- Sinais de infecção, como vermelhidão, inchaço, calor, pus ou febre.\n- Presença de objetos estranhos embutidos no corte.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/cuidado-com-os-acidentes-domesticos\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/artigos/cortes-e-feridas-como-cuidar/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/first-aid/cuts-and-scrapes/basics/art-20056664\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Como Tratar Cortes e Feridas\", \"url\": \"https://www.drauziovarella.uol.com.br/artigos/cortes-e-feridas-como-cuidar/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
-          "timestamp": "2026-04-09T17:56:12.529Z",
-          "riskLevel": "BAIXO",
-          "resources": [],
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ]
-        }
-      ],
-      "title": "Estou com gripe / resfria..."
-    },
-    {
-      "createdAt": "2026-04-09T17:46:07.375Z",
-      "id": "1775756767375",
-      "maxRisk": "BAIXO",
-      "messages": [
-        {
-          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "content": "Hemorróidas podem causar uma variedade de sintomas, que variam em intensidade. Aqui está uma análise dos sintomas mais comuns:\n\n### RESUMO E SÍNTESE\nOs sintomas das hemorróidas incluem desconforto e dor na região anal, sangramento e alterações nas evacuações. A identificação precoce é importante para o manejo adequado.\n\n### SINAIS E SINTOMAS COMUNS\n1. **Dor e Desconforto**: Sensação de dor ou desconforto na região anal, especialmente ao sentar ou durante as evacuações.\n2. **Sangramento**: Sangue vermelho vivo pode aparecer nas fezes, no papel toalha após a evacuação ou no vaso sanitário.\n3. **Inchaço**: Inchaço ou protuberâncias na área anal, que podem ser sensíveis ao toque.\n4. **Coceira e Irritação**: Sensação de coceira ou irritação na região anal.\n5. **Muco**: Secreção mucosa pode ser notada, especialmente se houver inflamação.\n\n### CONDUTA PRÁTICA\nSe você estiver experimentando sintomas de hemorróidas, é recomendado:\n\n1. **Consulte um Médico**: Para um diagnóstico preciso e orientação sobre o tratamento mais adequado.\n2. **Mantenha a Higiene**: Limpe a área anal com cuidado após evacuações para evitar irritação.\n3. **Evite Esforço**: Não force durante a evacuação, pois isso pode piorar os sintomas.\n\n### CUIDADOS EM CASA\n- **Banhos de Assento**: Banhos mornos podem ajudar a aliviar a dor e a irritação.\n- **Alimentação Rica em Fibras**: Consuma alimentos ricos em fibras para facilitar as evacuações e reduzir a constipação.\n- **Hidratação**: Beba bastante água para manter o corpo hidratado e ajudar na digestão.\n\n### SINAIS DE ALERTA\n**Bandeiras Vermelhas** que indicam a necessidade de ida imediata ao Pronto-Socorro:\n- Sangramento intenso ou persistente.\n- Dor insuportável que não melhora com analgésicos.\n- Alterações nos hábitos intestinais que persistem (diarreia ou constipação severa).\n- Sintomas que não melhoram após tratamento em casa por dois dias.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/hemorroidas-sintomas-e-prevencao\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/hemorroidas/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/diseases-conditions/hemorrhoids/symptoms-causes/syc-20341729\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Hemorróidas: Sintomas, Causas e Tratamentos\", \"url\": \"https://www.drauziovarella.uol.com.br/doencas-e-sintomas/hemorroidas/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
           "resources": [],
           "riskLevel": "BAIXO",
           "role": "bot",
@@ -120,205 +43,10 @@
             "Como prevenir isso?",
             "Quais os sintomas?"
           ],
-          "timestamp": "2026-04-09T17:46:07.378Z"
+          "timestamp": "2026-04-09T18:42:56.612Z"
         },
         {
-          "content": "Como prevenir isso?",
-          "role": "user",
-          "timestamp": "2026-04-09T17:46:08.545Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T17:46:22.515Z"
-        },
-        {
-          "content": "Quais os sintomas?",
-          "role": "user",
-          "timestamp": "2026-04-09T17:46:26.422Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T17:46:38.888Z"
-        },
-        {
-          "content": "oi puta",
-          "role": "user",
-          "timestamp": "2026-04-09T17:49:07.243Z"
-        },
-        {
-          "content": "oi",
-          "role": "user",
-          "timestamp": "2026-04-09T17:49:17.766Z"
-        }
-      ],
-      "title": "Como prevenir isso?"
-    },
-    {
-      "createdAt": "2026-04-09T17:37:56.611Z",
-      "id": "1775756276611",
-      "maxRisk": "BAIXO",
-      "messages": [
-        {
-          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T17:37:56.617Z"
-        },
-        {
-          "content": "olá lumi!",
-          "role": "user",
-          "timestamp": "2026-04-09T17:38:03.704Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T17:38:17.754Z"
-        },
-        {
-          "content": "Oi",
-          "role": "user",
-          "timestamp": "2026-04-09T17:44:48.583Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T17:45:02.430Z"
-        }
-      ],
-      "title": "olá lumi!"
-    },
-    {
-      "createdAt": "2026-04-09T17:30:45.097Z",
-      "id": "1775755845097",
-      "maxRisk": "BAIXO",
-      "messages": [
-        {
-          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T17:30:45.101Z"
-        },
-        {
-          "content": "Olá",
-          "role": "user",
-          "timestamp": "2026-04-09T17:30:49.214Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T17:31:03.265Z"
-        },
-        {
-          "content": "Como prevenir isso?",
-          "role": "user",
-          "timestamp": "2026-04-09T17:31:34.451Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T17:31:51.892Z"
-        },
-        {
-          "content": "hALLO!",
-          "role": "user",
-          "timestamp": "2026-04-09T17:34:06.253Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T17:34:23.655Z"
-        }
-      ],
-      "title": "Olá"
-    },
-    {
-      "createdAt": "2026-04-04T18:29:29.491Z",
-      "id": "1775327369491",
-      "maxRisk": "BAIXO",
-      "messages": [
-        {
-          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T18:29:29.494Z"
-        },
-        {
-          "content": "Estou com febre",
-          "role": "user",
-          "timestamp": "2026-04-04T18:29:32.300Z"
-        },
-        {
-          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T18:29:32.300Z"
-        },
-        {
-          "content": "Obrigado por fornecer informações sobre seus sintomas. Vamos analisar a situação:\n\n### 1. Resumo e Síntese\nVocê está apresentando febre intensa (9), acompanhada de fraqueza, calafrios e suor excessivo, o que indica uma possível infecção ou outra condição subjacente. O risco moderado sugere que você deve monitorar sua situação de perto.\n\n### 2. Conduta Prática\n**O que fazer agora:**\n- Hidratação: Beba bastante água, chás ou isotônicos para manter-se hidratado.\n- Repouso: Descanse o máximo possível para ajudar seu corpo a se recuperar.\n- Antitérmicos: Se não houver contraindicações, você pode tomar paracetamol ou ibuprofeno para ajudar a reduzir a febre e aliviar o desconforto.\n\n### 3. Cuidados em Casa\n- Compressas: Aplique compressas mornas na testa ou nos pulsos para ajudar a regular a temperatura.\n- Banho morno: Um banho morno pode ajudar a aliviar a sensação de calor e os calafrios.\n- Alimentação leve: Consuma alimentos leves e de fácil digestão, como sopas e frutas, conforme sua tolerância.\n\n### 4. Sinais de Alerta\n**Bandeiras Vermelhas que indicam necessidade de ida imediata ao Pronto-Socorro:**\n- Febre persistente acima de 39°C (102°F) por mais de 3 dias.\n- Dificuldade para respirar ou dor no peito.\n- Confusão ou alteração do estado mental.\n- Sangramentos inexplicáveis ou erupções cutâneas severas.\n- Desidratação grave (pouca ou nenhuma urina, boca seca).\n\n```json\n{\n  \"SOURCES\": [\n    {\n      \"name\": \"Ministério da Saúde\",\n      \"url\": \"https://www.gov.br/saude/pt-br\",\n      \"type\": \"national\"\n    },\n    {\n      \"name\": \"Drauzio Varella\",\n      \"url\": \"https://www.drauzio.com.br\",\n      \"type\": \"national\"\n    },\n    {\n      \"name\": \"Mayo Clinic\",\n      \"url\": \"https://www.mayoclinic.org\",\n      \"type\": \"international\"\n    }\n  ],\n  \"RESOURCES\": [\n    {\n      \"type\": \"article\",\n      \"title\": \"Como lidar com a febre\",\n      \"url\": \"https://www.drauzio.com.br/artigo/como-lidar-com-a-febre/\",\n      \"source\": \"Drauzio Varella\"\n    },\n    {\n      \"type\": \"video\",\n      \"title\": \"Entendendo a Febre\",\n      \"url\": \"https://www.youtube.com/watch?v=example\",\n      \"source\": \"Mayo Clinic\"\n    }\n  ]\n}\n```",
+          "content": "Entendi que você apresenta sintomas preocupantes e em alta intensidade. Aqui está uma análise completa e orientações passo a passo para a sua situação.\n\n### RESUMO E SÍNTESE\nVocê está relatando dor intensa de estômago (intensidade 10) associada a coceira, febre, tosse, perda de apetite e fraqueza. Esses sintomas são indicativos de uma condição que pode exigir avaliação médica urgente.\n\n### CONDUTA PRÁTICA IMEDIATA\n1. **Procure atendimento médico imediatamente**: Dada a intensidade da dor e a presença de outros sintomas, é fundamental buscar atendimento de emergência. Eles podem avaliar sua condição, realizar exames e determinar o tratamento adequado.\n2. **Evite tomar medicamentos sem orientação**: Não use analgésicos ou antiácidos antes de ser avaliado por um profissional de saúde, pois isso pode mascarar sintomas importantes.\n\n### CUIDADOS EM CASA\nEnquanto aguarda atendimento médico, aqui estão algumas orientações que podem ajudar a aliviar sintomas leves, mas lembre-se de que a prioridade é a busca por atendimento:\n\n- **Repouso**: Tente descansar o máximo possível.\n- **Hidratação**: Beba líquidos claros (água, chá, caldos) para se manter hidratado, especialmente se estiver com febre e perda de apetite.\n- **Dieta leve**: Quando começar a se sentir melhor, opte por alimentos leves para não irritar ainda mais o estômago (ex: arroz, banana, torradas).\n- **Compressas mornas**: Aplicar compressas mornas na região abdominal pode ajudar a aliviar a dor.\n\n### SINAIS DE ALERTA\n**Bandeiras Vermelhas que requerem ida imediata ao Pronto-Socorro**:\n- Dor abdominal intensa e persistente.\n- Sangramento visível (no vômito ou nas fezes).\n- Febre alta (acima de 39°C).\n- Desidratação (sintomas de boca seca, diminuição da urina).\n- Confusão ou desorientação.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/sintomas-abdominais-o-que-fazer\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/symptoms/abdominal-pain/basics/causes/sym-20050893\", \"type\": \"international\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/dor-abdominal/\", \"type\": \"national\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Dor Abdominal: Causas e Sintomas\", \"url\": \"https://www.drauziovarella.uol.com.br/doencas-e-sintomas/dor-abdominal/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
           "resources": [],
           "riskLevel": "MODERADO",
           "role": "bot",
@@ -326,15 +54,15 @@
             "Como prevenir isso?",
             "Quais os sintomas?"
           ],
-          "timestamp": "2026-04-04T18:29:54.786Z"
+          "timestamp": "2026-04-09T18:43:33.758Z"
         },
         {
-          "content": "Quais os sintomas?",
+          "content": "Olá Lumi",
           "role": "user",
-          "timestamp": "2026-04-04T18:30:05.019Z"
+          "timestamp": "2026-04-09T18:47:50.465Z"
         },
         {
-          "content": "Vamos explorar os sintomas associados à febre:\n\n### 1. Sintomas Comuns de Febre\nA febre é uma resposta do corpo a infecções, inflamações ou outras condições. Os sintomas podem incluir:\n\n- **Aumento da temperatura corporal**: Geralmente acima de 37,5°C (99,5°F).\n- **Calafrios**: Sensação de frio, mesmo quando a temperatura está elevada.\n- **Suor excessivo**: Sudorese intensa como parte da resposta do corpo.\n- **Fraqueza e fadiga**: Sensação de cansaço e falta de energia.\n- **Dor de cabeça**: Pode acompanhar a febre.\n- **Dor muscular**: Desconforto ou dor nos músculos.\n- **Perda de apetite**: Dificuldade em se alimentar.\n- **Desidratação**: O aumento da temperatura pode levar à perda de fluidos.\n\n### 2. Sintomas Adicionais (dependendo da causa da febre)\n- **Tosse**: Se houver uma infecção respiratória.\n- **Dor abdominal**: Se a febre estiver associada a uma infecção gastrointestinal.\n- **Erupções cutâneas**: Podem indicar uma infecção viral ou reações alérgicas.\n\n### 3. Observações\nÉ importante observar se a febre vem acompanhada de outros sintomas que podem indicar uma condição mais grave, como os listados anteriormente.\n\nCaso esteja apresentando febre, é fundamental monitorar outros sintomas e considerar as orientações que forneci anteriormente.\n\n```json\n{\n  \"SOURCES\": [\n    {\n      \"name\": \"Ministério da Saúde\",\n      \"url\": \"https://www.gov.br/saude/pt-br\",\n      \"type\": \"national\"\n    },\n    {\n      \"name\": \"Drauzio Varella\",\n      \"url\": \"https://www.drauzio.com.br\",\n      \"type\": \"national\"\n    },\n    {\n      \"name\": \"Mayo Clinic\",\n      \"url\": \"https://www.mayoclinic.org\",\n      \"type\": \"international\"\n    }\n  ],\n  \"RESOURCES\": [\n    {\n      \"type\": \"article\",\n      \"title\": \"Sintomas da Febre\",\n      \"url\": \"https://www.drauzio.com.br/artigo/sintomas-da-febre/\",\n      \"source\": \"Drauzio Varella\"\n    },\n    {\n      \"type\": \"video\",\n      \"title\": \"Como a febre funciona no corpo\",\n      \"url\": \"https://www.youtube.com/watch?v=example\",\n      \"source\": \"Mayo Clinic\"\n    }\n  ]\n}\n```",
+          "content": "Olá! Como posso ajudar você hoje? Se você está se sentindo mal ou se tiver alguma dúvida sobre saúde e bem-estar, fique à vontade para me contar.",
           "resources": [],
           "riskLevel": "BAIXO",
           "role": "bot",
@@ -342,20 +70,15 @@
             "Como prevenir isso?",
             "Quais os sintomas?"
           ],
-          "timestamp": "2026-04-04T18:30:14.929Z"
+          "timestamp": "2026-04-09T18:47:53.187Z"
         },
         {
-          "content": "Olá..",
+          "content": "Estou com dor nas costas",
           "role": "user",
-          "timestamp": "2026-04-09T17:28:00.592Z"
+          "timestamp": "2026-04-09T18:48:46.615Z"
         },
         {
-          "content": "Vai responder não... PUt...?",
-          "role": "user",
-          "timestamp": "2026-04-09T17:28:18.202Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
           "resources": [],
           "riskLevel": "BAIXO",
           "role": "bot",
@@ -363,15 +86,10 @@
             "Como prevenir isso?",
             "Quais os sintomas?"
           ],
-          "timestamp": "2026-04-09T17:28:29.922Z"
+          "timestamp": "2026-04-09T18:48:46.618Z"
         },
         {
-          "content": "Quais os sintomas?",
-          "role": "user",
-          "timestamp": "2026-04-09T17:28:34.885Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
+          "content": "Compreendido! Vamos oferecer orientações práticas para a sua dor nas costas e fraqueza.\n\n### RESUMO E SÍNTESE\nVocê está com dor nas costas de intensidade 4, acompanhada de sensação de fraqueza, mas apresenta um risco geral baixo. Embora a dor não seja severa, é importante cuidar de si e monitorar os sintomas.\n\n### 1. CONDUTA PRÁTICA IMEDIATA\n- **Descanso Moderado**: Evite atividades físicas intensas que possam exacerbar a dor. No entanto, não permaneça em repouso absoluto; movimentos leves podem ajudar a evitar rigidez.\n- **Monitoramento**: Observe como a dor evolui e qualquer agravamento dos sintomas.\n\n### 2. CUIDADOS EM CASA\n- **Compressas Quentes ou Frias**: Use compressas quentes na região das costas para relaxar os músculos ou compressas frias para reduzir a inflamação, conforme o que você sentir mais alívio.\n- **Exercícios Leves**: Movimentos suaves, como alongamentos e caminhadas curtas, podem ajudar a manter a mobilidade e reduzir a rigidez.\n- **Cuidado Postural**: Atente-se à postura ao sentar, levantar ou deitar para evitar sobrecarga na coluna.\n- **Hidratação e Alimentação Balanceada**: A ingestão de líquidos e alimentos saudáveis pode ajudar na recuperação geral.\n\n### 3. SINAIS DE ALERTA\n**Bandeiras Vermelhas que indicam a necessidade de ida imediata ao Pronto-Socorro**:\n- Dor intensa ou que piora rapidamente.\n- Perda de controle da bexiga ou intestinos.\n- Dormência ou fraqueza nas pernas que se intensifica.\n- Febre alta acompanhada de dor nas costas.\n- Dor surgida após um trauma significativo.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/dor-nas-costas-como-tratar-e-prevenir\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/dor-nas-costas/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/diseases-conditions/back-pain/symptoms-causes/syc-20308534\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Dor nas Costas: Sintomas, Causas e Tratamentos\", \"url\": \"https://www.drauziovarella.uol.com.br/doencas-e-sintomas/dor-nas-costas/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
           "resources": [],
           "riskLevel": "BAIXO",
           "role": "bot",
@@ -379,26 +97,10 @@
             "Como prevenir isso?",
             "Quais os sintomas?"
           ],
-          "timestamp": "2026-04-09T17:28:46.185Z"
-        },
-        {
-          "content": "Oi",
-          "role": "user",
-          "timestamp": "2026-04-09T17:30:19.753Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T17:30:31.004Z"
+          "timestamp": "2026-04-09T18:50:38.373Z"
         }
       ],
-      "title": "Estou com febre"
+      "title": "Estou com dor de estômago"
     },
     {
       "createdAt": "2026-04-04T17:59:31.046Z",
@@ -477,215 +179,6 @@
         }
       ],
       "title": "Estou com febre"
-    },
-    {
-      "createdAt": "2026-04-04T17:52:07.048Z",
-      "id": "1775325127048",
-      "maxRisk": "BAIXO",
-      "messages": [
-        {
-          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:52:07.055Z"
-        },
-        {
-          "content": "Estou com febre",
-          "role": "user",
-          "timestamp": "2026-04-04T17:52:10.137Z"
-        },
-        {
-          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:52:10.137Z"
-        },
-        {
-          "content": "Identifiquei um **Risco BAIXO**.\n\n📍 RESUMO DA TRIAGEM:\n- Queixa: **Estou com febre**\n- Intensidade: **6/10**\n- Sintomas associados: Calafrios, Fraqueza\n\nProcure atendimento médico.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:52:24.293Z"
-        },
-        {
-          "content": "Como prevenir isso?",
-          "role": "user",
-          "timestamp": "2026-04-04T17:52:26.384Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:52:28.151Z"
-        },
-        {
-          "content": "Quais os sintomas?",
-          "role": "user",
-          "timestamp": "2026-04-04T17:52:29.617Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:52:31.388Z"
-        },
-        {
-          "content": "Como prevenir isso?",
-          "role": "user",
-          "timestamp": "2026-04-04T17:57:06.897Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:57:10.577Z"
-        },
-        {
-          "content": "Quais os sintomas?",
-          "role": "user",
-          "timestamp": "2026-04-04T17:57:12.039Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:57:14.039Z"
-        }
-      ],
-      "title": "Estou com febre"
-    },
-    {
-      "createdAt": "2026-03-28T17:50:06.833Z",
-      "id": "1774720206833",
-      "maxRisk": "BAIXO",
-      "messages": [
-        {
-          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-03-28T17:50:06.837Z"
-        },
-        {
-          "content": "Estou com dor de cabeça",
-          "role": "user",
-          "timestamp": "2026-03-28T17:50:09.731Z"
-        },
-        {
-          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-03-28T17:50:09.732Z"
-        },
-        {
-          "content": "Identifiquei um **Risco URGENTE**.\n\n📍 RESUMO DA TRIAGEM:\n- Queixa: **Estou com dor de cabeça**\n- Intensidade: **5/10**\n- Sintomas associados: Rigidez no pescoço, Febre\n\nProcure atendimento médico.",
-          "resources": [],
-          "riskLevel": "URGENTE",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-03-28T17:50:18.197Z"
-        },
-        {
-          "content": "Como prevenir isso?",
-          "role": "user",
-          "timestamp": "2026-04-04T17:33:14.377Z"
-        },
-        {
-          "content": "Quais os sintomas?",
-          "role": "user",
-          "timestamp": "2026-04-04T17:33:22.664Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:33:27.102Z"
-        },
-        {
-          "content": "Quais os sintomas?",
-          "role": "user",
-          "timestamp": "2026-04-04T17:33:31.064Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:33:33.012Z"
-        },
-        {
-          "content": "Quais os sintomas?",
-          "role": "user",
-          "timestamp": "2026-04-04T17:57:17.431Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:57:19.620Z"
-        }
-      ],
-      "title": "Estou com dor de cabeça"
     }
   ]
 }
