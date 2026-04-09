@@ -1,33 +1,58 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-09T14:46:39.863563Z",
+  "lastUpdated": "2026-04-09T14:56:13.355229Z",
   "conversations": [
     {
-      "id": "1775756767375",
-      "title": "Como prevenir isso?",
-      "createdAt": "2026-04-09T17:46:07.375Z",
+      "createdAt": "2026-04-09T17:49:26.941Z",
+      "id": "1775756966941",
       "maxRisk": "BAIXO",
       "messages": [
         {
-          "role": "bot",
           "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
-          "timestamp": "2026-04-09T17:46:07.378Z",
-          "riskLevel": "BAIXO",
           "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
           "suggestions": [
             "Como prevenir isso?",
             "Quais os sintomas?"
-          ]
+          ],
+          "timestamp": "2026-04-09T17:49:26.945Z"
         },
         {
+          "content": "Estou com gripe / resfriado",
           "role": "user",
+          "timestamp": "2026-04-09T17:49:31.723Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-09T17:49:31.724Z"
+        },
+        {
           "content": "Como prevenir isso?",
-          "timestamp": "2026-04-09T17:46:08.545Z"
+          "role": "user",
+          "timestamp": "2026-04-09T17:49:39.142Z"
+        },
+        {
+          "content": "Vamos lá..",
+          "role": "user",
+          "timestamp": "2026-04-09T17:50:07.598Z"
+        },
+        {
+          "role": "user",
+          "content": "oi tio",
+          "timestamp": "2026-04-09T17:53:05.122Z"
         },
         {
           "role": "bot",
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
-          "timestamp": "2026-04-09T17:46:22.515Z",
+          "content": "Parece que houve um mal-entendido. Vamos focar nos sintomas que você está apresentando. \n\n### RESUMO E SÍNTESE\nO termo gripe ou resfriado geralmente se refere a infecções virais que afetam o sistema respiratório. Os sintomas podem incluir coriza, dor de garganta, tosse, febre, dores no corpo e cansaço. \n\n### CONDUTA PRÁTICA\n**O que fazer agora**:  Repouse o máximo que puder e mantenha-se hidratado. Caso os sintomas estejam causando desconforto significativo, você pode considerar o uso de medicamentos antivirais ou analgésicos, se for recomendado por um profissional de saúde. Se os sintomas persistirem ou piorarem, busque um médico.\n\n### CUIDADOS EM CASA\n- Beba bastante líquidos como água, chás e sopas.\n- Use um umidificador de ar no ambiente, se possível.\n- Faça gargarejos com água morna e sal para aliviar a dor de garganta.\n- Coma alimentos leves, como frutas, vegetais e caldos nutritivos.\n- Descanse o suficiente para ajudar seu corpo na recuperação.\n\n### SINAIS DE ALERTA\n**Bandeiras Vermelhas** que indicam a necessidade de ida imediata ao Pronto-Socorro:\n- Dificuldade em respirar ou respiração acelerada.\n- Dor no peito ou pressão sentida.\n- Confusão mental ou incapacidade de despertar.\n- Febre alta persistente (acima de 39°C) que não melhora com medicamentos.\n- Sintomas que pioram rapidamente.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/campanha-de-vacinacao-contra-a-gripe-comecou-nesta-segunda-feira\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/gripe-e-resfriado/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/diseases-conditions/cold/symptoms-causes/syc-20377426\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Gripe e Resfriado: Entenda as Diferenças\", \"url\": \"https://www.drauziovarella.uol.com.br/artigos/gripe-e-resfriado-entenda-as-diferencas/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
+          "timestamp": "2026-04-09T17:53:18.252Z",
           "riskLevel": "BAIXO",
           "resources": [],
           "suggestions": [
@@ -37,13 +62,40 @@
         },
         {
           "role": "user",
-          "content": "Quais os sintomas?",
-          "timestamp": "2026-04-09T17:46:26.422Z"
+          "content": "estou com gripe",
+          "timestamp": "2026-04-09T17:54:20.485Z"
         },
         {
           "role": "bot",
-          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
-          "timestamp": "2026-04-09T17:46:38.888Z",
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "timestamp": "2026-04-09T17:54:20.488Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        },
+        {
+          "role": "bot",
+          "content": "Obrigado por compartilhar os detalhes dos seus sintomas. Vamos às orientações:\n\n### RESUMO E SÍNTESE\nCom base nos sintomas que você descreveu — gripe, febre, espirros, dor de garganta e dor no corpo — e considerando um risco moderado, é importante tomar medidas para aliviar os sintomas e monitorar seu estado.\n\n### CONDUTA PRÁTICA\n**O que fazer agora**:\n1. **Repouso**: Descansar é fundamental para que seu corpo possa combater a infecção.\n2. **Hidratação**: Beba bastante água, chás quentes e caldos nutritivos para evitar desidratação.\n3. **Medicamentos**: Se não houver contraindicações, considere o uso de antitérmicos, como paracetamol ou ibuprofeno, para aliviar a febre e a dor. Sempre consulte um médico ou farmacêutico antes de usar qualquer medicamento.\n\n### CUIDADOS EM CASA\n- **Compressas mornas**: Aplique compressas mornas na testa para ajudar a reduzir a febre.\n- **Gargarejos**: Faça gargarejos com água morna e sal para aliviar a dor de garganta.\n- **Ambiente ventilado**: Mantenha o ambiente arejado, mas evite correntes de vento.\n- **Alimentação leve**: Prefira alimentos leves, como sopas, frutas e vegetais.\n\n### SINAIS DE ALERTA\n**Bandeiras Vermelhas** que indicam a necessidade de ida imediata ao Pronto-Socorro:\n- Dificuldade em respirar ou respiração acelerada.\n- Dor no peito ou pressão sentida.\n- Confusão mental ou incapacidade de despertar.\n- Febre persistente acima de 39°C que não melhora com medicamentos.\n- Sintomas que pioram rapidamente ou não melhoram após 3 a 5 dias.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/campanha-de-vacinacao-contra-a-gripe-comecou-nesta-segunda-feira\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/gripe-e-resfriado/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/diseases-conditions/cold/symptoms-causes/syc-20377426\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Gripe e Resfriado: Entenda as Diferenças\", \"url\": \"https://www.drauziovarella.uol.com.br/artigos/gripe-e-resfriado-entenda-as-diferencas/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
+          "timestamp": "2026-04-09T17:55:24.389Z",
+          "riskLevel": "MODERADO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        },
+        {
+          "role": "user",
+          "content": "oque faço se me cortar com uma faca",
+          "timestamp": "2026-04-09T17:56:02.219Z"
+        },
+        {
+          "role": "bot",
+          "content": "### RESUMO E SÍNTESE\nUm corte feito com uma faca pode variar em gravidade. A primeira coisa a considerar é a profundidade e extensão do corte, bem como se está sangrando muito ou se há sinais de infecção.\n\n### CONDUTA PRÁTICA\n**O que fazer agora**:\n1. **Lave as mãos**: Antes de tocar no corte, lave bem as mãos com água e sabão.\n2. **Parar o sangramento**: Aplique pressão suave sobre o corte com um pano limpo ou gaze até que o sangramento diminua.\n3. **Limpeza**: Após o sangramento ter parado, lave o corte gentilmente com água e sabão neutro. Evite usar álcool ou produtos irritantes diretamente no ferimento.\n4. **Cobrir o ferimento**: Aplique um antisséptico (se disponível) e cubra o corte com um curativo ou gaze estéril.\n\n### CUIDADOS EM CASA\n- Mantenha o corte limpo e seco. Troque o curativo diariamente ou se ele ficar molhado ou sujo.\n- Evite tocar no corte com as mãos sujas para prevenir infecções.\n- Utilize analgésicos como paracetamol ou ibuprofeno se houver dor.\n\n### SINAIS DE ALERTA\n**Bandeiras Vermelhas** que indicam a necessidade de ida imediata ao Pronto-Socorro:\n- Corte profundo que parece exigir pontos.\n- Sangramento intenso que não para após 10 minutos de pressão.\n- Sinais de infecção, como vermelhidão, inchaço, calor, pus ou febre.\n- Presença de objetos estranhos embutidos no corte.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/cuidado-com-os-acidentes-domesticos\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/artigos/cortes-e-feridas-como-cuidar/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/first-aid/cuts-and-scrapes/basics/art-20056664\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Como Tratar Cortes e Feridas\", \"url\": \"https://www.drauziovarella.uol.com.br/artigos/cortes-e-feridas-como-cuidar/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
+          "timestamp": "2026-04-09T17:56:12.529Z",
           "riskLevel": "BAIXO",
           "resources": [],
           "suggestions": [
@@ -51,7 +103,69 @@
             "Quais os sintomas?"
           ]
         }
-      ]
+      ],
+      "title": "Estou com gripe / resfria..."
+    },
+    {
+      "createdAt": "2026-04-09T17:46:07.375Z",
+      "id": "1775756767375",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-09T17:46:07.378Z"
+        },
+        {
+          "content": "Como prevenir isso?",
+          "role": "user",
+          "timestamp": "2026-04-09T17:46:08.545Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-09T17:46:22.515Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-09T17:46:26.422Z"
+        },
+        {
+          "content": "Ops, houve um erro na conexão: Erro desconhecido na conexão.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-09T17:46:38.888Z"
+        },
+        {
+          "content": "oi puta",
+          "role": "user",
+          "timestamp": "2026-04-09T17:49:07.243Z"
+        },
+        {
+          "content": "oi",
+          "role": "user",
+          "timestamp": "2026-04-09T17:49:17.766Z"
+        }
+      ],
+      "title": "Como prevenir isso?"
     },
     {
       "createdAt": "2026-04-09T17:37:56.611Z",

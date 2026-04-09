@@ -92,7 +92,7 @@ def chat():
 
         # CHAMANDO A API DO OPENAI COM O HISTÓRICO COMPLETO
         response = openai_client.chat.completions.create(
-            model="gpt-5-mini", 
+            model="gpt-4o-mini", 
             messages=messages,
             max_completion_tokens=800  # Parâmetro correto para os modelos novos
         )
