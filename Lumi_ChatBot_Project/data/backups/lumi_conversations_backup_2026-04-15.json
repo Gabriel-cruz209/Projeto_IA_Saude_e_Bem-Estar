@@ -1,0 +1,398 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-04-15T09:41:32.080630Z",
+  "conversations": [
+    {
+      "id": "1776256891236",
+      "title": "Nova conversa",
+      "createdAt": "2026-04-15T12:41:31.236Z",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "role": "bot",
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "timestamp": "2026-04-15T12:41:31.243Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        }
+      ]
+    },
+    {
+      "createdAt": "2026-04-15T00:39:36.873Z",
+      "id": "1776213576873",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:39:36.876Z"
+        },
+        {
+          "content": "Estou com dor de estômago",
+          "role": "user",
+          "timestamp": "2026-04-15T00:39:40.409Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:39:40.409Z"
+        },
+        {
+          "content": "### 1. Conduta Prática Imediata\n- **Hidratação**: Beba água ou soluções de reidratação oral para evitar desidratação, especialmente se você estiver com febre.\n- **Descanso**: Tente repousar o máximo possível para ajudar seu corpo a se recuperar.\n- **Alimentação leve**: Se sentir vontade de comer, opte por alimentos leves e de fácil digestão, como arroz, banana e torradas.\n\n### 2. Cuidados em Casa Apropriados\n- **Monitoramento dos Sintomas**: Fique atento à evolução dos sintomas. Mantenha um registro da intensidade da dor, febre e qualquer outra alteração.\n- **Medicação**: Considere tomar analgésicos ou antitérmicos, como paracetamol, para aliviar a dor e a febre, mas evite medicamentos para o estômago sem orientação médica.\n- **Ambiente Confortável**: Mantenha-se em um ambiente fresco e confortável, evitando temperaturas extremas.\n\n### 3. Sinais de Alerta para Ir à Emergência\n- **Dor Abdominal Intensa**: Se a dor de estômago aumentar ou se tornar insuportável.\n- **Sinais de Desidratação**: Como boca seca, diminuição da urina, tontura ou confusão.\n- **Febre Alta**: Se a febre ultrapassar 39°C (102°F) ou não responder a medicamentos.\n- **Vômito Persistente**: Se você estiver vomitando e não conseguir manter líquidos ou alimentos.\n- **Sinais de Reação Alérgica**: Como dificuldade para respirar, inchaço no rosto ou na garganta, coceira intensa.\n\nÉ importante que você consulte um profissional de saúde para uma avaliação mais detalhada, especialmente com um perfil de risco moderado.\n\n```json\nRESOURCES: [{\"title\": \"Orientações sobre dor abdominal\", \"url\": \"https://www.example.com/dor-abdominal\"},{\"title\": \"Cuidados em casa para febre\", \"url\": \"https://www.example.com/cuidados-febre\"}]\nSOURCES: [{\"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude\"},{\"name\": \"Sociedade Brasileira de Clínica Médica\", \"url\": \"https://www.sbcm.org.br\"}]\n```",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:40:08.485Z"
+        },
+        {
+          "content": "estou com dor de cabeça",
+          "role": "user",
+          "timestamp": "2026-04-15T00:55:09.837Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:55:09.842Z"
+        },
+        {
+          "content": "### 1. Conduta Prática Imediata\n- **Hidratação**: Beba bastante água para evitar desidratação, especialmente se estiver com febre.\n- **Repouso**: Tente descansar em um ambiente tranquilo e escuro, pois isso pode ajudar a aliviar a dor de cabeça.\n- **Medicação**: Se não houver contraindicações, considere tomar analgésicos como paracetamol ou ibuprofeno para aliviar a dor e a febre. Siga sempre as instruções da bula ou orientação médica.\n\n### 2. Cuidados em Casa Apropriados\n- **Compressas Frias**: Aplique compressas frias na testa ou na nuca para ajudar a reduzir a dor de cabeça.\n- **Alimentação Leve**: Consuma alimentos leves e de fácil digestão, como sopas e frutas, para ajudar a minimizar a náusea.\n- **Ambiente Confortável**: Mantenha o ambiente fresco e bem ventilado. Evite luzes fortes e sons altos.\n\n### 3. Sinais de Alerta para Ir à Emergência\n- **Dor de Cabeça Severamente Intensa**: Se a dor de cabeça aumentar de intensidade ou for a pior da sua vida.\n- **Alterações Visuais**: Se você notar perda de visão ou visão embaçada.\n- **Confusão ou Dificuldade para Falar**: Se houver dificuldade em se comunicar ou confusão mental.\n- **Rigidez no Pescoço**: Se você tiver rigidez no pescoço, especialmente se acompanhada de febre.\n- **Vômitos Persistentes**: Se a náusea evoluir para vômitos constantes e não conseguir manter líquidos.\n\nSe algum desses sinais se manifestar, procure atendimento médico imediatamente.\n\n```json\nRESOURCES: [{\"title\": \"Mayo Clinic - Headaches\", \"url\": \"https://www.mayoclinic.org/diseases-conditions/headaches/symptoms-causes/syc-20338917\"}]\nSOURCES: [{\"name\": \"CDC - Fever\", \"url\": \"https://www.cdc.gov/fever/index.html\"}]\n```",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:55:36.354Z"
+        },
+        {
+          "content": "### 1. Conduta Prática Imediata\n- **Hidratação**: Beba bastante água ou soluções de reidratação oral para evitar desidratação, especialmente se você estiver com febre e náuseas.\n- **Medicamentos**: Considere tomar um analgésico como paracetamol ou ibuprofeno para aliviar a dor de cabeça e a febre. Siga as instruções no rótulo ou consulte um profissional de saúde.\n- **Repouso**: Tente descansar em um ambiente calmo e escuro, pois a luz e o barulho podem agravar a dor de cabeça.\n\n### 2. Cuidados em Casa Apropriados\n- **Alimentação**: Tente ingerir alimentos leves e ricos em nutrientes, como sopas ou frutas, se a náusea permitir.\n- **Compressas**: Aplique uma compressa fria na testa ou na nuca para ajudar a aliviar a dor de cabeça.\n- **Evite Estímulos**: Reduza a exposição a telas, como celular e computador, e evite atividades físicas intensas até que os sintomas melhorem.\n\n### 3. Sinais de Alerta para Ir à Emergência\n- **Dor de Cabeça Severa**: Caso a dor de cabeça se torne intensa ou diferente do habitual.\n- **Confusão ou Alteração de Consciência**: Se você notar confusão, dificuldade em falar ou perda de consciência.\n- **Febre Alta**: Se a febre persistir acima de 39°C ou se não responder ao tratamento.\n- **Sintomas Neurológicos**: Qualquer sintoma como fraqueza em um lado do corpo, dificuldade para andar ou visão embaçada.\n- **Desidratação**: Sinais de desidratação grave, como boca seca, sede intensa, tontura ou diminuição da urina.\n\n### RESOURCES\n```json\n[{\"title\": \"Orientações sobre dor de cabeça\", \"url\": \"https://www.minhavida.com.br/saude/temas/dor-de-cabeca\"},{\"title\": \"Cuidados em casa para febre\", \"url\": \"https://www.tuasaude.com/febre/\"}]\n```\n### SOURCES\n```json\n[{\"name\": \"Portal da Saúde\", \"url\": \"https://www.gov.br/saude/pt-br\"},{\"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/\"}]\n```",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:55:58.419Z"
+        },
+        {
+          "content": "Como prevenir isso?",
+          "role": "user",
+          "timestamp": "2026-04-15T00:56:08.502Z"
+        },
+        {
+          "content": "Para oferecer uma resposta mais precisa, seria útil saber a que você está se referindo ao perguntar \"como prevenir isso\". No entanto, aqui estão algumas dicas gerais de prevenção de doenças e manutenção da saúde:\n\n### 1. **Alimentação Balanceada**\n   - Consuma uma dieta rica em frutas, vegetais, grãos integrais e proteínas magras.\n   - Limite o consumo de açúcar, sal e gorduras saturadas.\n\n### 2. **Exercício Regular**\n   - Pratique atividades físicas pelo menos 150 minutos por semana.\n   - Inclua exercícios de força duas vezes por semana.\n\n### 3. **Hidratação**\n   - Beba bastante água ao longo do dia.\n   - Evite bebidas açucaradas e alcoólicas em excesso.\n\n### 4. **Sono Adequado**\n   - Tente dormir entre 7 a 9 horas por noite.\n   - Crie uma rotina de sono regular.\n\n### 5. **Higiene Pessoal**\n   - Lave as mãos frequentemente.\n   - Mantenha uma boa higiene bucal.\n\n### 6. **Check-ups Regulares**\n   - Consulte um médico regularmente para exames de rotina.\n   - Realize vacinas conforme recomendado.\n\n### 7. **Gestão do Estresse**\n   - Pratique técnicas de relaxamento, como meditação ou yoga.\n   - Dedique tempo para hobbies e atividades que você gosta.\n\nSe você tiver um problema específico em mente, por favor, compartilhe para que eu possa fornecer orientações mais direcionadas.\n\n```json\nRESOURCES: [{\"title\": \"Alimentação Saudável\", \"url\": \"https://www.who.int/health-topics/nutrition\"},{\"title\": \"Exercícios Físicos\", \"url\": \"https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm\"}]\nSOURCES: [{\"name\": \"Organização Mundial da Saúde\", \"url\": \"https://www.who.int/\"},{\"name\": \"Centros de Controle e Prevenção de Doenças\", \"url\": \"https://www.cdc.gov/\"}]\n```",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:56:17.379Z"
+        },
+        {
+          "content": "estou com gripe",
+          "role": "user",
+          "timestamp": "2026-04-15T01:02:10.689Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T01:02:10.946Z"
+        },
+        {
+          "content": "📍 RESUMO DA TRIAGEM:\n- Queixa: **estou com gripe**\n- Intensidade: **8/10**\n- Sintomas associados: Coriza, Febre\n",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T01:02:34.645Z"
+        },
+        {
+          "content": "### 1. Conduta Prática Imediata\n- **Hidratação:** Beba bastante água, chás ou caldos para manter-se hidratado.\n- **Descanso:** Descanse o máximo possível para ajudar o corpo a combater a infecção.\n- **Antitérmicos:** Considere o uso de medicamentos como paracetamol ou ibuprofeno para aliviar a febre e a dor, seguindo a dosagem recomendada.\n\n### 2. Cuidados em Casa Apropriados\n- **Umidificação do Ar:** Use um umidificador para ajudar a aliviar a coriza e a congestão nasal.\n- **Alimentação:** Mantenha uma dieta equilibrada, rica em frutas e vegetais, que ajudam a fortalecer o sistema imunológico.\n- **Isolamento:** Evite contato próximo com outras pessoas para prevenir a propagação da infecção, especialmente em ambientes fechados.\n\n### 3. Sinais de Alerta para Ir à Emergência\n- **Dificuldade para Respirar:** Se sentir falta de ar ou dificuldade para respirar.\n- **Dor no Peito:** Dor persistente ou pressão no peito.\n- **Confusão Mental:** Alterações no nível de consciência ou confusão.\n- **Febre Alta Persistente:** Se a febre não ceder após o uso de antitérmicos ou se subir acima de 39°C.\n\nSe você experimentar qualquer um desses sinais, procure atendimento médico imediatamente.\n\n```json\nRESOURCES: [{\"title\": \"Cuidados com a Gripe\", \"url\": \"https://www.cdc.gov/flu/prevent/actions-prevent-flu.htm\"}]\nSOURCES: [{\"name\": \"CDC\", \"url\": \"https://www.cdc.gov/\"}]\n```",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T01:02:43.896Z"
+        },
+        {
+          "content": "estou com uma mancha",
+          "role": "user",
+          "timestamp": "2026-04-15T01:11:33.390Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T01:11:33.396Z"
+        },
+        {
+          "content": "📍 RESUMO DA TRIAGEM:\n- Queixa: **estou com uma mancha**\n- Intensidade: **6/10**\n- Sintomas associados: Tosse, Perda de apetite, Coceira\n",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T01:11:51.961Z"
+        },
+        {
+          "content": "### 1. Conduta Prática Imediata\n- **Avaliação Médica**: Embora o risco seja baixo, é importante que você consulte um médico para uma avaliação mais detalhada da mancha e dos sintomas associados. \n- **Registro de Sintomas**: Anote a evolução da mancha, a intensidade da tosse, e outros sintomas para relatar ao profissional de saúde.\n\n### 2. Cuidados em Casa Apropriados\n- **Hidratação**: Mantenha-se bem hidratado, bebendo bastante água para ajudar na tosse e na coceira.\n- **Alimentação Leve**: Opte por uma alimentação leve e nutritiva, focando em frutas, legumes e alimentos ricos em vitaminas.\n- **Umidificação do Ar**: Se a tosse for persistente, considere usar um umidificador no ambiente para aliviar a irritação nas vias respiratórias.\n- **Evitar Irritantes**: Fique longe de fumaça, poeira e outros irritantes que podem agravar a tosse ou a coceira.\n\n### 3. Sinais de Alerta para Ir à Emergência\n- **Dificuldade Respiratória**: Se você sentir dificuldade para respirar ou chiado.\n- **Aumento da Intensidade da Tosse**: Se a tosse se tornar mais severa ou persistente.\n- **Mudança na Cor da Mancha**: Se a mancha mudar de cor, aumentar de tamanho ou se tornar dolorosa.\n- **Febre Alta**: Caso a temperatura corporal suba acima de 38°C por mais de 24 horas.\n- **Desidratação**: Se você notar sinais de desidratação, como boca seca, urina escura ou tontura.\n\nLembre-se, sempre é importante buscar a orientação de um profissional de saúde para uma avaliação precisa.\n\n```json\nRESOURCES: [{\"title\": \"Cuidados em Casa para Tosse\", \"url\": \"https://www.cdc.gov/healthywater/drinking/home-repair.html\"}]\nSOURCES: [{\"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/\"},{\"name\": \"WebMD\", \"url\": \"https://www.webmd.com/\"}]\n```",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T01:12:01.303Z"
+        },
+        {
+          "content": "estou com dor de cabeça",
+          "role": "user",
+          "timestamp": "2026-04-15T01:16:38.092Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T01:16:38.097Z"
+        },
+        {
+          "content": "Com base nos sintomas que você descreveu e considerando o perfil de risco alto, aqui estão as orientações:\n\n### 1. Conduta Prática Imediata\n- **Procure atendimento médico imediatamente.** A combinação de dor de cabeça intensa, tontura e rigidez no pescoço pode indicar uma condição séria, como meningite ou hemorragia subaracnóidea.\n\n### 2. Cuidados em Casa Apropriados\n- **Repouso:** Enquanto aguarda atendimento médico, tente descansar em um ambiente calmo e escuro.\n- **Hidratação:** Beba água para se manter hidratado, mas evite qualquer tipo de automedicação sem orientação médica.\n- **Compressas frias:** Se sentir desconforto, pode aplicar compressas frias na testa para aliviar a dor de cabeça.\n\n### 3. Sinais de Alerta para Ir à Emergência\n- **Aumento da intensidade da dor de cabeça.**\n- **Febre alta.**\n- **Confusão ou alteração do estado mental.**\n- **Dificuldade para falar ou entender.**\n- **Rigidez no pescoço acompanhada de dor intensa.**\n- **Náuseas ou vômitos persistentes.**\n\nSe você apresentar qualquer um desses sinais, procure assistência médica imediata.\n\n```json\nRESOURCES: [{\"title\": \"Dor de Cabeça e Meningite\", \"url\": \"https://www.example.com/dor-de-cabeca-meningite\"}]\nSOURCES: [{\"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org\"}]\n```",
+          "resources": [],
+          "riskLevel": "ALTO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T01:17:07.607Z"
+        }
+      ],
+      "title": "Estou com dor de estômago"
+    },
+    {
+      "createdAt": "2026-04-15T00:22:11.939Z",
+      "id": "1776212531939",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:22:11.975Z"
+        },
+        {
+          "content": "Estou com gripe / resfriado",
+          "role": "user",
+          "timestamp": "2026-04-15T00:38:05.225Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:38:05.226Z"
+        },
+        {
+          "content": "### 1. Conduta Prática Imediata\n- **Hidratação:** Beba bastante líquidos como água, chás e caldos para manter-se hidratado.\n- **Repouso:** Descanse o máximo possível para ajudar seu corpo a combater a infecção.\n- **Medicamentos:** Considere a utilização de analgésicos e antipiréticos, como paracetamol ou ibuprofeno, para aliviar dor e febre. Siga as orientações do médico ou as instruções da embalagem.\n\n### 2. Cuidados em Casa Apropriados\n- **Ambiente Confortável:** Mantenha o ambiente bem ventilado, mas evite correntes de ar frio. Umidificadores podem ajudar a aliviar a irritação na garganta.\n- **Alimentação:** Consuma alimentos leves e nutritivos. Sopas e frutas ricas em vitamina C podem ser benéficas.\n- **Higiene:** Lave as mãos frequentemente e evite compartilhar utensílios para prevenir a transmissão de vírus.\n\n### 3. Sinais de Alerta para Ir à Emergência\n- **Dificuldade para respirar:** Se você sentir falta de ar ou dificuldade para respirar.\n- **Dor intensa:** Se a dor de garganta ou dor no corpo se tornarem insuportáveis.\n- **Febre alta persistente:** Se a febre não baixar com medicação ou se ultrapassar 39°C.\n- **Sintomas agravados:** Se você notar que os sintomas estão piorando rapidamente, procure atendimento médico imediatamente.\n\nRESOURCES: [{\"title\": \"Cuidados com Gripe e Resfriado\", \"url\": \"https://www.cdc.gov/flu/symptoms/index.html\"},{\"title\": \"Sinais de Alerta em Doenças Respiratórias\", \"url\": \"https://www.who.int/news-room/questions-and-answers/item/coronavirus-disease-covid-19\"}]\nSOURCES: [{\"name\": \"Centers for Disease Control and Prevention\", \"url\": \"https://www.cdc.gov\"},{\"name\": \"Organização Mundial da Saúde\", \"url\": \"https://www.who.int\"}]",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:38:23.808Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-15T00:38:56.473Z"
+        },
+        {
+          "content": "Os sintomas podem variar dependendo da condição ou doença específica. Aqui estão alguns sintomas comuns que podem ocorrer em várias condições de saúde:\n\n1. **Febre** - Elevação da temperatura corporal.\n2. **Dor** - Pode incluir dores de cabeça, dores musculares ou articulares.\n3. **Cansaço** - Sensação de fadiga ou falta de energia.\n4. **Tosse** - Pode ser seca ou produtiva.\n5. **Dificuldade para respirar** - Sensação de falta de ar.\n6. **Náuseas ou vômitos** - Desconforto no estômago ou necessidade de vomitar.\n7. **Diarréia** - Fezes líquidas ou frequentes.\n8. **Mudanças no apetite** - Aumento ou diminuição do desejo de comer.\n9. **Erupções cutâneas** - Alterações na pele, como manchas ou coceira.\n10. **Alterações de humor** - Ansiedade, depressão ou irritabilidade.\n\nSe você está preocupado com sintomas específicos, é importante consultar um profissional de saúde para um diagnóstico adequado.\n\nRESOURCES: [{\"title\": \"Sintomas Comuns\", \"url\": \"https://www.healthline.com/symptoms\"}]\nSOURCES: [{\"name\": \"Healthline\", \"url\": \"https://www.healthline.com\"}]",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:39:01.841Z"
+        }
+      ],
+      "title": "Estou com gripe / resfria..."
+    },
+    {
+      "createdAt": "2026-04-15T00:14:15.903Z",
+      "id": "1776212055903",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:14:15.907Z"
+        },
+        {
+          "content": "Estou com gripe / resfriado",
+          "role": "user",
+          "timestamp": "2026-04-15T00:14:18.256Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:14:18.257Z"
+        },
+        {
+          "content": "### RESUMO E SÍNTESE\nVocê está apresentando sintomas típicos de gripe ou resfriado, como febre, dor no corpo, coriza e espirros, com uma intensidade de 9, o que indica um desconforto significativo. O perfil de risco moderado sugere que, embora seus sintomas não sejam extremamente graves, é importante monitorar sua condição e adotar medidas para aliviar os sintomas e prevenir complicações.\n\n### CONDUTA PRÁTICA\n**O que fazer agora:**\n1. **Descanso:** Priorize o descanso, permitindo que seu corpo se recupere.\n2. **Hidratação:** Beba bastante água, chás ou caldos para manter-se hidratado.\n3. **Antipiréticos:** Considere o uso de medicamentos como paracetamol ou ibuprofeno para aliviar a febre e a dor no corpo, seguindo as orientações de dosagem.\n\n### CUIDADOS EM CASA\n1. **Umidificação do Ar:** Utilize um umidificador ou coloque toalhas molhadas no ambiente para ajudar a aliviar a coriza e a congestão nasal.\n2. **Alimentação Leve:** Consuma alimentos leves e nutritivos, como sopas e frutas ricas em vitamina C, para auxiliar na recuperação.\n3. **Descanso Adequado:** Evite atividades físicas intensas e permita que seu corpo descanse o máximo possível.\n\n### SINAIS DE ALERTA\nConsidere ir ao Pronto-Socorro se você apresentar:\n- Dificuldade para respirar ou falta de ar.\n- Dor no peito ou sensação de pressão.\n- Confusão ou dificuldade em se manter acordado.\n- Febre alta persistente (acima de 39°C) que não melhora com medicação.\n- Sintomas que pioram rapidamente ou não melhoram após alguns dias.\n\nRESOURCES: [ { \"type\": \"article\", \"title\": \"Como lidar com a gripe\", \"url\": \"https://www.cdc.gov/flu/prevent/actions.htm\", \"source\": \"CDC\" } ]\nSOURCES: [ { \"name\": \"Organização Mundial da Saúde\", \"url\": \"https://www.who.int\", \"type\": \"international\" } ]",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:14:50.061Z"
+        }
+      ],
+      "title": "Estou com gripe / resfria..."
+    },
+    {
+      "createdAt": "2026-04-14T23:59:24.278Z",
+      "id": "1776211164278",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T23:59:24.280Z"
+        },
+        {
+          "content": "Estou com gripe / resfriado",
+          "role": "user",
+          "timestamp": "2026-04-15T00:00:22.293Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:00:22.293Z"
+        },
+        {
+          "content": "{\"resumo\": \"Você apresenta sintomas de gripe ou resfriado, com intensidade de 8, febre e coriza. O perfil de risco moderado indica que você deve prestar atenção especial aos sintomas e à evolução do quadro.\"}\n\n{\"conduta_pratica\": \"O que fazer agora: Recomendo que você procure um médico para avaliação, especialmente devido à febre e à intensidade dos sintomas. Pode ser necessário realizar exames para descartar outras infecções.\"}\n\n{\"cuidados_em_casa\": \"1. Hidratação: Beba bastante água, chás e caldos. 2. Repouso: Descanse o máximo possível para ajudar seu corpo a se recuperar. 3. Compressas mornas: Se a febre estiver alta, você pode usar compressas mornas na testa para ajudar a aliviar o desconforto. 4. Alimentação leve: Consuma alimentos de fácil digestão, como sopas e frutas.\"}\n\n{\"sinais_de_alerta\": \"1. Dificuldade para respirar ou falta de ar. 2. Febre persistente acima de 39°C que não responde a medicamentos. 3. Dor no peito ou sensação de pressão. 4. Confusão mental ou sonolência excessiva. 5. Sintomas que pioram rapidamente.\"}\n\n{\"SOURCES\": [ { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/pt",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:00:59.707Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-15T00:14:04.210Z"
+        },
+        {
+          "content": "1. **RESUMO E SÍNTESE:** Para poder fornecer uma análise adequada, preciso de mais informações sobre os sintomas que você está sentindo. Sintomas podem variar amplamente, desde dor de cabeça, febre, tosse, dor abdominal, entre outros. Cada sintoma pode indicar diferentes condições de saúde.\n\n2. **CONDUTA PRÁTICA:** Por favor, descreva os sintomas que você está sentindo. Com base nas informações que você fornecer, poderei sugerir o que fazer agora.\n\n3. **CUIDADOS EM CASA:** Dependendo dos sintomas, cuidados em casa podem incluir hidratação, repouso e uso de compressas quentes ou frias. No entanto, isso varia conforme a condição específica.\n\n4. **SINAIS DE ALERTA:** Assim que você descrever os sintomas, poderei listar sinais que indicam a necessidade de procurar atendimento médico imediato.\n\nPor favor, compartilhe mais detalhes sobre os sintomas que você está experimentando para que eu possa ajudá-lo melhor!\n\nRESOURCES: []\nSOURCES: []",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-15T00:14:10.370Z"
+        }
+      ],
+      "title": "Estou com gripe / resfria..."
+    }
+  ]
+}

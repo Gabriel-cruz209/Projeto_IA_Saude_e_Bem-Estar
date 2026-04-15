@@ -42,11 +42,7 @@
             </header>
 
             <div class="diary-dashboard">
-                <!-- Insights Card -->
-                <div class="insights-container" id="insights-container">
-                    <h3>🔍 Insights da Lumi</h3>
-                    <div id="insights-list" class="insights-list"></div>
-                </div>
+                <!-- Insights Card REMOVIDO pelo usuário -->
 
                 <div class="dashboard-grid">
                     <!-- Heatmap Card -->
@@ -86,8 +82,10 @@
     <!-- Container for dynamic entries -->
     <div id="diary-modal-root"></div>
 
-    <!-- Scripts -->
+    <!-- Scripts — Ordem de dependência: Storage → Analysis → Service → Component → Page -->
     <script src="../../services/ModalService.js"></script>
+    <script src="../../services/DiaryStorageService.js"></script>
+    <script src="../../services/DiaryAnalysisService.js"></script>
     <script src="../../services/DiaryService.js"></script>
     <script src="../../components/DiaryEntryForm.js"></script>
     <script src="diary.js"></script>

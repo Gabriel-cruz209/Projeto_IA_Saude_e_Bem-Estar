@@ -1,103 +1,99 @@
 /**
  * services/DiaryService.js
- * Gerencia o armazenamento e a análise de dados do diário de saúde.
+ * Fachada unificada do Diário de Saúde Lumi.
+ * Delega persistência ao DiaryStorageService e análise ao DiaryAnalysisService.
+ *
+ * Mantém a API pública original (getEntries, saveEntry, deleteEntry, getStats,
+ * generateInsights) para não quebrar nenhuma funcionalidade existente.
  */
 
-const DIARY_STORAGE_KEY = 'lumi_health_diary';
-
 const DiaryService = {
-  getEntries() {
-    const data = localStorage.getItem(DIARY_STORAGE_KEY);
-    return data ? JSON.parse(data).entries : [];
-  },
 
-  saveEntry(entry) {
-    const entries = this.getEntries();
-    // Adicionar UUID simples se necessário
-    const newEntry = {
-      id: Date.now().toString(),
-      date: new Date().toISOString().split('T')[0],
-      timestamp: new Date().toISOString(),
-      ...entry
-    };
+    // ─── API PÚBLICA (compatível com versão anterior) ─────────────────────────
 
-    // Sobrescrever se já houver registro para a mesma data (registro único por dia)
-    const existingIdx = entries.findIndex(e => e.date === newEntry.date);
-    if (existingIdx !== -1) {
-      entries[existingIdx] = newEntry;
-    } else {
-      entries.unshift(newEntry);
+    /** Retorna todos os registros (síncrono, do cache local). */
+    getEntries() {
+        return window.diaryStorageService.loadSync();
+    },
+
+    /** Carrega registros do backend de forma assíncrona. */
+    async loadEntriesAsync() {
+        return window.diaryStorageService.loadAll();
+    },
+
+    /**
+     * Salva um novo registro (ou atualiza o do dia atual).
+     * Compatível com o esquema antigo; retorna a entrada salva.
+     */
+    async saveEntry(entry) {
+        return window.diaryStorageService.saveEntry(entry);
+    },
+
+    /** Remove um registro pelo ID. */
+    async deleteEntry(id) {
+        return window.diaryStorageService.deleteEntry(id);
+    },
+
+    // ─── ANÁLISE E ESTATÍSTICAS ───────────────────────────────────────────────
+
+    /** Retorna estatísticas agregadas dos registros. */
+    getStats() {
+        const entries = this.getEntries();
+        if (entries.length === 0) return null;
+        return window.DiaryAnalysisService.computeStats(entries);
+    },
+
+    /**
+     * Gera insights legíveis para exibição no painel.
+     * @returns {string[]} — lista de textos (mantém compatibilidade com string[])
+     */
+    generateInsights() {
+        const entries = this.getEntries();
+        const insights = window.DiaryAnalysisService.generateInsights(entries);
+        // Retorna array de objetos enriquecidos; diary.js os processa
+        return insights;
+    },
+
+    /**
+     * Gera insights usando a IA do backend.
+     * @returns {Promise<string[]|null>}
+     */
+    async generateAIInsights() {
+        return window.diaryStorageService.requestAIAnalysis();
+    },
+
+    /** Dados dos últimos N dias formatados para o gráfico. */
+    getLast15DaysData(days = 15) {
+        const entries = this.getEntries();
+        return window.DiaryAnalysisService.getLast15DaysData(entries, days);
+    },
+
+    /** Resumo do histórico para o chat. */
+    getHistorySummary(days = 7) {
+        const entries = this.getEntries();
+        return window.DiaryAnalysisService.generateHistorySummary(entries, days);
+    },
+
+    // ─── PARSING DE LINGUAGEM NATURAL ─────────────────────────────────────────
+
+    /**
+     * Detecta se uma mensagem do chat contém um registro de sintomas natural.
+     * @param {string} text
+     * @returns {{ symptoms: string[], intensity: number }|null}
+     */
+    parseNaturalEntry(text) {
+        return window.DiaryAnalysisService.parseNaturalEntry(text);
+    },
+
+    /** Verifica se texto é uma consulta ao histórico. */
+    isHistoryQuery(text) {
+        return window.DiaryAnalysisService.isHistoryQuery(text);
+    },
+
+    /** Verifica se texto é um registro natural de diário. */
+    isDiaryEntry(text) {
+        return window.DiaryAnalysisService.isDiaryEntry(text);
     }
-
-    localStorage.setItem(DIARY_STORAGE_KEY, JSON.stringify({ entries }));
-    return newEntry;
-  },
-
-  deleteEntry(id) {
-    const entries = this.getEntries().filter(e => e.id !== id);
-    localStorage.setItem(DIARY_STORAGE_KEY, JSON.stringify({ entries }));
-  },
-
-  getStats() {
-    const entries = this.getEntries();
-    if (entries.length === 0) return null;
-
-    const last7Days = entries.slice(0, 7);
-    const symptomFreq = {};
-    const moods = {};
-
-    entries.forEach(e => {
-      e.symptoms.forEach(s => {
-        symptomFreq[s] = (symptomFreq[s] || 0) + 1;
-      });
-      moods[e.mood] = (moods[e.mood] || 0) + 1;
-    });
-
-    return {
-      totalEntries: entries.length,
-      symptomFreq,
-      moods,
-      lastRisk: entries[0]?.riskLevel || 'BAIXO'
-    };
-  },
-
-  generateInsights() {
-    const entries = this.getEntries();
-    if (entries.length < 3) return ["Continue registrando seus sintomas para que a Lumi possa identificar padrões em sua saúde."];
-
-    const insights = [];
-    const stats = this.getStats();
-    
-    // Insight de frequência
-    const topSymptom = Object.entries(stats.symptomFreq).sort((a, b) => b[1] - a[1])[0];
-    if (topSymptom && topSymptom[1] >= 3) {
-      insights.push(`Você relatou **${topSymptom[0]}** cerca de ${topSymptom[1]} vezes recentemente.`);
-    }
-
-    // Insight de Humor vs Sintoma
-    const moodCorrelation = {}; // Ex: fadiga + ansioso
-    entries.forEach(e => {
-        if (e.mood && e.symptoms.length > 0) {
-            e.symptoms.forEach(s => {
-                const key = `${s} + ${e.mood}`;
-                moodCorrelation[key] = (moodCorrelation[key] || 0) + 1;
-            });
-        }
-    });
-
-    const topCorr = Object.entries(moodCorrelation).sort((a,b) => b[1] - a[1])[0];
-    if (topCorr && topCorr[1] >= 2) {
-        insights.push(`Notamos que **${topCorr[0].split(' + ')[0]}** e **${topCorr[0].split(' + ')[1]}** costumam aparecer juntos em sua rotina.`);
-    }
-
-    // Alerta de Risco
-    const highRisks = entries.filter(e => e.riskLevel === 'ALTO' || e.riskLevel === 'URGENTE').length;
-    if (highRisks >= 2) {
-        insights.push("⚠️ Detectamos múltiplos registros de risco elevado. Recomendamos agendar uma consulta médica preventiva.");
-    }
-
-    return insights;
-  }
 };
 
 window.DiaryService = DiaryService;

@@ -3,10 +3,7 @@
  * Persistence, Multi-session, TTS, and Risky Analysis
  */
 
-const API_BASE = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost' 
-    ? 'http://127.0.0.1:5000' 
-    : 'https://api.producao.com';
-const API_URL = `${API_BASE}/chat`;
+const API_URL = 'http://127.0.0.1:5000/chat';
 const AVATAR_URL = "../../../Arquivos/Avatar_bot_realista.png";
 
 let conversations = [];
@@ -19,12 +16,7 @@ if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition((pos) => {
         userLocation = { lat: pos.coords.latitude, lng: pos.coords.longitude };
         console.log("Geolocalização habilitada:", userLocation);
-    }, (err) => {
-        console.log("Geolocalização não permitida ou falhou.");
-        if (window.ProfileMemoryNotice) {
-            window.ProfileMemoryNotice("Localização não permitida. A busca por hospitais será genérica.", "info");
-        }
-    });
+    }, (err) => console.log("Geolocalização não permitida"));
 }
 
 // Elementos da UI
@@ -135,7 +127,7 @@ function showSkeleton(show) {
 }
 
 /**
- * UI RENDERING - Com lógica JSON
+ * UI RENDERING
  */
 function renderHistory() {
     chatHistoryList.innerHTML = '';
@@ -167,35 +159,79 @@ function renderMessage(msg) {
     let dynamicResources = [];
 
     if (msg.role === 'bot') {
-        // --- EXTRAÇÃO DO JSON ---
-        const jsonRegex = /```json\s*([\s\S]*?)\s*```/i;
-        const match = displayContent.match(jsonRegex);
-
-        if (match) {
-            try {
-                const parsedJson = JSON.parse(match[1]);
-                if (parsedJson.SOURCES) sources = parsedJson.SOURCES;
-                if (parsedJson.RESOURCES) dynamicResources = parsedJson.RESOURCES;
-                displayContent = displayContent.replace(jsonRegex, '').trim();
-            } catch (e) {
-                console.error('Erro ao ler o JSON extraído:', e);
-            }
-        } else {
-            const startIdx = displayContent.indexOf('{');
-            const endIdx = displayContent.lastIndexOf('}');
-            if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {
-                const possibleJson = displayContent.substring(startIdx, endIdx + 1);
-                if (possibleJson.includes('"SOURCES"')) {
-                    try {
-                        const parsedJson = JSON.parse(possibleJson);
-                        if (parsedJson.SOURCES) sources = parsedJson.SOURCES;
-                        if (parsedJson.RESOURCES) dynamicResources = parsedJson.RESOURCES;
-                        displayContent = displayContent.substring(0, startIdx).trim();
-                    } catch (e) { }
+        // Função robusta usando Regex para encontrar os arrays JSON
+        const extractWithRegex = (text, marker) => {
+            const regex = new RegExp(marker + '\\s*(\\[[\\s\\S]*?\\])');
+            const match = text.match(regex);
+            
+            if (match) {
+                try {
+                    const parsed = JSON.parse(match[1]);
+                    return { json: parsed, cleanText: text.replace(match[0], '').trim() };
+                } catch (e) {
+                    console.error(`Erro ao parsear ${marker}:`, e);
                 }
             }
-        }
+            return { json: [], cleanText: text };
+        };
 
+        // Extrai RESOURCES e SOURCES
+        const resExtraction = extractWithRegex(displayContent, 'RESOURCES:');
+        dynamicResources = resExtraction.json;
+        displayContent = resExtraction.cleanText;
+
+        const srcExtraction = extractWithRegex(displayContent, 'SOURCES:');
+        sources = srcExtraction.json;
+        displayContent = srcExtraction.cleanText;
+
+        // Limpa possíveis resquícios de formatação markdown (```json) do final do texto
+        displayContent = displayContent.replace(/```json\s*/g, '').replace(/```\s*$/g, '');
+
+        // =========================================================
+        // INÍCIO DA INTEGRAÇÃO DOS CARDS DA LUMI 
+        // =========================================================
+        const sections = {
+            "RESUMO E SÍNTESE": { class: "card-resumo", icon: "📋" },
+            "CONDUTA PRÁTICA": { class: "card-conduta", icon: "⚡" },
+            "CUIDADOS EM CASA": { class: "card-casa", icon: "🏠" },
+            "SINAIS DE ALERTA": { class: "card-alerta", icon: "⚠️" }
+        };
+
+        let htmlFinal = `<div class="lumi-response-container">`;
+
+        Object.keys(sections).forEach(sectionTitle => {
+            // Regex para capturar o conteúdo de cada bloco
+            const regex = new RegExp(`${sectionTitle}:?\\s*([\\s\\S]*?)(?=(RESUMO E SÍNTESE|CONDUTA PRÁTICA|CUIDADOS EM CASA|SINAIS DE ALERTA|$))`, "i");
+            const match = displayContent.match(regex);
+
+            if (match && match[1]) {
+                let cleanedText = match[1].trim().replace(/^[#\-*•]\s?/gm, '');
+                
+                // Aproveita a sua função formatMarkdown se existir
+                let content = typeof formatMarkdown === 'function' 
+                    ? formatMarkdown(cleanedText) 
+                    : cleanedText.replace(/\n/g, '<br><br>');
+
+                htmlFinal += `
+                    <div class="lumi-card ${sections[sectionTitle].class} fade-in-up">
+                        <div class="card-header">
+                            <span class="card-icon">${sections[sectionTitle].icon}</span>
+                            <strong>${sectionTitle}</strong>
+                        </div>
+                        <div class="card-body">${content}</div>
+                    </div>`;
+            }
+        });
+
+        htmlFinal += `</div>`;
+
+        // Fallback de segurança: caso a IA não retorne as seções formatadas corretamente
+        if (htmlFinal === `<div class="lumi-response-container"></div>`) {
+            htmlFinal = typeof formatMarkdown === 'function' ? formatMarkdown(displayContent) : displayContent;
+        }
+        // =========================================================
+
+        // --- O RESTANTE DO SEU CÓDIGO (BOTÕES, RISCO, UPA) ---
         const riskHtml = msg.riskLevel && msg.riskLevel !== "BAIXO" ? `
             <div class="urgency-indicator urgency-${msg.riskLevel.toLowerCase()}">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.45L20.15 19H3.85L12 5.45zM11 10v4h2v-4h-2zm0 6v2h2v-2h-2z"/></svg>
@@ -204,7 +240,7 @@ function renderMessage(msg) {
 
         const finalResources = dynamicResources.length > 0 ? dynamicResources : (msg.resources || []);
         const isRisky = ['MODERADO', 'ALTO', 'URGENTE'].includes((msg.riskLevel || '').toUpperCase());
-        
+
         const resourcesHtml = (finalResources.length > 0 && isRisky) ? `
             <div class="resources-container">
                 <span class="resources-label">RECURSOS ÚTEIS:</span>
@@ -219,9 +255,9 @@ function renderMessage(msg) {
                 </div>
             </div>` : '';
 
-        let upaUrl = "https://www.google.com/maps/search/UPA+Hospital+proximo";
-        if (userLocation) {
-            upaUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLocation.lat},${userLocation.lng}&destination=UPA+Hospital+mais+proximo&travelmode=driving`;
+        let upaUrl = "[https://www.google.com/maps/search/UPA+Hospital+proximo](https://www.google.com/maps/search/UPA+Hospital+proximo)";
+        if (typeof userLocation !== 'undefined' && userLocation) {
+            upaUrl = `https://www.google.com/maps/dir/?api=1&origin=$${userLocation.lat},${userLocation.lng}&destination=UPA+Hospital+mais+proximo&travelmode=driving`;
         }
 
         const upaBtnHtml = (isRisky && (msg.riskLevel === 'ALTO' || msg.riskLevel === 'URGENTE')) ? `
@@ -231,22 +267,36 @@ function renderMessage(msg) {
                 </a>
             </div>` : '';
 
+        // Cria a "Casca" da mensagem (Note que o <div class="msg-content"> está vazio para a animação)
         msgDiv.innerHTML = `
-            <img src="${AVATAR_URL}" class="mini-avatar" alt="Lumi">
+            <img src="${typeof AVATAR_URL !== 'undefined' ? AVATAR_URL : ''}" class="mini-avatar" alt="Lumi">
             <div class="msg-content-wrapper">
                 ${riskHtml}
-                <div class="msg-content">${formatMarkdown(displayContent)}</div>
+                
+                <div class="msg-content"></div> 
+                
                 ${resourcesHtml}
                 ${upaBtnHtml}
                 <div class="sources-slot"></div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px;">
-                    <span class="timestamp">${formatTime(msg.timestamp)}</span>
+                    <span class="timestamp">${typeof formatTime === 'function' ? formatTime(msg.timestamp) : ''}</span>
                     <div class="audio-button-slot"></div>
                 </div>
                 ${msg.riskLevel && msg.riskLevel !== "BAIXO" ? '<span class="disclaimer-badge">Análise informativa, não substitui médico.</span>' : ''}
             </div>
         `;
 
+        // =========================================================
+        // INJEÇÃO DA ANIMAÇÃO DO TYPEWRITER
+        // =========================================================
+        const contentDiv = msgDiv.querySelector('.msg-content');
+        if (window.TypewriterService) {
+            window.TypewriterService.animate(contentDiv, htmlFinal);
+        } else {
+            contentDiv.innerHTML = htmlFinal; // Fallback se o script da animação não carregar
+        }
+
+        // --- Adição de Slots (Badges e Áudio) ---
         if (sources.length > 0) {
             const slot = msgDiv.querySelector('.sources-slot');
             if (window.SourceBadge) {
@@ -257,22 +307,30 @@ function renderMessage(msg) {
 
         const audioSlot = msgDiv.querySelector('.audio-button-slot');
         if (window.AudioButton) {
+            // Usa o displayContent limpo (apenas os textos, sem os JSONs, ideal para narração)
             const audioBtn = window.AudioButton({ text: displayContent, messageId: msg.timestamp });
             if (audioBtn) audioSlot.appendChild(audioBtn);
         }
+
     } else {
         msgDiv.innerHTML = `
             <div class="msg-content-wrapper user-wrapper">
                 <div class="msg-content">${msg.content}</div>
-                <span class="timestamp" style="text-align: right;">${formatTime(msg.timestamp)}</span>
+                <span class="timestamp" style="text-align: right;">${typeof formatTime === 'function' ? formatTime(msg.timestamp) : ''}</span>
             </div>
         `;
     }
 
-    messagesContainer.appendChild(msgDiv);
-    if (msg.role === 'bot' && msg.suggestions) showSuggestionChips(msg.suggestions);
-}
+    if (typeof messagesContainer !== 'undefined' && messagesContainer) {
+        messagesContainer.appendChild(msgDiv);
+    }
+    
+    if (msg.role === 'bot' && msg.suggestions && typeof showSuggestionChips === 'function') {
+        showSuggestionChips(msg.suggestions);
+    }
 
+    return msgDiv;
+}
 function showSuggestionChips(suggestions) {
     const old = document.querySelector('.suggestion-chips');
     if (old) old.remove();
@@ -309,37 +367,46 @@ async function handleSend() {
 
     appendUserMessage(text);
 
+    // ─── Verificação 1: É uma triagem de sintomas? ────────────────────────
     const symptomKeywords = ['dor', 'febre', 'mancha', 'tosse', 'falta de ar', 'vomito', 'enjoo', 'tontura', 'gripe', 'resfriado', 'mal-estar', 'fraqueza', 'cansaco', 'diarreia'];
     if (symptomKeywords.some(kw => text.toLowerCase().includes(kw)) && !isTriaging) {
         startTriage(text);
         return;
     }
 
+    // ─── Verificação 2: É um registro manual do Diário? ───────────────────
+    if (window.DiaryService && window.DiaryService.isDiaryEntry(text)) {
+        const parsed = window.DiaryService.parseNaturalEntry(text);
+        if (parsed) {
+            const entry = await window.DiaryService.saveEntry({
+                date: new Date().toISOString().split('T')[0],
+                symptoms: parsed.symptoms,
+                intensity: parsed.intensity,
+                notes: text,
+                riskLevel: 'BAIXO',
+                source: 'MANUAL'
+            });
+            appendBotMessage(`📝 Registrei no seu **Diário de Saúde**!\n\nSintomas: ${parsed.symptoms.join(', ')}\nIntensidade: ${parsed.intensity}/10\n\nAcesse a página do Diário para ver o histórico completo!`, {
+                suggestions: ["Ver Diário de Saúde", "Quanto tempo essa dor já está durando?", "Doutor, o que fazer?"]
+            });
+            window.useUserProfile().detectAndSaveInfo(text);
+            return;
+        }
+    }
+
     window.useUserProfile().detectAndSaveInfo(text);
     showTypingIndicator();
 
     try {
-        const history = currentChat.messages.map(m => ({
-            role: m.role,
-            content: m.content
-        }));
-
         const response = await fetch(API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ 
-                message: text,
-                history: history 
-            })
+            body: JSON.stringify({ message: text })
         });
         const data = await response.json();
         hideTypingIndicator();
-        if (response.ok && data.response) {
-            appendBotMessage(data.response);
-        } else {
-            const errorMsg = data.error || "Erro desconhecido na conexão.";
-            appendBotMessage(`Ops, houve um erro na conexão: ${errorMsg}`);
-        }
+        if (response.ok && data.response) appendBotMessage(data.response);
+        else appendBotMessage("Ops, houve um erro na conexão.");
     } catch (error) {
         hideTypingIndicator();
         appendBotMessage("Não foi possível conectar ao servidor.");
@@ -368,6 +435,7 @@ function appendBotMessage(content, options = {}) {
     chat.messages.push(msg);
     saveToStorage();
 
+    // Contextual alert based on profile
     const profile = window.useUserProfile().getProfile();
     if (profile.conditions.length > 0 && (content.toLowerCase().includes("importante") || content.toLowerCase().includes("atencão"))) {
         msg.content += `\n\n> **Nota da Lumi:** Como você registrou possuir **${profile.conditions.join(" e ")}**, certifique-se de seguir estas orientações com cuidado.`;
@@ -411,22 +479,44 @@ async function finalizeTriage(results) {
     isTriaging = false;
     chatTextarea.disabled = false;
     sendBtn.disabled = false;
-    
+
+    // Diagnóstico Geral: Obter risco real do serviço
     const risk = window.TriageService.calculateFinalRisk(results);
-    const currentChat = conversations.find(c => c.id === currentConversationId);
-    
+
     let summary = `📍 RESUMO DA TRIAGEM:\n`;
     summary += `- Queixa: **${results.initial}**\n`;
     summary += `- Intensidade: **${results.intensity}/10**\n`;
     if (results.associated?.length > 0) summary += `- Sintomas associados: ${results.associated.join(', ')}\n`;
-    
-    showTypingIndicator();
-    
-    const history = currentChat ? currentChat.messages.map(m => ({
-        role: m.role,
-        content: m.content
-    })) : [];
 
+    // ─── INTEGRAÇÃO: Atualizar Diário com a última triagem ──────────────────────
+    if (window.DiaryService) {
+        // Montar lista de sintomas para o diário
+        const allSymptoms = [results.initial];
+        if (results.associated?.length > 0) {
+            allSymptoms.push(...results.associated);
+        }
+        
+        // Obter data de hoje
+        const today = new Date().toISOString().split('T')[0];
+        
+        // Salvar a entrada (DiaryStorageService já substitui registros do mesmo dia automaticamente!)
+        await window.DiaryService.saveEntry({
+            date: today,
+            symptoms: allSymptoms,
+            intensity: results.intensity,
+            notes: `Triagem realizada na Lumi. Risco identificado: ${risk}.`,
+            riskLevel: risk,
+            source: 'TRIAGEM'
+        });
+        
+        // Adicionar confirmação clara e em destaque no resumo
+        summary += `\n✅ **Diário de Saúde Atualizado!**`;
+        summary += `\nAs informações da triagem foram registradas como o último registro do dia.`;
+    }
+
+    showTypingIndicator();
+
+    // Prompt estratégico para IA gerar conduta prática com os novos campos
     const prompt = `Realizei uma triagem. Sintomas: ${results.initial}, Intensidade: ${results.intensity}, Associados: ${results.associated || 'nenhum'}.
 Perfil de Risco do Sistema: **Risco ${risk}**.
 
@@ -440,14 +530,11 @@ No final, inclua os blocos RESOURCES e SOURCES obrigatórios.`;
         const response = await fetch(API_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ 
-                message: prompt,
-                history: history
-            })
+            body: JSON.stringify({ message: prompt })
         });
         const data = await response.json();
         hideTypingIndicator();
-        
+
         if (response.ok && data.response) {
             appendBotMessage(data.response, { riskLevel: risk });
         } else {
@@ -459,88 +546,15 @@ No final, inclua os blocos RESOURCES e SOURCES obrigatórios.`;
     }
 }
 
-// --- LÓGICA DO MICROFONE (SPEECH-TO-TEXT) ---
-const micBtn = document.getElementById('mic-btn');
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-if (SpeechRecognition && micBtn) {
-    const recognition = new SpeechRecognition();
-    recognition.lang = 'pt-BR'; // Define o idioma
-    recognition.interimResults = false; 
-    recognition.maxAlternatives = 1;
-
-    let isRecording = false;
-
-    // Ação de clique no botão do microfone
-    micBtn.addEventListener('click', () => {
-        if (isRecording) {
-            recognition.stop();
-        } else {
-            try {
-                recognition.start();
-            } catch (e) {
-                console.error("Erro ao iniciar gravação:", e);
-            }
-        }
-    });
-
-    // Feedback visual quando começa a gravar
-    recognition.onstart = () => {
-        isRecording = true;
-        micBtn.classList.add('recording');
-        chatTextarea.placeholder = "A Lumi está te ouvindo...";
-    };
-
-    // Quando o navegador transcreve o texto
-    recognition.onresult = (event) => {
-        const transcript = event.results[0][0].transcript;
-        chatTextarea.value = chatTextarea.value ? chatTextarea.value + ' ' + transcript : transcript;
-        autoResizeTextarea();
-        // Se quiser que envie automático ao parar de falar, descomente a linha abaixo:
-        // handleSend();
-    };
-
-    // Quando termina (por erro, ou por silêncio)
-    recognition.onend = () => {
-        isRecording = false;
-        micBtn.classList.remove('recording');
-        chatTextarea.placeholder = "Envie uma mensagem para Lumi...";
-    };
-
-    // Tratamento de erros
-    recognition.onerror = (event) => {
-        console.error("Erro no microfone: ", event.error);
-        isRecording = false;
-        micBtn.classList.remove('recording');
-        chatTextarea.placeholder = "Envie uma mensagem para Lumi...";
-        
-        if (event.error === 'not-allowed') {
-            if (window.ModalService) {
-                window.ModalService.alert({
-                    title: 'Permissão Negada',
-                    message: 'Por favor, permita o acesso ao microfone no seu navegador clicando no ícone do cadeado na barra de endereços.'
-                });
-            } else {
-                alert('Por favor, permita o acesso ao microfone no seu navegador.');
-            }
-        }
-    };
-} else if (micBtn) {
-    // Esconde o botão se o browser não tiver suporte a reconhecimento de voz
-    micBtn.style.display = 'none';
-    console.warn("Reconhecimento de voz não suportado neste navegador.");
-}
-
-// Inicializar os eventos gerais da tela de Chat
+// Inicializar
 chatTextarea.addEventListener('input', autoResizeTextarea);
-chatTextarea.addEventListener('keydown', e => { 
-    if (e.key === 'Enter' && !e.shiftKey) { 
-        e.preventDefault(); 
-        handleSend(); 
-    } 
-});
+chatTextarea.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); } });
 sendBtn.addEventListener('click', handleSend);
 newChatBtn.addEventListener('click', createNewConversation);
-
-// Dá a partida na aplicação
+init();
+// Inicializar
+chatTextarea.addEventListener('input', autoResizeTextarea);
+chatTextarea.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(); } });
+sendBtn.addEventListener('click', handleSend);
+newChatBtn.addEventListener('click', createNewConversation);
 init();

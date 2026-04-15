@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-09T16:21:18.097596Z",
+  "lastUpdated": "2026-04-15T09:43:18.842954Z",
   "conversations": [
     {
-      "createdAt": "2026-04-09T18:42:51.400Z",
-      "id": "1775760171400",
+      "createdAt": "2026-04-15T12:41:31.236Z",
+      "id": "1776256891236",
       "maxRisk": "BAIXO",
       "messages": [
         {
@@ -16,169 +16,37 @@
             "Como prevenir isso?",
             "Quais os sintomas?"
           ],
-          "timestamp": "2026-04-09T18:42:51.405Z"
+          "timestamp": "2026-04-15T12:41:31.243Z"
         },
         {
-          "content": "Estou com dor de estômago",
           "role": "user",
-          "timestamp": "2026-04-09T18:42:55.940Z"
+          "content": "Estou com dor de cabeça",
+          "timestamp": "2026-04-15T12:42:39.468Z"
         },
         {
+          "role": "bot",
           "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
-          "resources": [],
+          "timestamp": "2026-04-15T12:42:39.470Z",
           "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T18:42:55.941Z"
-        },
-        {
-          "content": "Hemorróidas podem causar uma variedade de sintomas, que variam em intensidade. Aqui está uma análise dos sintomas mais comuns:\n\n### RESUMO E SÍNTESE\nOs sintomas das hemorróidas incluem desconforto e dor na região anal, sangramento e alterações nas evacuações. A identificação precoce é importante para o manejo adequado.\n\n### SINAIS E SINTOMAS COMUNS\n1. **Dor e Desconforto**: Sensação de dor ou desconforto na região anal, especialmente ao sentar ou durante as evacuações.\n2. **Sangramento**: Sangue vermelho vivo pode aparecer nas fezes, no papel toalha após a evacuação ou no vaso sanitário.\n3. **Inchaço**: Inchaço ou protuberâncias na área anal, que podem ser sensíveis ao toque.\n4. **Coceira e Irritação**: Sensação de coceira ou irritação na região anal.\n5. **Muco**: Secreção mucosa pode ser notada, especialmente se houver inflamação.\n\n### CONDUTA PRÁTICA\nSe você estiver experimentando sintomas de hemorróidas, é recomendado:\n\n1. **Consulte um Médico**: Para um diagnóstico preciso e orientação sobre o tratamento mais adequado.\n2. **Mantenha a Higiene**: Limpe a área anal com cuidado após evacuações para evitar irritação.\n3. **Evite Esforço**: Não force durante a evacuação, pois isso pode piorar os sintomas.\n\n### CUIDADOS EM CASA\n- **Banhos de Assento**: Banhos mornos podem ajudar a aliviar a dor e a irritação.\n- **Alimentação Rica em Fibras**: Consuma alimentos ricos em fibras para facilitar as evacuações e reduzir a constipação.\n- **Hidratação**: Beba bastante água para manter o corpo hidratado e ajudar na digestão.\n\n### SINAIS DE ALERTA\n**Bandeiras Vermelhas** que indicam a necessidade de ida imediata ao Pronto-Socorro:\n- Sangramento intenso ou persistente.\n- Dor insuportável que não melhora com analgésicos.\n- Alterações nos hábitos intestinais que persistem (diarreia ou constipação severa).\n- Sintomas que não melhoram após tratamento em casa por dois dias.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/hemorroidas-sintomas-e-prevencao\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/hemorroidas/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/diseases-conditions/hemorrhoids/symptoms-causes/syc-20341729\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Hemorróidas: Sintomas, Causas e Tratamentos\", \"url\": \"https://www.drauziovarella.uol.com.br/doencas-e-sintomas/hemorroidas/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
           "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
           "suggestions": [
             "Como prevenir isso?",
             "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T18:42:56.612Z"
+          ]
         },
         {
-          "content": "Entendi que você apresenta sintomas preocupantes e em alta intensidade. Aqui está uma análise completa e orientações passo a passo para a sua situação.\n\n### RESUMO E SÍNTESE\nVocê está relatando dor intensa de estômago (intensidade 10) associada a coceira, febre, tosse, perda de apetite e fraqueza. Esses sintomas são indicativos de uma condição que pode exigir avaliação médica urgente.\n\n### CONDUTA PRÁTICA IMEDIATA\n1. **Procure atendimento médico imediatamente**: Dada a intensidade da dor e a presença de outros sintomas, é fundamental buscar atendimento de emergência. Eles podem avaliar sua condição, realizar exames e determinar o tratamento adequado.\n2. **Evite tomar medicamentos sem orientação**: Não use analgésicos ou antiácidos antes de ser avaliado por um profissional de saúde, pois isso pode mascarar sintomas importantes.\n\n### CUIDADOS EM CASA\nEnquanto aguarda atendimento médico, aqui estão algumas orientações que podem ajudar a aliviar sintomas leves, mas lembre-se de que a prioridade é a busca por atendimento:\n\n- **Repouso**: Tente descansar o máximo possível.\n- **Hidratação**: Beba líquidos claros (água, chá, caldos) para se manter hidratado, especialmente se estiver com febre e perda de apetite.\n- **Dieta leve**: Quando começar a se sentir melhor, opte por alimentos leves para não irritar ainda mais o estômago (ex: arroz, banana, torradas).\n- **Compressas mornas**: Aplicar compressas mornas na região abdominal pode ajudar a aliviar a dor.\n\n### SINAIS DE ALERTA\n**Bandeiras Vermelhas que requerem ida imediata ao Pronto-Socorro**:\n- Dor abdominal intensa e persistente.\n- Sangramento visível (no vômito ou nas fezes).\n- Febre alta (acima de 39°C).\n- Desidratação (sintomas de boca seca, diminuição da urina).\n- Confusão ou desorientação.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/sintomas-abdominais-o-que-fazer\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/symptoms/abdominal-pain/basics/causes/sym-20050893\", \"type\": \"international\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/dor-abdominal/\", \"type\": \"national\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Dor Abdominal: Causas e Sintomas\", \"url\": \"https://www.drauziovarella.uol.com.br/doencas-e-sintomas/dor-abdominal/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
+          "role": "bot",
+          "content": "Diante dos sintomas que você descreveu, é importante agir com cautela, já que o seu perfil de risco indica uma situação de **Risco URGENTE**. Aqui estão as orientações:\n\n### 1. Conduta Prática Imediata\n- **Procure atendimento médico imediatamente.** A combinação de dor de cabeça intensa, tontura e rigidez no pescoço pode ser um sinal de condições sérias, como meningite ou hemorragia subaracnoide.\n  \n### 2. Cuidados em Casa Apropriados\n- **Repouso:** Enquanto aguarda atendimento, mantenha-se em um local calmo e com pouca luz, evitando estímulos que possam piorar a dor de cabeça.\n- **Hidratação:** Beba líquidos, mas evite cafeína e álcool, pois podem piorar a desidratação e a dor de cabeça.\n- **Compressas frias:** Aplicar compressas frias na testa pode ajudar a aliviar a dor.\n\n### 3. Sinais de Alerta para Ir à Emergência\n- **Aumento da intensidade da dor de cabeça.**\n- **Febre alta e rigidez no pescoço.**\n- **Confusão, dificuldade de fala ou visão.**\n- **Náuseas ou vômitos persistentes.**\n- **Alterações no nível de consciência.**\n\nEm caso de qualquer um desses sinais, procure atendimento médico de emergência imediatamente.\n\nRESOURCES: [{\"title\": \"Meningite\", \"url\": \"https://www.cdc.gov/meningitis/index.html\"}, {\"title\": \"Dor de Cabeça\", \"url\": \"https://www.mayoclinic.org/pt-br/diseases-conditions/headaches/symptoms-causes/syc-20331560\"}]\nSOURCES: [{\"name\": \"CDC - Centers for Disease Control and Prevention\", \"url\": \"https://www.cdc.gov\"}, {\"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org\"}]",
+          "timestamp": "2026-04-15T12:43:18.036Z",
+          "riskLevel": "URGENTE",
           "resources": [],
-          "riskLevel": "MODERADO",
-          "role": "bot",
           "suggestions": [
             "Como prevenir isso?",
             "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T18:43:33.758Z"
-        },
-        {
-          "content": "Olá Lumi",
-          "role": "user",
-          "timestamp": "2026-04-09T18:47:50.465Z"
-        },
-        {
-          "content": "Olá! Como posso ajudar você hoje? Se você está se sentindo mal ou se tiver alguma dúvida sobre saúde e bem-estar, fique à vontade para me contar.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T18:47:53.187Z"
-        },
-        {
-          "content": "Estou com dor nas costas",
-          "role": "user",
-          "timestamp": "2026-04-09T18:48:46.615Z"
-        },
-        {
-          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T18:48:46.618Z"
-        },
-        {
-          "content": "Compreendido! Vamos oferecer orientações práticas para a sua dor nas costas e fraqueza.\n\n### RESUMO E SÍNTESE\nVocê está com dor nas costas de intensidade 4, acompanhada de sensação de fraqueza, mas apresenta um risco geral baixo. Embora a dor não seja severa, é importante cuidar de si e monitorar os sintomas.\n\n### 1. CONDUTA PRÁTICA IMEDIATA\n- **Descanso Moderado**: Evite atividades físicas intensas que possam exacerbar a dor. No entanto, não permaneça em repouso absoluto; movimentos leves podem ajudar a evitar rigidez.\n- **Monitoramento**: Observe como a dor evolui e qualquer agravamento dos sintomas.\n\n### 2. CUIDADOS EM CASA\n- **Compressas Quentes ou Frias**: Use compressas quentes na região das costas para relaxar os músculos ou compressas frias para reduzir a inflamação, conforme o que você sentir mais alívio.\n- **Exercícios Leves**: Movimentos suaves, como alongamentos e caminhadas curtas, podem ajudar a manter a mobilidade e reduzir a rigidez.\n- **Cuidado Postural**: Atente-se à postura ao sentar, levantar ou deitar para evitar sobrecarga na coluna.\n- **Hidratação e Alimentação Balanceada**: A ingestão de líquidos e alimentos saudáveis pode ajudar na recuperação geral.\n\n### 3. SINAIS DE ALERTA\n**Bandeiras Vermelhas que indicam a necessidade de ida imediata ao Pronto-Socorro**:\n- Dor intensa ou que piora rapidamente.\n- Perda de controle da bexiga ou intestinos.\n- Dormência ou fraqueza nas pernas que se intensifica.\n- Febre alta acompanhada de dor nas costas.\n- Dor surgida após um trauma significativo.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/assuntos/noticias/dor-nas-costas-como-tratar-e-prevenir\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/dor-nas-costas/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/diseases-conditions/back-pain/symptoms-causes/syc-20308534\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Dor nas Costas: Sintomas, Causas e Tratamentos\", \"url\": \"https://www.drauziovarella.uol.com.br/doencas-e-sintomas/dor-nas-costas/\", \"source\": \"Drauzio Varella\" }\n  ]\n}\n```",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-09T18:50:38.373Z"
+          ]
         }
       ],
-      "title": "Estou com dor de estômago"
-    },
-    {
-      "createdAt": "2026-04-04T17:59:31.046Z",
-      "id": "1775325571046",
-      "maxRisk": "BAIXO",
-      "messages": [
-        {
-          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:59:31.051Z"
-        },
-        {
-          "content": "Estou com febre",
-          "role": "user",
-          "timestamp": "2026-04-04T17:59:33.162Z"
-        },
-        {
-          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:59:33.164Z"
-        },
-        {
-          "content": "Identifiquei um **Risco MODERADO**.\n\n📍 RESUMO DA TRIAGEM:\n- Queixa: **Estou com febre**\n- Intensidade: **9/10**\n- Sintomas associados: Dores musculares, Calafrios, Suor excessivo\n\nProcure atendimento médico.",
-          "resources": [],
-          "riskLevel": "MODERADO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:59:48.452Z"
-        },
-        {
-          "content": "Quais os sintomas?",
-          "role": "user",
-          "timestamp": "2026-04-04T17:59:52.159Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro ao processar a mensagem: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T17:59:54.020Z"
-        },
-        {
-          "content": "oi",
-          "role": "user",
-          "timestamp": "2026-04-04T18:00:07.627Z"
-        },
-        {
-          "content": "Ops, houve um erro na conexão: Erro ao processar a mensagem: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
-          "resources": [],
-          "riskLevel": "BAIXO",
-          "role": "bot",
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ],
-          "timestamp": "2026-04-04T18:00:09.697Z"
-        }
-      ],
-      "title": "Estou com febre"
+      "title": "Estou com dor de cabeça"
     }
   ]
 }

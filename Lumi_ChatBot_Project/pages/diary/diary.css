@@ -25,19 +25,31 @@
   --container-padding: 40px;
 }
 
-/* Base & Layout Global */
+/* Base & Layout Global — Alta especificidade para sobrescrever global.css */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
+html body.dark-theme,
+body.dark-theme {
     background-color: var(--bg-main);
     color: var(--text-primary);
     font-family: 'Inter', 'Outfit', sans-serif;
     line-height: 1.6;
+    /* Garantir que o body tenha altura mínima e não fique cortado */
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    display: block; /* Sobrescrever o flex do global.css */
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .app-container {
     display: flex;
     min-height: 100vh;
+    /* Garantir que o container ocupe toda a altura disponível */
+    height: auto;
+    width: 100%;
+    max-width: 100vw;
 }
 
 /* Sidebar Refatorada */
@@ -48,9 +60,10 @@ body {
     border-right: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
-    position: sticky;
-    top: 0;
-    height: 100vh;
+    /* Remover position: sticky e height: 100vh para evitar corte no topo */
+    position: relative;
+    min-height: 100vh;
+    height: auto;
 }
 
 .sidebar-header {
@@ -90,6 +103,9 @@ body {
 .sidebar-nav {
     flex: 1;
     padding: 10px 0;
+    overflow-y: auto;
+    /* Garantir que a rolagem seja suave em dispositivos touch */
+    -webkit-overflow-scrolling: touch;
 }
 
 .nav-item {
@@ -123,8 +139,11 @@ body {
 /* Main Content Layout */
 .main-content {
     flex: 1;
-    padding: var(--container-padding);
+    padding: calc(var(--container-padding) + 20px) var(--container-padding) var(--container-padding) var(--container-padding);
     overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 .page-header {
@@ -477,3 +496,216 @@ textarea#diary-notes:focus {
     .page-header { flex-direction: column; align-items: flex-start; gap: 20px; }
     .register-btn { width: 100%; justify-content: center; }
 }
+
+/* ─── NOVOS ESTILOS — Feature: Diário de Saúde ───────────────────────────── */
+
+/* Insights com severidade */
+.insight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.insight-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    line-height: 1.6;
+}
+
+.insight-item.insight-low   { border-left-color: var(--low-risk); }
+.insight-item.insight-medium { border-left-color: var(--moderate-risk); }
+.insight-item.insight-high  { border-left-color: var(--high-risk); background: rgba(239,68,68, 0.04); }
+.insight-item.insight-ai    { border-left-color: var(--accent-primary); }
+
+.insights-divider {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 16px 0 12px;
+    letter-spacing: 1px;
+}
+
+/* Botão de Análise IA */
+.ai-insights-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px 20px;
+    background: rgba(124, 58, 237, 0.12);
+    border: 1.5px dashed rgba(124, 58, 237, 0.4);
+    border-radius: 16px;
+    color: var(--accent-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.ai-insights-btn:hover {
+    background: rgba(124, 58, 237, 0.2);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.ai-insights-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Risk Badges nos registros */
+.risk-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.risk-low      { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+.risk-moderate { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+.risk-high     { background: rgba(239, 68,  68, 0.15); color: #ef4444; }
+.risk-urgent   { background: rgba(159, 18,  57, 0.20); color: #f43f5e; }
+
+/* Border colorida no card por risco */
+.entry-card.entry-risk-alto    { border-left: 3px solid #ef4444; }
+.entry-card.entry-risk-urgente { border-left: 3px solid #9f1239; }
+.entry-card.entry-risk-moderado { border-left: 3px solid #f59e0b; }
+.entry-card.entry-risk-baixo   { border-left: 3px solid #10b981; }
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    gap: 10px;
+}
+
+.entry-header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.entry-date {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.entry-time {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.entry-mood {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.source-badge {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.12);
+    color: #3b82f6;
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+.entry-delete-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.entry-delete-btn:hover { opacity: 1; background: rgba(239,68,68,0.1); }
+
+.entry-stats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.intensity-alert {
+    font-size: 0.78rem;
+    color: #f59e0b;
+    font-weight: 600;
+}
+
+.entry-notes {
+    margin-top: 12px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-style: italic;
+    border-left: 2px solid rgba(255,255,255,0.06);
+    padding-left: 12px;
+    line-height: 1.5;
+    /* Limita a 3 linhas */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Gráfico de tendência */
+.chart-wrapper {
+    min-height: 220px;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.legend-avg strong { color: var(--text-primary); }
+
+/* Empty state do feed */
+.empty-state {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.empty-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.empty-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+/* Heatmap — cores dos dias */
+.day-box.low      { background: rgba(16, 185, 129, 0.35); color: #10b981; }
+.day-box.moderate { background: rgba(245, 158, 11, 0.35); color: #f59e0b; }
+.day-box.high     { background: rgba(239, 68,  68, 0.35); color: #ef4444; }
+.day-box.urgent   { background: rgba(159, 18,  57, 0.45); color: #f43f5e; }
+

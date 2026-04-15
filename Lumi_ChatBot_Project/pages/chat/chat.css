@@ -768,7 +768,8 @@ textarea {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: var(--text-secondary); /* Cor secundária do tema atual */
+    color: var(--text-secondary);
+    /* Cor secundária do tema atual */
     transition: transform 0.2s ease, color 0.2s ease;
     padding: 0;
     margin-left: 8px;
@@ -780,7 +781,8 @@ textarea {
 }
 
 .audio-button.playing {
-    color: #3b82f6; /* Azul brand */
+    color: #3b82f6;
+    /* Azul brand */
     animation: audioPulse 1.5s infinite ease-in-out;
 }
 
@@ -790,9 +792,20 @@ textarea {
 }
 
 @keyframes audioPulse {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.15); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 [title] {
@@ -819,7 +832,7 @@ textarea {
     display: flex;
     align-items: center;
     gap: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     transform: translateX(100%);
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -841,7 +854,10 @@ textarea {
     justify-content: center;
 }
 
-.notice-icon svg { width: 20px; height: 20px; }
+.notice-icon svg {
+    width: 20px;
+    height: 20px;
+}
 
 .notice-content {
     display: flex;
@@ -864,8 +880,8 @@ textarea {
 
 /* Aviso de Privacidade */
 .privacy-badge {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     padding: 10px;
     margin: 15px;
@@ -876,7 +892,10 @@ textarea {
     gap: 8px;
 }
 
-.privacy-badge svg { flex-shrink: 0; color: #10b981; }
+.privacy-badge svg {
+    flex-shrink: 0;
+    color: #10b981;
+}
 
 .clear-memory-btn {
     background: transparent;
@@ -946,8 +965,8 @@ textarea {
 }
 
 .triage-opt-btn {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     color: var(--text-primary);
     padding: 12px 20px;
     border-radius: 50px;
@@ -976,7 +995,13 @@ textarea {
     color: var(--text-secondary);
 }
 
-#slider-val { font-weight: 800; color: white; background: #3b82f6; padding: 2px 8px; border-radius: 4px; }
+#slider-val {
+    font-weight: 800;
+    color: white;
+    background: #3b82f6;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
 
 .symptom-slider {
     width: 100%;
@@ -994,7 +1019,7 @@ textarea {
     height: 24px;
     border-radius: 50%;
     background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 
@@ -1011,8 +1036,8 @@ textarea {
     align-items: center;
     gap: 12px;
     padding: 12px 16px;
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.04);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 12px;
     cursor: pointer;
     transition: 0.2s;
@@ -1023,7 +1048,11 @@ textarea {
     border-color: #10b981;
 }
 
-.checklist-item input { width: 18px; height: 18px; cursor: pointer; }
+.checklist-item input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
 
 /* Buttons */
 .triage-controls {
@@ -1053,8 +1082,15 @@ textarea {
 }
 
 @keyframes triageEntry {
-    from { opacity: 0; transform: translateY(20px) scale(0.95); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 /* Source Badges */
@@ -1147,7 +1183,7 @@ textarea {
     opacity: 0;
     pointer-events: none;
     transition: 0.2s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     z-index: 100;
 }
 
@@ -1156,10 +1192,17 @@ textarea {
     transform: translateX(-50%) translateY(0);
 }
 
-.source-badge-item.national { border-left: 3px solid #10b981; }
-.source-badge-item.international { border-left: 3px solid #3b82f6; }
+.source-badge-item.national {
+    border-left: 3px solid #10b981;
+}
 
-.source-badge-item .src-icon { font-size: 0.9rem; }
+.source-badge-item.international {
+    border-left: 3px solid #3b82f6;
+}
+
+.source-badge-item .src-icon {
+    font-size: 0.9rem;
+}
 
 /* Sidebar Global Nav */
 .sidebar-nav-global {
@@ -1286,7 +1329,8 @@ textarea {
     align-items: center;
     justify-content: center;
     transition: var(--transition-smooth);
-    margin-right: 5px; /* Separa um pouco do botão de enviar */
+    margin-right: 5px;
+    /* Separa um pouco do botão de enviar */
 }
 
 .mic-btn:hover {
@@ -1296,14 +1340,297 @@ textarea {
 
 /* Animação quando estiver ouvindo (Vermelho) */
 .mic-btn.recording {
-    color: #ef4444; 
+    color: #ef4444;
     background: rgba(239, 68, 68, 0.1);
     animation: pulse-mic 1.5s infinite;
 }
 
 @keyframes pulse-mic {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
-    70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
 }
 
+/* ─── Mini-formulário de Registro Manual do Diário (embutido no chat) ─── */
+
+.diary-chat-form {
+    background: var(--bg-surface);
+    border: 1px solid rgba(124, 58, 237, 0.25);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin: 4px 0 4px 52px;
+    /* alinha com as mensagens do bot */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: messageEntry 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(124, 58, 237, 0.1);
+    max-width: 520px;
+}
+
+.dcf-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dcf-label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.3px;
+}
+
+/* Grid de botões de humor */
+.dcf-moods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    border-radius: var(--radius-sm);
+    transition: 0.3s;
+}
+
+.dcf-mood-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1.5px solid rgba(255, 255, 255, 0.06);
+    color: var(--text-secondary);
+    padding: 12px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    font-family: inherit;
+}
+
+.dcf-mood-btn:hover {
+    background: rgba(124, 58, 237, 0.1);
+    border-color: rgba(124, 58, 237, 0.3);
+    color: var(--text-primary);
+}
+
+.dcf-mood-btn.active {
+    background: var(--accent-gradient);
+    border-color: transparent;
+    color: white;
+    box-shadow: 0 4px 15px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+/* Área de texto de sintomas */
+.dcf-text {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.9rem;
+    min-height: 80px;
+    padding: 14px 16px;
+    resize: none;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.dcf-text:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+/* Slider de intensidade */
+.dcf-slider-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.dcf-slider {
+    -webkit-appearance: none;
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.dcf-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--accent-secondary);
+    border: 3px solid var(--bg-surface);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.dcf-slider-val {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--accent-secondary);
+    min-width: 24px;
+    text-align: center;
+}
+
+/* Botões de ação */
+.dcf-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dcf-cancel {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.dcf-cancel:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.dcf-save {
+    background: var(--accent-gradient);
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.dcf-save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--accent-primary);
+}
+/* Container dos links no final da mensagem */
+.message-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo das Badges (Links) */
+.source-badge {
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    color: #a78bfa;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.source-badge:hover {
+    background: var(--accent-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.source-badge.resource {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.3);
+    color: #93c5fd;
+}
+
+.source-badge.resource:hover {
+    background: #3b82f6;
+}
+
+/* Animação para os links aparecerem suavemente */
+.message-footer-links {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================
+   ESTILIZAÇÃO DAS BARRAS DE ROLAGEM (SCROLLBARS)
+   ========================================================== */
+
+/* Configuração Geral para navegadores Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 6px;                /* Barra vertical fina */
+    height: 6px;               /* Barra horizontal fina */
+}
+
+/* O "trilho" da barra (fundo) */
+::-webkit-scrollbar-track {
+    background: transparent;    /* Mantém o fundo limpo */
+}
+
+/* O "ponteiro" da barra (a parte que se move) */
+::-webkit-scrollbar-thumb {
+    background: rgba(124, 58, 237, 0.2); /* Roxo bem suave (accent-primary) */
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+/* Quando o usuário passa o mouse sobre a barra */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-gradient); /* Usa o gradiente da Lumi no hover */
+}
+
+/* Estilização específica para o histórico de chat e mensagens */
+.sidebar, 
+#chat-history-list, 
+#messages-container {
+    scrollbar-width: thin;          /* Para Firefox */
+    scrollbar-color: var(--accent-primary) transparent; /* Para Firefox */
+}
+
+/* Ajuste específico para a Sidebar para não ficar visualmente poluído */
+#sidebar::-webkit-scrollbar {
+    width: 4px; /* Ainda mais fino na lateral */
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.05); /* Quase invisível na lateral */
+}
+
+#sidebar:hover::-webkit-scrollbar-thumb {
+    background: rgba(124, 58, 237, 0.3); /* Só aparece melhor ao dar hover na sidebar */
+}
+
+/* Garante que o container de mensagens tenha espaço para a barra sem "pular" o layout */
+#messages-container {
+    overflow-y: overlay; /* Faz a barra flutuar sobre o conteúdo em navegadores suportados */
+    padding-right: 8px;   /* Evita que o texto encoste na barra */
+}

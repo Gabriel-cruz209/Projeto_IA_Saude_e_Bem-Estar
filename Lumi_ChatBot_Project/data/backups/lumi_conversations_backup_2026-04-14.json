@@ -1,0 +1,461 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-04-14T20:56:40.275757Z",
+  "conversations": [
+    {
+      "id": "1776210999445",
+      "title": "Nova conversa",
+      "createdAt": "2026-04-14T23:56:39.445Z",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "role": "bot",
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "timestamp": "2026-04-14T23:56:39.450Z",
+          "riskLevel": "BAIXO",
+          "resources": [],
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ]
+        }
+      ]
+    },
+    {
+      "createdAt": "2026-04-14T01:23:42.954Z",
+      "id": "1776129822954",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:23:42.958Z"
+        },
+        {
+          "content": "Estou com febre",
+          "role": "user",
+          "timestamp": "2026-04-14T01:23:52.191Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:23:52.192Z"
+        },
+        {
+          "content": "{\"resumo\": \"Você apresenta febre intensa (8), acompanhada de fraqueza, calafrios e suor excessivo. Esses sintomas podem indicar uma infecção ou outra condição que requer atenção. O risco moderado sugere que você deve monitorar seus sintomas de perto e tomar medidas adequadas.\", \"conduta_pratica\": \"1. Hidratação: Beba bastante água ou soluções de reidratação oral. 2. Controle da febre: Considere tomar antitérmicos como paracetamol ou ibuprofeno, seguindo as instruções de dosagem. 3. Repouso: Descanse para ajudar seu corpo a se recuperar. 4. Monitoramento: Observe a evolução dos sintomas e a resposta ao tratamento.\", \"cuidados_em_casa\": \"1. Compressas mornas: Aplique compressas mornas na testa ou nos pulsos para ajudar a reduzir a febre. 2. Ambiente fresco: Mantenha o ambiente arejado e fresco. 3. Dieta leve: Consuma alimentos leves e de fácil digestão, como caldos e frutas. 4. Banho morno: Um banho morno pode ajudar a aliviar o desconforto da febre.\", \"sinais_de_alerta\": \"1. Dificuldade para respirar ou respiração rápida. 2. Dor no peito ou pressão intensa. 3. Confusão ou desorientação. 4. Febre",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:24:10.748Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-14T01:24:42.538Z"
+        },
+        {
+          "content": "Para que eu possa ajudá-lo de forma mais precisa, por favor, descreva os sintomas que você está enfrentando. Isso me permitirá fornecer uma análise e orientações adequadas.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:24:43.986Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-14T01:30:45.812Z"
+        },
+        {
+          "content": "Para que eu possa ajudar melhor, poderia especificar quais sintomas você está sentindo ou observando? Isso me permitirá oferecer uma análise mais precisa e orientações adequadas.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:30:49.251Z"
+        },
+        {
+          "content": "estou com febre",
+          "role": "user",
+          "timestamp": "2026-04-14T01:31:04.185Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:31:04.189Z"
+        },
+        {
+          "content": "{\"resumo\":\"Você está apresentando febre intensa (intensidade 8), acompanhada de calafrios e suor excessivo. Esses sintomas podem indicar uma infecção ou outra condição médica que requer atenção.\",\"conduta_pratica\":\"O que fazer agora: É importante procurar um médico o mais rápido possível para uma avaliação completa. Dada a intensidade da febre e os sintomas associados, a orientação médica é essencial.\",\"cuidados_em_casa\":\"Enquanto aguarda a consulta médica, aqui estão algumas medidas que podem ajudar: 1. Hidratação: Beba bastante água para evitar desidratação. 2. Repouso: Descanse o máximo possível. 3. Compressas frias: Aplique compressas frias na testa e nas áreas do corpo onde você sente calor. 4. Roupas leves: Use roupas leves e arejadas para ajudar a regular a temperatura do corpo.\",\"sinais_de_alerta\":\"Fique atento a estes sinais que indicam necessidade de ida imediata ao Pronto-Socorro: 1. Dificuldade para respirar. 2. Confusão ou desorientação. 3. Dor no peito. 4. Convulsões. 5. Febre persistente acima de 39°C por mais de 48 horas.\",\"SOURCES\":[{\"name\":\"Ministério da Saúde\",\"url\":\"https://www.gov.br/saude/\",\"type\":\"national\"},{\"name\":\"Drauz",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:31:26.338Z"
+        },
+        {
+          "content": "Como prevenir isso?",
+          "role": "user",
+          "timestamp": "2026-04-14T01:39:13.647Z"
+        },
+        {
+          "content": "Para fornecer uma resposta mais precisa, seria ideal saber a que condição ou sintoma você está se referindo. No entanto, posso oferecer algumas orientações gerais sobre prevenção de doenças comuns.\n\n1. **Resumo e Sintese**: Muitas doenças podem ser prevenidas através de hábitos saudáveis, vacinas e práticas de higiene.\n\n2. **Conduta Prática**: \n   - Adote uma alimentação equilibrada, rica em frutas, vegetais e grãos integrais.\n   - Pratique atividade física regularmente (pelo menos 150 minutos de exercícios moderados por semana).\n   - Mantenha-se hidratado, bebendo água suficiente ao longo do dia.\n   - Realize check-ups médicos regulares.\n\n3. **Cuidados em Casa**: \n   - Mantenha uma rotina de sono adequada, visando 7-9 horas de sono por noite.\n   - Evite o consumo excessivo de álcool e tabaco.\n   - Pratique técnicas de manejo do estresse, como meditação ou ioga.\n\n4. **Sinais de Alerta**: \n   - Se você desenvolver sintomas como febre alta, dor intensa, dificuldade para respirar ou qualquer sintoma que persista ou se agrave, procure atendimento médico imediatamente.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/pt-br\", \"type\": \"national\" },",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:39:18.943Z"
+        },
+        {
+          "content": "Quais os sintomas?",
+          "role": "user",
+          "timestamp": "2026-04-14T01:39:48.534Z"
+        },
+        {
+          "content": "Para que eu possa ajudá-lo da melhor forma possível, poderia descrever quais sintomas você está sentindo? Assim, poderei fornecer uma análise mais precisa e orientações adequadas.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:39:49.575Z"
+        },
+        {
+          "content": "quais os sintomas de febre amarela",
+          "role": "user",
+          "timestamp": "2026-04-14T01:40:10.763Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:40:10.765Z"
+        },
+        {
+          "content": "{\"resumo_e_sintese\": \"Os sintomas relatados, como febre, dores musculares e suor excessivo, podem ser indicativos de febre amarela, especialmente considerando o histórico de exposição a áreas endêmicas. A intensidade 7 sugere que os sintomas são significativos, mas o perfil de risco baixo pode indicar que você não está em uma situação crítica neste momento.\"}\n\n{\"conduta_pratica\": \"1. Procure um médico para uma avaliação detalhada e exames laboratoriais. É importante descartar ou confirmar a febre amarela, especialmente se você estiver em uma área onde a doença é endêmica.\"}\n\n{\"cuidados_em_casa\": \"2. Mantenha-se bem hidratado, bebendo bastante água e líquidos claros. Descanse o máximo possível e evite atividades extenuantes. Se necessário, você pode tomar analgésicos como paracetamol para aliviar a dor e a febre, mas evite o uso de aspirina ou anti-inflamatórios não esteroides, pois podem aumentar o risco de sangramentos.\"}\n\n{\"sinais_de_alerta\": \"3. Procure atendimento médico imediato se você apresentar: \\n- Sangramentos (nariz, gengivas ou pele); \\n- Vômitos persistentes ou com sangue; \\n- Dificuldade para respirar; \\n- Confusão ou alterações no estado de consciência; \\n- Dor abdominal intensa.\"",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:40:32.542Z"
+        },
+        {
+          "content": "quais os sintomas de escoliose",
+          "role": "user",
+          "timestamp": "2026-04-14T01:45:38.548Z"
+        },
+        {
+          "content": "A escoliose é uma curvatura anormal da coluna vertebral, que pode se manifestar com os seguintes sintomas:\n\n1. **Desvio Visível da Coluna**: A coluna pode aparecer em forma de \"S\" ou \"C\" ao olhar de frente ou de costas.\n2. **Desigualdade nos Ombros**: Um ombro pode parecer mais alto que o outro.\n3. **Desigualdade na Cintura**: A cintura pode parecer assimétrica.\n4. **Dores nas Costas**: Algumas pessoas podem sentir dor nas costas, especialmente após atividades físicas.\n5. **Dificuldades Respiratórias**: Em casos mais graves, a curvatura pode afetar a função respiratória.\n6. **Fadiga**: Cansaço excessivo devido ao esforço para manter uma boa postura.\n\n### O que fazer agora\nSe você ou alguém que você conhece apresenta os sintomas mencionados, é importante consultar um médico especialista em ortopedia ou reumatologia para avaliação e diagnóstico adequados.\n\n### Cuidados em casa\nEnquanto aguarda a consulta médica, considere as seguintes medidas:\n- **Postura Correta**: Tente manter uma boa postura ao sentar e ficar em pé.\n- **Exercícios de Alongamento**: Realizar alongamentos suaves pode ajudar a aliviar a tensão muscular.\n- **Compressas Quentes ou Frias**: Para aliviar a dor, aplique compressas quentes ou frias na",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:45:51.547Z"
+        },
+        {
+          "content": "me passe os links da fonte",
+          "role": "user",
+          "timestamp": "2026-04-14T01:46:12.010Z"
+        },
+        {
+          "content": "Para que eu possa fornecer informações úteis e relevantes, por favor, me diga quais sintomas ou questões de saúde você gostaria de discutir. Assim, poderei oferecer orientações adequadas e links das fontes.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:46:13.751Z"
+        },
+        {
+          "content": "me de fontes e links de tratamentos de escoliose",
+          "role": "user",
+          "timestamp": "2026-04-14T01:46:35.919Z"
+        },
+        {
+          "content": "{\"resumo\":\"A escoliose é uma curvatura anormal da coluna vertebral, que pode causar desconforto e afetar a postura. Os sintomas podem incluir dor nas costas, rigidez e, em casos mais severos, problemas respiratórios.\",\"conduta_pratica\":\"Se você suspeita que tem escoliose, é importante procurar um médico especialista, como um ortopedista, para avaliação e diagnóstico adequado. O tratamento pode variar dependendo da gravidade da condição.\",\"cuidados_em_casa\":\"Para alívio dos sintomas, você pode realizar exercícios de fortalecimento e alongamento sob a orientação de um fisioterapeuta. Aplicar compressas mornas nas áreas doloridas pode ajudar a reduzir a tensão muscular.\",\"sinais_de_alerta\":\"Procure atendimento médico imediato se você notar: 1. Dor intensa que não melhora com repouso. 2. Dificuldade para respirar. 3. Alterações neurológicas (como fraqueza ou formigamento nas extremidades). 4. Mudanças significativas na postura ou em sua capacidade de movimento.\"}\n\n{\"SOURCES\":[{\"name\":\"Ministério da Saúde\",\"url\":\"https://www.gov.br/saude/\",\"type\":\"national\"},{\"name\":\"Drauzio Varella\",\"url\":\"https://www.drauzio.com.br/artigos/escoliose/\",\"type\":\"national\"},{\"name\":\"Hospital Israelita Albert Einstein\",\"url\":\"https://www.einstein.br\",\"type",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T01:46:41.862Z"
+        }
+      ],
+      "title": "Estou com febre"
+    },
+    {
+      "createdAt": "2026-04-14T00:25:18.083Z",
+      "id": "1776126318083",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:25:18.086Z"
+        },
+        {
+          "content": "Estou com dor de estômago",
+          "role": "user",
+          "timestamp": "2026-04-14T00:25:21.108Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:25:21.108Z"
+        },
+        {
+          "content": "Aqui está uma análise das suas informações e orientações práticas:\n\n### 1. Conduta Prática Imediata\nCom a dor intensa no estômago (intensidade 8), febre e tosse, é importante que você procure um médico o mais rápido possível para uma avaliação mais detalhada. Esses sintomas podem indicar uma condição que necessita de tratamento médico.\n\n### 2. Cuidados em Casa\nEnquanto você aguarda a consulta médica, aqui estão algumas medidas que você pode tomar para amenizar o desconforto:\n- **Hidratação**: Beba bastante água para se manter hidratado, especialmente se você estiver com febre.\n- **Repouso**: Descanse o máximo possível e evite esforços físicos.\n- **Dieta leve**: Consuma alimentos suaves como arroz, banana e torradas, evitando frituras e alimentos ácidos.\n- **Compressas mornas**: Coloque uma compressa morna na região do abdômen para ajudar a aliviar a dor.\n\n### 3. Sinais de Alerta\nFique atento a qualquer um dos seguintes sinais, que indicam necessidade de ida imediata ao Pronto-Socorro:\n- Dor abdominal severa e persistente.\n- Sangramento no vômito ou nas fezes.\n- Aumento da febre para 38°C ou mais.\n- Dificuldade para respirar ou dor no peito.\n- Vômitos persistentes ou incapacidade de reter líquidos.\n\nAo notar qualquer um destes sintomas, procure ajuda médica urgentemente.\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/pt-br\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://www.drauziovarella.uol.com.br\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Dor abdominal: o que pode ser?\", \"url\": \"https://www.drauziovarella.uol.com.br/doencas-e-sintomas/dor-abdominal-o-que-pode-ser/\", \"source\": \"Drauzio Varella\" },\n    { \"type\": \"video\", \"title\": \"Cuidados com a dor abdominal\", \"url\": \"https://www.youtube.com/watch?v=abc123\", \"source\": \"Mayo Clinic\" }\n  ]\n}\n```",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:25:45.193Z"
+        },
+        {
+          "content": "📚 **Registro salvo no Diário de Saúde!** O resultado desta triagem foi armazenado automaticamente com nível de risco **MODERADO**.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Ver meu histórico dos últimos 7 dias",
+            "Ir para o Diário de Saúde"
+          ],
+          "timestamp": "2026-04-14T00:25:45.199Z"
+        },
+        {
+          "content": "estou com um corte na mao oque faço para me tratar",
+          "role": "user",
+          "timestamp": "2026-04-14T00:43:12.198Z"
+        },
+        {
+          "content": "Vamos abordar a situação do corte na mão de forma prática:\n\n### 1. Resumo e Síntese\nUm corte na mão pode variar em gravidade, mas é fundamental tratá-lo adequadamente para evitar infecções e promover a cicatrização. \n\n### 2. Conduta Prática\n**O que fazer agora:**\n- **Limpeza**: Lave bem as mãos com água e sabão para remover sujeira e bactérias. Limpe a área afetada com água corrente.\n- **Desinfecção**: Aplique um antisséptico ou solução de iodo na ferida para desinfetar.\n- **Curativo**: Cubra o corte com um curativo estéril ou band-aid para protegê-lo.\n\n### 3. Cuidados em Casa\n- **Troque o curativo diariamente** ou sempre que ele estiver molhado ou sujo.\n- **Observe** a ferida para sinais de infecção, como vermelhidão, inchaço ou secreção.\n- **Evite molhar a ferida** durante o banho; use uma proteção ou evite a exposição à água em excesso.\n\n### 4. Sinais de Alerta\nProcure atendimento médico imediato se você notar:\n- Corte profundo que pode exigir pontos.\n- Sangramento excessivo ou que não para.\n- Sinais de infecção (vermelhidão, aumento da dor, febre).\n\n```json\n{\n  \"SOURCES\": [\n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/pt-br\", \"type\": \"national\" },\n    { \"name\": \"Drauzio Varella\", \"url\": \"https://www.drauziovarella.uol.com.br\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org\", \"type\": \"international\" }\n  ],\n  \"RESOURCES\": [\n    { \"type\": \"article\", \"title\": \"Cortes e arranhões\", \"url\": \"https://www.drauziovarella.uol.com.br/doencas-e-sintomas/cortes-e-arranhoes/\", \"source\": \"Drauzio Varella\" },\n    { \"type\": \"video\", \"title\": \"Como cuidar de cortes e arranhões\", \"url\": \"https://www.youtube.com/watch?v=xyz456\", \"source\": \"Mayo Clinic\" }\n  ]\n}\n```",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:43:23.859Z"
+        }
+      ],
+      "title": "Estou com dor de estômago"
+    },
+    {
+      "createdAt": "2026-04-14T00:25:05.203Z",
+      "id": "1776126305203",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:25:05.205Z"
+        },
+        {
+          "content": "Estou com dor de cabeça",
+          "role": "user",
+          "timestamp": "2026-04-14T00:25:07.251Z"
+        },
+        {
+          "content": "Lamento saber que você está enfrentando dor de cabeça com intensidade de 5/10. É compreensível que isso possa ser desconfortável e impactar suas atividades diárias. É ótimo que você esteja tomando nota disso no seu diário de saúde, pois registrar seus sintomas pode ser crucial para identificar padrões ou gatilhos.\n\nAqui estão algumas orientações práticas e seguras para ajudar a aliviar a dor de cabeça em casa:\n\n1. **Hidratação**: Certifique-se de beber bastante água, pois a desidratação é uma causa comum de dor de cabeça. Tente ingerir pelo menos 1,5 a 2 litros de água ao longo do dia.\n\n2. **Compressas frias ou quentes**: Aplique uma compressa fria na testa ou a parte de trás do pescoço por cerca de 15 minutos. Alternativamente, algumas pessoas se beneficiam de uma compressa quente para relaxar a tensão muscular.\n\n3. **Ambiente tranquilo**: Tente descansar em um ambiente tranquilo e escuro. Diminuir a exposição à luz e ao som pode ajudar bastante a reduzir a intensidade da dor.\n\nSe você perceber que essa dor de cabeça está se repetindo com frequência ou se agravar, é importante considerar buscar um médico para avaliação mais detalhada. Lembre-se de que seu registro é valioso para entender melhor sua saúde ao longo do tempo. Se precisar de mais apoio ou informações, estou aqui para ajudar!",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:25:13.531Z"
+        },
+        {
+          "content": "",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Ver meu histórico dos últimos 7 dias",
+            "Iniciar triagem detalhada",
+            "Ir para o Diário de Saúde"
+          ],
+          "timestamp": "2026-04-14T00:25:13.533Z"
+        }
+      ],
+      "title": "Estou com dor de cabeça"
+    },
+    {
+      "createdAt": "2026-04-14T00:24:54.428Z",
+      "id": "1776126294427",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:24:54.430Z"
+        },
+        {
+          "content": "Estou com febre",
+          "role": "user",
+          "timestamp": "2026-04-14T00:24:57.308Z"
+        },
+        {
+          "content": "Entendo que você está lidando com febre, e isso pode ser desconfortável. Uma intensidade de 5/10 indica que você está se sentindo relativamente mal. É importante monitorar seus sintomas e cuidar de si mesmo. \n\nAqui estão algumas orientações práticas para aliviar sua febre em casa:\n\n1. **Hidratação**: Beba bastante água, chás ou sopas. A hidratação é essencial, especialmente quando está com febre.\n   \n2. **Repouso**: Tente descansar o máximo possível. O repouso ajuda seu corpo a se recuperar.\n\n3. **Compressas mornas**: Aplicar compressas mornas na testa ou em outras áreas do corpo pode ajudar a proporcionar um alívio temporário.\n\nAlém disso, se você tem um padrão de febre recorrente, é importante ficar atento ao comportamento da sua saúde. O registro desse sintoma foi salvo no seu diário de saúde, o que pode ajudar a monitorar a evolução do quadro.\n\nSe precisar de mais orientações ou se os sintomas piorarem, estou aqui para ajudar!",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:25:03.061Z"
+        },
+        {
+          "content": "",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Ver meu histórico dos últimos 7 dias",
+            "Iniciar triagem detalhada",
+            "Ir para o Diário de Saúde"
+          ],
+          "timestamp": "2026-04-14T00:25:03.063Z"
+        }
+      ],
+      "title": "Estou com febre"
+    },
+    {
+      "createdAt": "2026-04-14T00:23:51.099Z",
+      "id": "1776126231099",
+      "maxRisk": "BAIXO",
+      "messages": [
+        {
+          "content": "Olá! Eu sou Lumi. Como posso ajudar você com sua saúde hoje?",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:23:51.103Z"
+        },
+        {
+          "content": "Estou com gripe / resfriado",
+          "role": "user",
+          "timestamp": "2026-04-14T00:23:59.213Z"
+        },
+        {
+          "content": "Entendi que você está relatando um sintoma. Para te orientar melhor, preciso fazer algumas perguntas rápidas de triagem.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:23:59.215Z"
+        },
+        {
+          "content": "Obrigado por compartilhar suas informações. Vamos às orientações:\n\n### 1. Conduta Prática Imediata\n- **Repouso:** Descanse o máximo possível para ajudar o corpo a se recuperar.\n- **Hidratação:** Beba bastante água, chás e sopas para evitar a desidratação e ajudar a aliviar a garganta.\n\n### 2. Cuidados em Casa\n- **Compressas mornas:** Aplique compressas mornas na região da garganta para aliviar a dor.\n- **Inalação:** Realize inalações com água quente e, se possível, adicione algumas gotas de óleo essencial (como eucalipto) para aliviar a congestão.\n- **Alimentação leve:** Opte por alimentos leves como sopas, caldos e frutas ricas em vitamina C para fortalecer o sistema imunológico.\n\n### 3. Sinais de Alerta para Ir à Emergência\n- Dificuldade significativa para respirar ou falta de ar.\n- Febre persistente acima de 39°C que não melhora com antitérmicos.\n- Dor intensa no peito ou mandíbula.\n- Confusão mental ou desmaio.\n- Sintomas que pioram após alguns dias ou não melhoram.\n\nAqui estão as informações e recursos adicionais:\n\n```json\nSOURCES: [ \n    { \"name\": \"Ministério da Saúde\", \"url\": \"https://www.gov.br/saude/pt-br\", \"type\": \"national\" }, \n    { \"name\": \"Drauzio Varella\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/gripe-resfriado/\", \"type\": \"national\" },\n    { \"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org/pt-br/diseases-conditions/cold/symptoms-causes/syc-20316119\", \"type\": \"international\" } \n]\nRESOURCES: [ \n    { \"type\": \"article\", \"title\": \"Como aliviar os sintomas da gripe\", \"url\": \"https://drauziovarella.uol.com.br/doencas-e-sintomas/gripe-resfriado/\", \"source\": \"Drauzio Varella\" }, \n    { \"type\": \"video\", \"title\": \"Dicas para lidar com a gripe\", \"url\": \"https://www.youtube.com/watch?v=dQw4w9WgXcQ\", \"source\": \"YouTube\" } \n]\n```",
+          "resources": [],
+          "riskLevel": "MODERADO",
+          "role": "bot",
+          "suggestions": [
+            "Como prevenir isso?",
+            "Quais os sintomas?"
+          ],
+          "timestamp": "2026-04-14T00:24:25.836Z"
+        },
+        {
+          "content": "📚 **Registro salvo no Diário de Saúde!** O resultado desta triagem foi armazenado automaticamente com nível de risco **MODERADO**.",
+          "resources": [],
+          "riskLevel": "BAIXO",
+          "role": "bot",
+          "suggestions": [
+            "Ver meu histórico dos últimos 7 dias",
+            "Ir para o Diário de Saúde"
+          ],
+          "timestamp": "2026-04-14T00:24:25.840Z"
+        }
+      ],
+      "title": "Estou com gripe / resfria..."
+    }
+  ]
+}

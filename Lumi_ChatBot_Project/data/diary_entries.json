@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-04-13T21:25:37.067306Z",
+  "entries": [
+    {
+      "id": "1776126336260",
+      "date": "2026-04-14",
+      "timestamp": "2026-04-14T00:25:36.260Z",
+      "mood": "regular",
+      "symptoms": [
+        "Estou com dor de estômago",
+        "Febre",
+        "Tosse"
+      ],
+      "intensity": "8",
+      "notes": "Caracterização: Pressão/Aperto | Tempo: Algumas horas",
+      "riskLevel": "MODERADO",
+      "source": "triage"
+    },
+    {
+      "date": "2026-03-27",
+      "id": "1774617885333",
+      "intensity": 5,
+      "mood": "ansioso",
+      "notes": "",
+      "riskLevel": "MODERADO",
+      "symptoms": [
+        "falta de ar"
+      ],
+      "timestamp": "2026-03-27T13:24:45.333Z"
+    }
+  ]
+}
