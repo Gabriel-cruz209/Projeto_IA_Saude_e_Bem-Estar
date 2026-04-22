@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-04-22T20:29:00.518773Z",
+  "lastUpdated": "2026-04-22T20:28:49.748479Z",
   "conversations": [
     {
       "createdAt": "2026-04-15T12:41:31.236Z",
@@ -46,25 +46,9 @@
           "timestamp": "2026-04-15T12:43:18.036Z"
         },
         {
-          "content": "Quais os sintomas?",
           "role": "user",
+          "content": "Quais os sintomas?",
           "timestamp": "2026-04-22T23:28:48.907Z"
-        },
-        {
-          "role": "user",
-          "content": "Quais os sintomas?",
-          "timestamp": "2026-04-22T23:28:53.313Z"
-        },
-        {
-          "role": "bot",
-          "content": "Os sintomas podem variar dependendo da condição de saúde em questão. Aqui estão alguns sintomas comuns que podem ser observados em várias condições:\n\n### Sintomas Comuns\n\n1. **Dor**: Pode ser localizada em uma área específica ou generalizada.\n2. **Febre**: Elevação da temperatura corporal.\n3. **Fadiga**: Sensação de cansaço extremo ou falta de energia.\n4. **Tosse**: Pode ser seca ou produtiva (com muco).\n5. **Dificuldade para respirar**: Sensação de falta de ar ou respiração ofegante.\n6. **Náuseas ou vômitos**: Sensação de enjoo ou ato de vomitar.\n7. **Mudanças no apetite**: Aumento ou diminuição do desejo por alimentos.\n8. **Alterações no sono**: Insônia ou sonolência excessiva.\n9. **Erupções cutâneas**: Mudanças na pele, como manchas ou coceira.\n10. **Mudanças de humor**: Ansiedade, depressão ou irritabilidade.\n\n### Considerações\n\nÉ importante lembrar que os sintomas podem ser leves ou graves e podem variar muito entre diferentes pessoas. Se você estiver preocupado com sintomas específicos, é sempre melhor consultar um profissional de saúde.\n\nRESOURCES: [{\"title\": \"Sintomas Comuns de Doenças\", \"url\": \"https://www.example.com/sintomas-comuns\"}]\nSOURCES: [{\"name\": \"Mayo Clinic\", \"url\": \"https://www.mayoclinic.org\"}]",
-          "timestamp": "2026-04-22T23:28:59.700Z",
-          "riskLevel": "BAIXO",
-          "resources": [],
-          "suggestions": [
-            "Como prevenir isso?",
-            "Quais os sintomas?"
-          ]
         }
       ],
       "title": "Estou com dor de cabeça"

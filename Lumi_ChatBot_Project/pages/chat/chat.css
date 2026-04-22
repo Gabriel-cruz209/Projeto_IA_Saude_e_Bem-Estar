@@ -1530,6 +1530,7 @@ textarea {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px var(--accent-primary);
 }
+
 /* Container dos links no final da mensagem */
 .message-footer-links {
     display: flex;
@@ -1577,8 +1578,15 @@ textarea {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ==========================================================
@@ -1587,50 +1595,62 @@ textarea {
 
 /* Configuração Geral para navegadores Webkit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-    width: 6px;                /* Barra vertical fina */
-    height: 6px;               /* Barra horizontal fina */
+    width: 6px;
+    /* Barra vertical fina */
+    height: 6px;
+    /* Barra horizontal fina */
 }
 
 /* O "trilho" da barra (fundo) */
 ::-webkit-scrollbar-track {
-    background: transparent;    /* Mantém o fundo limpo */
+    background: transparent;
+    /* Mantém o fundo limpo */
 }
 
 /* O "ponteiro" da barra (a parte que se move) */
 ::-webkit-scrollbar-thumb {
-    background: rgba(124, 58, 237, 0.2); /* Roxo bem suave (accent-primary) */
+    background: rgba(124, 58, 237, 0.2);
+    /* Roxo bem suave (accent-primary) */
     border-radius: 20px;
     transition: background 0.3s ease;
 }
 
 /* Quando o usuário passa o mouse sobre a barra */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-gradient); /* Usa o gradiente da Lumi no hover */
+    background: var(--accent-gradient);
+    /* Usa o gradiente da Lumi no hover */
 }
 
 /* Estilização específica para o histórico de chat e mensagens */
-.sidebar, 
-#chat-history-list, 
+.sidebar,
+#chat-history-list,
 #messages-container {
-    scrollbar-width: thin;          /* Para Firefox */
-    scrollbar-color: var(--accent-primary) transparent; /* Para Firefox */
+    scrollbar-width: thin;
+    /* Para Firefox */
+    scrollbar-color: var(--accent-primary) transparent;
+    /* Para Firefox */
 }
 
 /* Ajuste específico para a Sidebar para não ficar visualmente poluído */
 #sidebar::-webkit-scrollbar {
-    width: 4px; /* Ainda mais fino na lateral */
+    width: 4px;
+    /* Ainda mais fino na lateral */
 }
 
 #sidebar::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.05); /* Quase invisível na lateral */
+    background: rgba(255, 255, 255, 0.05);
+    /* Quase invisível na lateral */
 }
 
 #sidebar:hover::-webkit-scrollbar-thumb {
-    background: rgba(124, 58, 237, 0.3); /* Só aparece melhor ao dar hover na sidebar */
+    background: rgba(124, 58, 237, 0.3);
+    /* Só aparece melhor ao dar hover na sidebar */
 }
 
 /* Garante que o container de mensagens tenha espaço para a barra sem "pular" o layout */
 #messages-container {
-    overflow-y: overlay; /* Faz a barra flutuar sobre o conteúdo em navegadores suportados */
-    padding-right: 8px;   /* Evita que o texto encoste na barra */
+    overflow-y: overlay;
+    /* Faz a barra flutuar sobre o conteúdo em navegadores suportados */
+    padding-right: 8px;
+    /* Evita que o texto encoste na barra */
 }

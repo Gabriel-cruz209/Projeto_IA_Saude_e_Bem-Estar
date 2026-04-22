@@ -37,6 +37,17 @@ async function initDiaryPage() {
             modalRoot.appendChild(modal);
         };
     }
+
+    // Listener para o botão de sair (Logout)
+    const logoutBtn = document.querySelector('.logout-btn');
+    if (logoutBtn) {
+        logoutBtn.onclick = () => {
+            if (confirm('Deseja realmente sair do seu diário?')) {
+                // Redireciona para a home principal do projeto
+                window.location.href = '../Home/home.html'; 
+            }
+        };
+    }
 }
 
 // ─── INSIGHTS ───────────────────────────────────────────────────────────────
@@ -123,7 +134,8 @@ function renderHeatmap() {
     if (!container) return;
     container.innerHTML = '';
 
-    const entries = window.DiaryService.getEntries();
+    const rawEntries = window.DiaryService.getEntries();
+    const entries = window.DiaryAnalysisService._getCleanSortedEntries(rawEntries);
     const entryMap = {};
     entries.forEach(e => entryMap[e.date] = e);
 
@@ -162,7 +174,7 @@ function renderTrendChart() {
     // Calcula médias por período para a linha de tendência
     const validPoints = chartData.filter(d => d.intensity !== null);
     const avgIntensity = validPoints.length > 0
-        ? (validPoints.reduce((a, b) => a + b.intensity, 0) / validPoints.length).toFixed(1)
+        ? (validPoints.reduce((acc, curr) => acc + (parseFloat(curr.intensity) || 0), 0) / validPoints.length).toFixed(1)
         : 0;
 
     // Cria o SVG do gráfico
@@ -340,7 +352,8 @@ function renderEntries() {
     if (!feed) return;
     feed.innerHTML = '';
 
-    const entries = window.DiaryService.getEntries();
+    const rawEntries = window.DiaryService.getEntries();
+    const entries = window.DiaryAnalysisService._getCleanSortedEntries(rawEntries);
 
     if (entries.length === 0) {
         feed.innerHTML = `

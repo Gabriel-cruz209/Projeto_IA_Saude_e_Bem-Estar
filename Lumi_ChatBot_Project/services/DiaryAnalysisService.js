@@ -14,7 +14,8 @@ const DiaryAnalysisService = {
      * @returns {Array<{type, text, severity}>}
      */
     generateInsights(entries) {
-        if (!entries || entries.length < 3) {
+        const cleanEntries = this._getCleanSortedEntries(entries);
+        if (!cleanEntries || cleanEntries.length < 3) {
             return [{
                 type: 'info',
                 severity: 'low',
@@ -23,7 +24,7 @@ const DiaryAnalysisService = {
         }
 
         const insights = [];
-        const stats = this.computeStats(entries);
+        const stats = this.computeStats(cleanEntries);
 
         // 1. Sintoma mais frequente
         const topSymptom = stats.topSymptomEntry;
@@ -36,7 +37,7 @@ const DiaryAnalysisService = {
         }
 
         // 2. Padrão por dia da semana
-        const weekdayPattern = this._detectWeekdayPattern(entries);
+        const weekdayPattern = this._detectWeekdayPattern(cleanEntries);
         if (weekdayPattern) {
             insights.push({
                 type: 'pattern',
@@ -46,7 +47,7 @@ const DiaryAnalysisService = {
         }
 
         // 3. Combinação recorrente de sintomas
-        const pair = this._detectSymptomPair(entries);
+        const pair = this._detectSymptomPair(cleanEntries);
         if (pair) {
             insights.push({
                 type: 'correlation',
@@ -56,7 +57,7 @@ const DiaryAnalysisService = {
         }
 
         // 4. Alerta de múltiplos registros de alto risco
-        const highRiskDays = entries.filter(e =>
+        const highRiskDays = cleanEntries.filter(e =>
             e.riskLevel === 'ALTO' || e.riskLevel === 'URGENTE'
         ).length;
         if (highRiskDays >= 2) {
@@ -68,7 +69,7 @@ const DiaryAnalysisService = {
         }
 
         // 5. Tendência de melhora ou piora (últimos 7 vs anteriores)
-        const trend = this._detectIntensityTrend(entries);
+        const trend = this._detectIntensityTrend(cleanEntries);
         if (trend === 'piora') {
             insights.push({
                 type: 'trend',
@@ -84,7 +85,7 @@ const DiaryAnalysisService = {
         }
 
         // 6. Consistência de registros (engajamento)
-        const last7Filled = this._countDaysWithEntries(entries, 7);
+        const last7Filled = this._countDaysWithEntries(cleanEntries, 7);
         if (last7Filled >= 5) {
             insights.push({
                 type: 'engagement',
@@ -104,11 +105,18 @@ const DiaryAnalysisService = {
      * Computa estatísticas gerais dos registros.
      */
     computeStats(entries) {
+        const cleanEntries = this._getCleanSortedEntries(entries);
         const symptomFreq = {};
         const moodFreq = {};
-        const intensities = entries.map(e => e.intensity || 0).filter(v => v > 0);
+        // Inclui intensidade 0 (dias bons) mas ignora nulos/undefined e garante que são números
+        const intensities = cleanEntries
+            .map(e => {
+                const val = parseFloat(e.intensity);
+                return isNaN(val) ? null : val;
+            })
+            .filter(v => v !== null);
 
-        entries.forEach(e => {
+        cleanEntries.forEach(e => {
             (e.symptoms || []).forEach(s => {
                 symptomFreq[s] = (symptomFreq[s] || 0) + 1;
             });
@@ -121,16 +129,16 @@ const DiaryAnalysisService = {
             : null;
 
         const avgIntensity = intensities.length > 0
-            ? (intensities.reduce((a, b) => a + b, 0) / intensities.length).toFixed(1)
+            ? (intensities.reduce((a, b) => a + b, 0) / intensities.length)
             : 0;
 
         return {
-            totalEntries: entries.length,
+            totalEntries: cleanEntries.length,
             symptomFreq,
             moodFreq,
             topSymptomEntry,
-            avgIntensity: parseFloat(avgIntensity),
-            lastRisk: entries[0]?.riskLevel || 'BAIXO'
+            avgIntensity: parseFloat(avgIntensity.toFixed(1)),
+            lastRisk: cleanEntries[0]?.riskLevel || 'BAIXO'
         };
     },
 
@@ -141,6 +149,7 @@ const DiaryAnalysisService = {
      * @returns {Array<{date, label, intensity, symptoms, riskLevel}>}
      */
     getLast15DaysData(entries, days = 15) {
+        const cleanEntries = this._getCleanSortedEntries(entries);
         const result = [];
         const now = new Date();
 
@@ -148,12 +157,17 @@ const DiaryAnalysisService = {
             const d = new Date();
             d.setDate(now.getDate() - i);
             const dateStr = d.toISOString().split('T')[0];
-            const entry = entries.find(e => e.date === dateStr);
+            const entry = cleanEntries.find(e => e.date === dateStr);
+            let intensity = null;
+            if (entry && entry.intensity !== undefined && entry.intensity !== null) {
+                intensity = parseFloat(entry.intensity);
+                if (isNaN(intensity)) intensity = null;
+            }
 
             result.push({
                 date: dateStr,
                 label: d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' }),
-                intensity: entry ? (entry.intensity || null) : null,
+                intensity: intensity,
                 symptoms: entry ? (entry.symptoms || []) : [],
                 riskLevel: entry ? (entry.riskLevel || 'BAIXO') : null,
                 hasEntry: !!entry
@@ -230,8 +244,8 @@ const DiaryAnalysisService = {
     _detectIntensityTrend(entries) {
         if (entries.length < 6) return null;
 
-        const recent = entries.slice(0, 3).map(e => e.intensity || 0);
-        const older = entries.slice(3, 6).map(e => e.intensity || 0);
+        const recent = entries.slice(0, 3).map(e => parseFloat(e.intensity) || 0);
+        const older = entries.slice(3, 6).map(e => parseFloat(e.intensity) || 0);
 
         const avgRecent = recent.reduce((a, b) => a + b, 0) / recent.length;
         const avgOlder = older.reduce((a, b) => a + b, 0) / older.length;
@@ -326,6 +340,34 @@ const DiaryAnalysisService = {
         ];
         const parsed = this.parseNaturalEntry(text);
         return entryTriggers.some(p => p.test(lower)) && parsed !== null;
+    },
+
+    // ─── HELPERS PRIVADOS ────────────────────────────────────────────────────────
+
+    /**
+     * Limpa e ordena os registros:
+     * 1. Garante ordem cronológica (mais recentes primeiro).
+     * 2. Mantém apenas o último registro de cada dia.
+     */
+    _getCleanSortedEntries(entries) {
+        if (!entries || entries.length === 0) return [];
+
+        // Ordena por timestamp ou data (mais recente primeiro)
+        const sorted = [...entries].sort((a, b) => {
+            const dateA = new Date(a.timestamp || a.date);
+            const dateB = new Date(b.timestamp || b.date);
+            return dateB - dateA;
+        });
+
+        // Deduplica por data (o primeiro encontrado é o mais recente devido ao sort)
+        const dayMap = new Map();
+        sorted.forEach(e => {
+            if (!dayMap.has(e.date)) {
+                dayMap.set(e.date, e);
+            }
+        });
+
+        return Array.from(dayMap.values());
     }
 };
 

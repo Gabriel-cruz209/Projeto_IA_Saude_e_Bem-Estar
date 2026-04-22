@@ -99,6 +99,7 @@ body {
     color: var(--accent-secondary);
     transform: translateY(-1px);
 }
+
 .hero {
     min-height: 100vh;
     display: flex;
